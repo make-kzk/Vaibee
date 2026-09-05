@@ -1,12 +1,22 @@
 {
   "research": [
     {
+      "slug": "12df",
+      "title": "12 Driving Forces (TTI)",
+      "status": "complete",
+      "date": "2026-09-05",
+      "tags": ["motivation", "team", "methodology", "tti"],
+      "summary": "TTI motivators assessment: 12 poles, clusters, business outcomes, artifact templates.",
+      "path": "RSCH/RSCH-02/02-02-00-12DF/README.md"
+    },
+    {
       "slug": "mcode",
       "title": "MCode / Motivation Code",
       "status": "complete",
       "date": "2026-09-05",
       "tags": ["motivation", "team", "methodology"],
-      "summary": "Motivational assessment framework: 8 dimensions, 32 motivations, team alignment."
+      "summary": "Motivational assessment framework: 8 dimensions, 32 motivations, team alignment.",
+      "path": "RSCH/RSCH-02/02-01-00-MCode/README.md"
     },
     {
       "slug": "notion",
@@ -14,7 +24,8 @@
       "status": "complete",
       "date": "2026-09-05",
       "tags": ["knowledge-base", "collaboration"],
-      "summary": "All-in-one workspace: notes, databases, wikis."
+      "summary": "All-in-one workspace: notes, databases, wikis.",
+      "path": "RSCH/RSCH-01/products/notion/README.md"
     }
   ],
   "concepts": [

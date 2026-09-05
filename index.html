@@ -196,8 +196,12 @@
       if (!data.research?.length) {
         researchEl.innerHTML = '<p class="empty">Пока нет исследований</p>';
       } else {
-        researchEl.innerHTML = data.research.map((r) => `
-          <a class="card" href="https://github.com/make-kzk/Vaibee/blob/main/RSCH/RSCH-01/products/${r.slug}/README.md" target="_blank" rel="noopener">
+        researchEl.innerHTML = data.research.map((r) => {
+          const href = r.path
+            ? r.path
+            : `RSCH/RSCH-01/products/${r.slug}/README.md`;
+          return `
+          <a class="card" href="${href}">
             <div class="card-body">
               <div class="card-title">${r.title}</div>
               <div class="card-summary">${r.summary}</div>
@@ -208,7 +212,8 @@
             </div>
             <span class="card-arrow">→</span>
           </a>
-        `).join('');
+        `;
+        }).join('');
       }
     }
   </script>
