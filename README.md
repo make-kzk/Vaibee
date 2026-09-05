@@ -4,30 +4,43 @@ Product research lab: исследуйте продукты, логируйте 
 
 **Live:** после настройки GitHub Pages → `https://make-kzk.github.io/Vaibee/`
 
-## Структура
+## Архитектура
 
 ```
 Vaibee/
 ├── index.html              # Portal — каталог research & concepts
-├── catalog.json            # Индекс всех записей (обновляйте при добавлении)
-├── assets/                 # Общие стили и JS для прототипов
-├── 02-01-00-MCode/         # Раздел: Motivation Code
-├── 02-02-00-12DF/          # Раздел: 12 Driving Forces
-├── research/products/      # Исследования продуктов (Markdown)
-├── concepts/               # Концепты с click-through прототипами
-└── templates/              # Шаблоны для копирования
+├── RSCH/                   # Исследования
+│   ├── RSCH-01/            # Бизнес (product research)
+│   ├── RSCH-02/            # Методологии (MCode, 12DF, …)
+│   └── RSCH-03/            # События
+├── PRDT/                   # Продукт
+│   └── concepts/           # Click-through концепты
+└── SYST/                   # Система
+    ├── catalog.json        # Индекс всех записей
+    ├── templates/          # Шаблоны для копирования
+    ├── assets/             # Общие стили и JS для прототипов
+    └── docs/               # Документация
 ```
 
-## Разделы методологий (`02-0X-00-[xxx]`)
+| Раздел | ID | Назначение |
+|--------|----|------------|
+| RSCH | — | Исследования |
+| | RSCH-01 | Бизнес — продукты, рынки |
+| | RSCH-02 | Методологии — фреймворки и модели |
+| | RSCH-03 | События — конференции, воркшопы |
+| PRDT | — | Продуктовые артефакты и прототипы |
+| SYST | — | Шаблоны, каталог, инфраструктура |
 
-| Раздел | Описание |
-|--------|----------|
-| [02-01-00-MCode](./02-01-00-MCode/) | Motivation Code (MCode) — мотивация в коллективах |
-| [02-02-00-12DF](./02-02-00-12DF/) | 12 Driving Forces (TTI Success Insights) |
+## Разделы методологий (`RSCH-02`)
 
-### Правила оформления раздела `02-0X-00-[xxx]`
+| Раздел | Путь | Описание |
+|--------|------|----------|
+| MCode | [RSCH/RSCH-02/02-01-00-MCode/](./RSCH/RSCH-02/02-01-00-MCode/) | Motivation Code — мотивация в коллективах |
+| 12 Driving Forces | [RSCH/RSCH-02/02-02-00-12DF/](./RSCH/RSCH-02/02-02-00-12DF/) | TTI Success Insights — мотиваторы и драйверы |
 
-Каждый раздел — **папка** с кодом `02-0X-00-[ShortCode]`:
+### Правила оформления раздела `02-0X-00-[ShortCode]`
+
+Каждый раздел — **папка** в `RSCH/RSCH-02/` с кодом `02-0X-00-[ShortCode]`:
 
 | Часть кода | Значение | Пример |
 |------------|----------|--------|
@@ -40,56 +53,53 @@ Vaibee/
 
 ```
 02-0X-00-[ShortCode]/
-├── README.md                    # Оглавление раздела
+├── README.md                    # Оглавление (# RSCH-02-0X-00-[ShortCode])
 ├── 02-0X-01-[ShortCode].md      # Страница 01 (обычно — исследование)
-├── 02-0X-02-[ShortCode].md      # Страница 02 (шаблон, практика, …)
+├── 02-0X-02-[ShortCode].md      # Страница 02 (практика, шаблон)
 └── …
 ```
 
 **Правила:**
 
 1. **Папка раздела** — только `02-0X-00-[ShortCode]`. Код `00` зарезервирован за оглавлением.
-2. **Страницы** — `02-0X-0N-[ShortCode].md`, где `N` = `01`, `02`, `03`… Порядковый номер, не `00`.
-3. **README раздела** — заголовок `# 02-0X-00-[ShortCode]`, таблица «Страницы», блок «Источники».
-4. **Заголовок страницы** — `# 02-0X-0N-[ShortCode] — Название`.
+2. **Страницы** — `02-0X-0N-[ShortCode].md`, где `N` = `01`, `02`, `03`…
+3. **README раздела** — заголовок `# RSCH-02-0X-00-[ShortCode]`, таблица «Страницы», блок «Источники».
+4. **Заголовок страницы** — `# RSCH-02-0X-0N-[ShortCode] — Название`.
 5. **Шапка страницы** — метаданные и ссылка на раздел:
    ```markdown
    > Дата / контекст  
    > Раздел: [02-0X-00-[ShortCode]](./README.md)
    ```
-   Для страниц 02+ добавьте ссылку на исследование: `· Контекст: [02-0X-01-[ShortCode] — …](./02-0X-01-[ShortCode].md)`.
-6. **Язык** — русский; англицизмы и смешанная кириллица/латиница в одном слове недопустимы (например: «Генеалогия», не «Гenealogия»).
+6. **Язык** — русский; англицизмы и смешанная кириллица/латиница в одном слове недопустимы.
 7. **Нумерация разделов** — сквозная внутри страницы: `## 1. …`, `## 2. …`.
 
-**Примеры:**
+**Примеры (12 Driving Forces):**
 
 | Тип | Путь |
 |-----|------|
-| Оглавление | [02-01-00-MCode/README.md](./02-01-00-MCode/README.md) |
-| Исследование | [02-01-01-MCode.md](./02-01-00-MCode/02-01-01-MCode.md) |
-| Практика | [02-01-02-MCode.md](./02-01-00-MCode/02-01-02-MCode.md) |
-| Исследование (база) | [02-02-00-12DF.md](./02-02-00-12DF/02-02-00-12DF.md) |
-| Исследование (углубление) | [02-02-01-12DF.md](./02-02-00-12DF/02-02-01-12DF.md) |
-| Практика | [02-02-02-12DF.md](./02-02-00-12DF/02-02-02-12DF.md) |
-| Артефакты | [02-02-03-12DF.md](./02-02-00-12DF/02-02-03-12DF.md) |
+| Оглавление | [RSCH/RSCH-02/02-02-00-12DF/README.md](./RSCH/RSCH-02/02-02-00-12DF/README.md) |
+| Базовое исследование | [02-02-00-12DF.md](./RSCH/RSCH-02/02-02-00-12DF/02-02-00-12DF.md) |
+| Углублённое исследование | [02-02-01-12DF.md](./RSCH/RSCH-02/02-02-00-12DF/02-02-01-12DF.md) |
+| Результат для бизнеса | [02-02-02-12DF.md](./RSCH/RSCH-02/02-02-00-12DF/02-02-02-12DF.md) |
+| Артефакты | [02-02-03-12DF.md](./RSCH/RSCH-02/02-02-00-12DF/02-02-03-12DF.md) |
 
 ## Workflow
 
 ### 1. Исследовать продукт
 
 ```bash
-cp -r templates/research research/products/my-product
+cp -r SYST/templates/research RSCH/RSCH-01/products/my-product
 # Заполните README.md, sources.md, insights.md
-# Добавьте запись в catalog.json → "research"
+# Добавьте запись в SYST/catalog.json → "research"
 ```
 
 ### 2. Создать click-through концепт
 
 ```bash
-cp -r templates/concept concepts/my-concept
+cp -r SYST/templates/concept PRDT/concepts/my-concept
 # Заполните README.md
 # Отредактируйте prototype/index.html — добавьте экраны
-# Добавьте запись в catalog.json → "concepts"
+# Добавьте запись в SYST/catalog.json → "concepts"
 ```
 
 ### 3. Навигация в прототипе
@@ -101,7 +111,7 @@ cp -r templates/concept concepts/my-concept
 <button data-nav="detail">Открыть</button>
 ```
 
-Общая логика в `assets/mockup.js`, стили телефонного фрейма в `assets/mockup.css`.
+Общая логика в `SYST/assets/mockup.js`, стили телефонного фрейма в `SYST/assets/mockup.css`.
 
 ### 4. Опубликовать
 
@@ -113,8 +123,10 @@ cp -r templates/concept concepts/my-concept
 
 | Тип | Путь |
 |-----|------|
-| Research | [research/products/notion/](research/products/notion/) |
-| Concept | [concepts/vaibee-notes/prototype/](concepts/vaibee-notes/prototype/) |
+| Research (продукт) | [RSCH/RSCH-01/products/notion/](./RSCH/RSCH-01/products/notion/) |
+| Methodology (MCode) | [RSCH/RSCH-02/02-01-00-MCode/](./RSCH/RSCH-02/02-01-00-MCode/) |
+| Methodology (12DF) | [RSCH/RSCH-02/02-02-00-12DF/](./RSCH/RSCH-02/02-02-00-12DF/) |
+| Concept | [PRDT/concepts/vaibee-notes/prototype/](./PRDT/concepts/vaibee-notes/prototype/) |
 
 ## Работа с Cursor
 

@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Motivational Map</title>
+  <link rel="stylesheet" href="../../../../SYST/assets/mockup.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="mockup-frame">
+    <header class="mockup-header">
+      <button class="back-btn" hidden aria-label="Назад">←</button>
+      <h1 class="mockup-title">Team Map</h1>
+    </header>
+
+    <main class="mockup-screens">
+
+      <!-- HOME: One-page overview -->
+      <section class="screen active" data-screen="home">
+        <p class="screen-label">One-page view · Раздел E</p>
+        <h2>Product Team Alpha</h2>
+        <p style="font-size:12px;color:var(--muted)">Сентябрь 2026 · 5 человек · Лидер: Мария</p>
+
+        <div class="overview-card">
+          <h3>Концентрации</h3>
+          <div class="overview-row">
+            <span class="tag concentration">Orchestrator ×2</span>
+            <span class="tag concentration">Achiever ×2</span>
+            <span class="tag normal">Driver ×1</span>
+          </div>
+        </div>
+
+        <div class="overview-card">
+          <h3>Пробелы</h3>
+          <div class="overview-row">
+            <span class="tag gap">Influencer ×0</span>
+            <span class="tag gap">Relator ×1</span>
+          </div>
+        </div>
+
+        <div class="overview-card">
+          <h3>Power Combos</h3>
+          <p>Иван + Мария → Visionary + Orchestrator</p>
+          <p>Алекс + Олег → Driver + Optimizer</p>
+        </div>
+
+        <div class="overview-card">
+          <h3>Danger Zone</h3>
+          <p>Алекс ↔ Иван: Driver vs Visionary</p>
+        </div>
+
+        <div class="nav-grid" style="margin-top:8px">
+          <button class="nav-card" data-nav="dimensions">
+            <span class="nav-card-icon">📊</span>
+            <span class="nav-card-label">Dimensions</span>
+            <span class="nav-card-desc">Heatmap C1</span>
+          </button>
+          <button class="nav-card" data-nav="profiles">
+            <span class="nav-card-icon">👥</span>
+            <span class="nav-card-label">Профили</span>
+            <span class="nav-card-desc">Раздел B</span>
+          </button>
+          <button class="nav-card" data-nav="energy">
+            <span class="nav-card-icon">⚡</span>
+            <span class="nav-card-label">Energy</span>
+            <span class="nav-card-desc">Zones C3</span>
+          </button>
+          <button class="nav-card" data-nav="power">
+            <span class="nav-card-icon">🔗</span>
+            <span class="nav-card-label">Combos</span>
+            <span class="nav-card-desc">Раздел C4</span>
+          </button>
+          <button class="nav-card" data-nav="danger">
+            <span class="nav-card-icon">⚠️</span>
+            <span class="nav-card-label">Danger</span>
+            <span class="nav-card-desc">Zones C5</span>
+          </button>
+          <button class="nav-card" data-nav="actions">
+            <span class="nav-card-icon">✅</span>
+            <span class="nav-card-label">Actions</span>
+            <span class="nav-card-desc">90 days D3</span>
+          </button>
+        </div>
+
+        <button class="btn" data-nav="passport" style="margin-top:8px">Паспорт команды →</button>
+      </section>
+
+      <!-- PASSPORT -->
+      <section class="screen" data-screen="passport">
+        <p class="screen-label">Раздел A</p>
+        <h2>Паспорт команды</h2>
+        <dl class="meta-grid">
+          <dt>Команда</dt><dd>Product Team Alpha</dd>
+          <dt>Лидер</dt><dd>Мария (PM)</dd>
+          <dt>Размер</dt><dd>5 человек</dd>
+          <dt>Дата карты</dt><dd>05.09.2026</dd>
+          <dt>Review</dt><dd>05.03.2027</dd>
+          <dt>Миссия</dt><dd>Исследовать продукты и создавать интерактивные концепты для Vaibee</dd>
+          <dt>Задачи</dt><dd>Product research · Click-through prototypes · MCode alignment</dd>
+        </dl>
+        <button class="btn" data-nav="home">← К overview</button>
+      </section>
+
+      <!-- DIMENSIONS HEATMAP -->
+      <section class="screen" data-screen="dimensions">
+        <p class="screen-label">Раздел C1</p>
+        <h2>8 Dimensions</h2>
+        <p class="hint">Top 1 + Top 2 у 5 участников. Influencer — пробел команды.</p>
+
+        <div class="dim-bar-row">
+          <div class="dim-bar-item">
+            <div class="dim-bar-header">
+              <span class="dim-bar-name">Orchestrator <span class="tag concentration">конц.</span></span>
+              <span class="dim-bar-value">4/10</span>
+            </div>
+            <div class="dim-bar-track"><div class="dim-bar-fill high" style="width:40%"></div></div>
+          </div>
+          <div class="dim-bar-item">
+            <div class="dim-bar-header">
+              <span class="dim-bar-name">Driver</span>
+              <span class="dim-bar-value">3/10</span>
+            </div>
+            <div class="dim-bar-track"><div class="dim-bar-fill mid" style="width:30%"></div></div>
+          </div>
+          <div class="dim-bar-item">
+            <div class="dim-bar-header">
+              <span class="dim-bar-name">Achiever</span>
+              <span class="dim-bar-value">3/10</span>
+            </div>
+            <div class="dim-bar-track"><div class="dim-bar-fill mid" style="width:30%"></div></div>
+          </div>
+          <div class="dim-bar-item">
+            <div class="dim-bar-header">
+              <span class="dim-bar-name">Optimizer</span>
+              <span class="dim-bar-value">3/10</span>
+            </div>
+            <div class="dim-bar-track"><div class="dim-bar-fill mid" style="width:30%"></div></div>
+          </div>
+          <div class="dim-bar-item">
+            <div class="dim-bar-header">
+              <span class="dim-bar-name">Visionary</span>
+              <span class="dim-bar-value">2/10</span>
+            </div>
+            <div class="dim-bar-track"><div class="dim-bar-fill low" style="width:20%"></div></div>
+          </div>
+          <div class="dim-bar-item">
+            <div class="dim-bar-header">
+              <span class="dim-bar-name">Learner</span>
+              <span class="dim-bar-value">2/10</span>
+            </div>
+            <div class="dim-bar-track"><div class="dim-bar-fill low" style="width:20%"></div></div>
+          </div>
+          <div class="dim-bar-item">
+            <div class="dim-bar-header">
+              <span class="dim-bar-name">Relator</span>
+              <span class="dim-bar-value">1/10</span>
+            </div>
+            <div class="dim-bar-track"><div class="dim-bar-fill low" style="width:10%"></div></div>
+          </div>
+          <div class="dim-bar-item">
+            <div class="dim-bar-header">
+              <span class="dim-bar-name">Influencer <span class="tag gap">пробел</span></span>
+              <span class="dim-bar-value">0/10</span>
+            </div>
+            <div class="dim-bar-track"><div class="dim-bar-fill gap" style="width:4%"></div></div>
+          </div>
+        </div>
+
+        <button class="btn" data-nav="home">← К overview</button>
+      </section>
+
+      <!-- PROFILES LIST -->
+      <section class="screen" data-screen="profiles">
+        <p class="screen-label">Раздел B1</p>
+        <h2>Участники</h2>
+        <div class="note-list">
+          <button class="list-item" data-nav="profile-alex">
+            <div class="member-avatar a1">А</div>
+            <div class="list-item-body">
+              <div class="list-item-title">Алекс · Tech Lead</div>
+              <div class="dim-pills">
+                <span class="dim-pill">Driver</span>
+                <span class="dim-pill secondary">Achiever</span>
+              </div>
+            </div>
+          </button>
+          <button class="list-item" data-nav="profile-maria">
+            <div class="member-avatar a2">М</div>
+            <div class="list-item-body">
+              <div class="list-item-title">Мария · PM</div>
+              <div class="dim-pills">
+                <span class="dim-pill">Orchestrator</span>
+                <span class="dim-pill secondary">Achiever</span>
+              </div>
+            </div>
+          </button>
+          <button class="list-item" data-nav="profile-ivan">
+            <div class="member-avatar a3">И</div>
+            <div class="list-item-body">
+              <div class="list-item-title">Иван · Designer</div>
+              <div class="dim-pills">
+                <span class="dim-pill">Visionary</span>
+                <span class="dim-pill secondary">Learner</span>
+              </div>
+            </div>
+          </button>
+          <button class="list-item" data-nav="profile-oleg">
+            <div class="member-avatar a4">О</div>
+            <div class="list-item-body">
+              <div class="list-item-title">Олег · Backend</div>
+              <div class="dim-pills">
+                <span class="dim-pill">Optimizer</span>
+                <span class="dim-pill secondary">Learner</span>
+              </div>
+            </div>
+          </button>
+          <button class="list-item" data-nav="profile-anna">
+            <div class="member-avatar a5">А</div>
+            <div class="list-item-body">
+              <div class="list-item-title">Анна · QA</div>
+              <div class="dim-pills">
+                <span class="dim-pill">Relator</span>
+                <span class="dim-pill secondary">Optimizer</span>
+              </div>
+            </div>
+          </button>
+        </div>
+      </section>
+
+      <!-- PROFILE: Alex -->
+      <section class="screen" data-screen="profile-alex">
+        <p class="screen-label">Профиль · B1</p>
+        <h2>Алекс</h2>
+        <p style="font-size:12px;color:var(--muted)">Tech Lead · Driver + Achiever</p>
+        <p style="font-size:11px;color:var(--muted);margin-top:4px">Drain zone: Relator, Visionary</p>
+        <div class="motivation-list" style="margin-top:12px">
+          <div class="motivation-item"><span class="motivation-rank">1</span> Meet the Challenge</div>
+          <div class="motivation-item"><span class="motivation-rank">2</span> Finish</div>
+          <div class="motivation-item"><span class="motivation-rank">3</span> Overcome</div>
+          <div class="motivation-item"><span class="motivation-rank">4</span> Make an Impact</div>
+          <div class="motivation-item"><span class="motivation-rank">5</span> Excel</div>
+        </div>
+        <p class="hint" style="margin-top:12px">1:1 язык: «Сложная задача, нужен breakthrough» · Избегать: рутина без вызова</p>
+        <button class="btn" data-nav="profiles">← К списку</button>
+      </section>
+
+      <!-- PROFILE: Maria -->
+      <section class="screen" data-screen="profile-maria">
+        <p class="screen-label">Профиль · B1</p>
+        <h2>Мария</h2>
+        <p style="font-size:12px;color:var(--muted)">PM · Orchestrator + Achiever</p>
+        <p style="font-size:11px;color:var(--muted);margin-top:4px">Drain zone: Influencer</p>
+        <div class="motivation-list" style="margin-top:12px">
+          <div class="motivation-item"><span class="motivation-rank">1</span> Systematize</div>
+          <div class="motivation-item"><span class="motivation-rank">2</span> Finish</div>
+          <div class="motivation-item"><span class="motivation-rank">3</span> Meet Requirements</div>
+          <div class="motivation-item"><span class="motivation-rank">4</span> Be Key</div>
+          <div class="motivation-item"><span class="motivation-rank">5</span> Make It Work</div>
+        </div>
+        <p class="hint" style="margin-top:12px">1:1 язык: «Собери всех, доведи до релиза» · Owner: Planning, Closing</p>
+        <button class="btn" data-nav="profiles">← К списку</button>
+      </section>
+
+      <!-- PROFILE: Ivan -->
+      <section class="screen" data-screen="profile-ivan">
+        <p class="screen-label">Профиль · B1</p>
+        <h2>Иван</h2>
+        <p style="font-size:12px;color:var(--muted)">Designer · Visionary + Learner</p>
+        <p style="font-size:11px;color:var(--muted);margin-top:4px">Drain zone: Driver</p>
+        <div class="motivation-list" style="margin-top:12px">
+          <div class="motivation-item"><span class="motivation-rank">1</span> Realize the Vision</div>
+          <div class="motivation-item"><span class="motivation-rank">2</span> Design</div>
+          <div class="motivation-item"><span class="motivation-rank">3</span> Explore</div>
+          <div class="motivation-item"><span class="motivation-rank">4</span> Identify Potential</div>
+          <div class="motivation-item"><span class="motivation-rank">5</span> Develop</div>
+        </div>
+        <p class="hint" style="margin-top:12px">1:1 язык: «Представь, как это изменит продукт» · Owner: Ideation</p>
+        <button class="btn" data-nav="profiles">← К списку</button>
+      </section>
+
+      <!-- PROFILE: Oleg -->
+      <section class="screen" data-screen="profile-oleg">
+        <p class="screen-label">Профиль · B1</p>
+        <h2>Олег</h2>
+        <p style="font-size:12px;color:var(--muted)">Backend · Optimizer + Learner</p>
+        <p style="font-size:11px;color:var(--muted);margin-top:4px">Drain zone: Influencer</p>
+        <div class="motivation-list" style="margin-top:12px">
+          <div class="motivation-item"><span class="motivation-rank">1</span> Improve</div>
+          <div class="motivation-item"><span class="motivation-rank">2</span> Do It Right</div>
+          <div class="motivation-item"><span class="motivation-rank">3</span> Mastery</div>
+          <div class="motivation-item"><span class="motivation-rank">4</span> Comprehend &amp; Express</div>
+          <div class="motivation-item"><span class="motivation-rank">5</span> Systematize</div>
+        </div>
+        <p class="hint" style="margin-top:12px">1:1 язык: «Система работает плохо — улучши» · Owner: Optimization</p>
+        <button class="btn" data-nav="profiles">← К списку</button>
+      </section>
+
+      <!-- PROFILE: Anna -->
+      <section class="screen" data-screen="profile-anna">
+        <p class="screen-label">Профиль · B1</p>
+        <h2>Анна</h2>
+        <p style="font-size:12px;color:var(--muted)">QA · Relator + Optimizer</p>
+        <p style="font-size:11px;color:var(--muted);margin-top:4px">Drain zone: Visionary</p>
+        <div class="motivation-list" style="margin-top:12px">
+          <div class="motivation-item"><span class="motivation-rank">1</span> Collaborate</div>
+          <div class="motivation-item"><span class="motivation-rank">2</span> Make the Team</div>
+          <div class="motivation-item"><span class="motivation-rank">3</span> Meet Needs</div>
+          <div class="motivation-item"><span class="motivation-rank">4</span> Do It Right</div>
+          <div class="motivation-item"><span class="motivation-rank">5</span> Improve</div>
+        </div>
+        <p class="hint" style="margin-top:12px">1:1 язык: «Команда нуждается в твоей поддержке» · Owner: Team support</p>
+        <button class="btn" data-nav="profiles">← К списку</button>
+      </section>
+
+      <!-- ENERGY ZONES -->
+      <section class="screen" data-screen="energy">
+        <p class="screen-label">Раздел C3</p>
+        <h2>Energy Zones</h2>
+        <div class="zone-table">
+          <div class="zone-row">
+            <div class="zone-phase">💡 Идеация / Vision</div>
+            <div class="zone-people">
+              <span class="energize">↑ Иван</span> ·
+              <span class="drain">↓ Алекс</span> ·
+              <span class="owner">→ Иван</span>
+            </div>
+          </div>
+          <div class="zone-row">
+            <div class="zone-phase">📋 Планирование</div>
+            <div class="zone-people">
+              <span class="energize">↑ Мария</span> ·
+              <span class="drain">↓ Иван</span> ·
+              <span class="owner">→ Мария</span>
+            </div>
+          </div>
+          <div class="zone-row">
+            <div class="zone-phase">🚀 Execution</div>
+            <div class="zone-people">
+              <span class="energize">↑ Алекс</span> ·
+              <span class="drain">↓ Анна</span> ·
+              <span class="owner">→ Алекс</span>
+            </div>
+          </div>
+          <div class="zone-row">
+            <div class="zone-phase">⚙️ Оптимизация</div>
+            <div class="zone-people">
+              <span class="energize">↑ Олег</span> ·
+              <span class="owner">→ Олег</span>
+            </div>
+          </div>
+          <div class="zone-row">
+            <div class="zone-phase">🏁 Closing</div>
+            <div class="zone-people">
+              <span class="energize">↑ Мария, Алекс</span> ·
+              <span class="owner">→ Мария</span>
+            </div>
+          </div>
+          <div class="zone-row">
+            <div class="zone-phase">📢 Stakeholders</div>
+            <div class="zone-people">
+              <span class="drain">↓ вся команда</span> ·
+              <span class="tag gap">пробел Influencer</span>
+            </div>
+          </div>
+          <div class="zone-row">
+            <div class="zone-phase">🤝 Поддержка команды</div>
+            <div class="zone-people">
+              <span class="energize">↑ Анна</span> ·
+              <span class="owner">→ Анна</span>
+            </div>
+          </div>
+          <div class="zone-row">
+            <div class="zone-phase">🔥 Кризис</div>
+            <div class="zone-people">
+              <span class="energize">↑ Алекс</span> ·
+              <span class="drain">↓ Иван</span> ·
+              <span class="owner">→ Алекс + Олег</span>
+            </div>
+          </div>
+        </div>
+        <button class="btn" data-nav="home">← К overview</button>
+      </section>
+
+      <!-- POWER COMBOS -->
+      <section class="screen" data-screen="power">
+        <p class="screen-label">Раздел C4</p>
+        <h2>Power Combos</h2>
+        <div class="combo-card">
+          <h4>Иван + Мария</h4>
+          <p><strong>Visionary + Orchestrator</strong></p>
+          <p>Идея → структура → дедлайн. Лучше для: новый продукт, roadmap.</p>
+        </div>
+        <div class="combo-card">
+          <h4>Алекс + Олег</h4>
+          <p><strong>Driver + Optimizer</strong></p>
+          <p>Пробить + улучшить процесс. Лучше для: техдолг, инциденты.</p>
+        </div>
+        <div class="combo-card">
+          <h4>Анна + Мария</h4>
+          <p><strong>Relator + Orchestrator</strong></p>
+          <p>Результат + buy-in команды. Лучше для: онboarding, ретро.</p>
+        </div>
+        <button class="btn" data-nav="home">← К overview</button>
+      </section>
+
+      <!-- DANGER ZONES -->
+      <section class="screen" data-screen="danger">
+        <p class="screen-label">Раздел C5</p>
+        <h2>Danger Zones</h2>
+        <div class="danger-card">
+          <h4>Алекс ↔ Иван</h4>
+          <p><strong>Driver vs Visionary</strong></p>
+          <p>«Давай быстрее» vs «ещё идеи»</p>
+          <p class="hint" style="margin-top:8px;background:none;padding:0">Framing: «Нам нужен и Finish, и Explore — разделим фазы»</p>
+        </div>
+        <div class="danger-card">
+          <h4>Мария ↔ Иван</h4>
+          <p><strong>Orchestrator vs Visionary</strong></p>
+          <p>Процесс vs свобода</p>
+          <p class="hint" style="margin-top:8px;background:none;padding:0">Framing: «Ты — vision, я — structure; границы фазы X»</p>
+        </div>
+        <div class="danger-card">
+          <h4>Олег ↔ Алекс</h4>
+          <p><strong>Optimizer vs Driver</strong></p>
+          <p>«Сначала правильно» vs «go»</p>
+          <p class="hint" style="margin-top:8px;background:none;padding:0">Framing: «Clash Do It Right и Overcome — timebox на каждую фазу»</p>
+        </div>
+        <button class="btn" data-nav="home">← К overview</button>
+      </section>
+
+      <!-- 90-DAY ACTIONS -->
+      <section class="screen" data-screen="actions">
+        <p class="screen-label">Раздел D3</p>
+        <h2>План 90 дней</h2>
+        <div class="action-row">
+          <div class="action-check"></div>
+          <div class="action-text">
+            Назначить внешнего «Influencer» на stakeholder-презентации
+            <div class="action-meta">Компенсация пробела · Owner: Мария · 30 дней</div>
+          </div>
+        </div>
+        <div class="action-row">
+          <div class="action-check"></div>
+          <div class="action-text">
+            Разделить ideation / execution фазы в спринтах
+            <div class="action-meta">Danger zone Алекс↔Иван · Owner: Мария · 14 дней</div>
+          </div>
+        </div>
+        <div class="action-row">
+          <div class="action-check"></div>
+          <div class="action-text">
+            Еженедельные 1:1 на мотивационном языке (D2)
+            <div class="action-meta">Relator support · Owner: Анна · ongoing</div>
+          </div>
+        </div>
+        <div class="action-row">
+          <div class="action-check"></div>
+          <div class="action-text">
+            Пара Иван+Мария ведёт roadmap Q4
+            <div class="action-meta">Power combo V+Or · Owner: Иван · 60 дней</div>
+          </div>
+        </div>
+        <div class="action-row">
+          <div class="action-check done"></div>
+          <div class="action-text">
+            Заполнить Team Motivational Map
+            <div class="action-meta">Baseline · Owner: Мария · Done ✓</div>
+          </div>
+        </div>
+        <button class="btn" data-nav="home">← К overview</button>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
