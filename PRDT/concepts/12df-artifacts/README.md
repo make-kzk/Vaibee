@@ -47,4 +47,4 @@ HR, руководители и фасилитаторы не читают 40-с
 
 ## Прототип
 
-После сборки агентом: [prototype/index.html](./prototype/index.html)
+Открыть: [prototype/index.html](./prototype/index.html) — click-through всех артефактов A–H на демо-данных Ивана Петрова и команды «Продукт Альфа».
