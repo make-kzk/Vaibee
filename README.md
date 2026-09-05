@@ -35,40 +35,40 @@ Vaibee/
 
 | Раздел | Путь | Описание |
 |--------|------|----------|
-| MCode | [RSCH/RSCH-02/02-01-00-MCode/](./RSCH/RSCH-02/02-01-00-MCode/) | Motivation Code — мотивация в коллективах |
-| 12 Driving Forces | [RSCH/RSCH-02/02-02-00-12DF/](./RSCH/RSCH-02/02-02-00-12DF/) | TTI Success Insights — мотиваторы и драйверы |
+| MCode | [RSCH/RSCH-02/RSCH-02-01-00-MCode/](./RSCH/RSCH-02/RSCH-02-01-00-MCode/) | Motivation Code — мотивация в коллективах |
+| 12 Driving Forces | [RSCH/RSCH-02/RSCH-02-02-00-12DF/](./RSCH/RSCH-02/RSCH-02-02-00-12DF/) | TTI Success Insights — мотиваторы и драйверы |
 
-### Правила оформления раздела `02-0X-00-[ShortCode]`
+### Правила оформления раздела `RSCH-02-0X-00-[ShortCode]`
 
-Каждый раздел — **папка** в `RSCH/RSCH-02/` с кодом `02-0X-00-[ShortCode]`:
+Каждый раздел — **папка** в `RSCH/RSCH-02/` с кодом `RSCH-02-0X-00-[ShortCode]`:
 
 | Часть кода | Значение | Пример |
 |------------|----------|--------|
-| `02` | Блок «Методологии» | — |
+| `RSCH-02` | Блок «Методологии» в RSCH | — |
 | `0X` | Номер раздела в блоке | `01`, `02` |
-| `00` | Индекс раздела (оглавление) | всегда `00` в имени папки |
+| `00` | Индекс раздела (оглавление) | всегда `00` |
 | `[ShortCode]` | Краткий код методологии | `MCode`, `12DF` |
 
 **Структура папки:**
 
 ```
-02-0X-00-[ShortCode]/
-├── README.md                    # Оглавление (# RSCH-02-0X-00-[ShortCode])
-├── 02-0X-01-[ShortCode].md      # Страница 01 (обычно — исследование)
-├── 02-0X-02-[ShortCode].md      # Страница 02 (практика, шаблон)
+RSCH-02-0X-00-[ShortCode]/
+├── README.md                                      # Оглавление (# RSCH-02-0X-00-[ShortCode])
+├── RSCH-02-0X-01-[ShortCode] — Название.md        # Страница 01
+├── RSCH-02-0X-02-[ShortCode] — Название.md        # Страница 02
 └── …
 ```
 
 **Правила:**
 
-1. **Папка раздела** — только `02-0X-00-[ShortCode]`. Код `00` зарезервирован за оглавлением.
+1. **Папка раздела** — `RSCH-02-0X-00-[ShortCode]`. Код `00` зарезервирован за оглавлением (README).
 2. **Страницы** — `RSCH-02-0X-0N-[ShortCode] — Название.md`, где `N` = `01`, `02`, `03`…
 3. **README раздела** — заголовок `# RSCH-02-0X-00-[ShortCode]`, таблица «Страницы», блок «Источники».
 4. **Заголовок страницы** — `# RSCH-02-0X-0N-[ShortCode] — Название` (совпадает с именем файла без `.md`).
 5. **Шапка страницы** — метаданные и ссылка на раздел:
    ```markdown
    > Дата / контекст  
-   > Раздел: [02-0X-00-[ShortCode]](./README.md)
+   > Раздел: [RSCH-02-0X-00-[ShortCode]](./README.md)
    ```
 6. **Язык** — русский; англицизмы и смешанная кириллица/латиница в одном слове недопустимы.
 7. **Нумерация разделов** — сквозная внутри страницы: `## 1. …`, `## 2. …`.
@@ -77,10 +77,10 @@ Vaibee/
 
 | Тип | Путь |
 |-----|------|
-| Оглавление | [RSCH/RSCH-02/02-02-00-12DF/README.md](./RSCH/RSCH-02/02-02-00-12DF/README.md) |
-| Исследование | [RSCH-02-02-01-12DF — Исследование методологии 12 Driving Forces.md](./RSCH/RSCH-02/02-02-00-12DF/RSCH-02-02-01-12DF — Исследование методологии 12 Driving Forces.md) |
-| Результат для бизнеса | [RSCH-02-02-02-12DF — Результат 12 Driving Forces для бизнеса.md](./RSCH/RSCH-02/02-02-00-12DF/RSCH-02-02-02-12DF — Результат 12 Driving Forces для бизнеса.md) |
-| Артефакты | [RSCH-02-02-03-12DF — Артефакты практических бизнес-результатов.md](./RSCH/RSCH-02/02-02-00-12DF/RSCH-02-02-03-12DF — Артефакты практических бизнес-результатов.md) |
+| Оглавление | [RSCH/RSCH-02/RSCH-02-02-00-12DF/README.md](./RSCH/RSCH-02/RSCH-02-02-00-12DF/README.md) |
+| Исследование | [RSCH-02-02-01-12DF — Исследование методологии 12 Driving Forces.md](./RSCH/RSCH-02/RSCH-02-02-00-12DF/RSCH-02-02-01-12DF — Исследование методологии 12 Driving Forces.md) |
+| Результат для бизнеса | [RSCH-02-02-02-12DF — Результат 12 Driving Forces для бизнеса.md](./RSCH/RSCH-02/RSCH-02-02-00-12DF/RSCH-02-02-02-12DF — Результат 12 Driving Forces для бизнеса.md) |
+| Артефакты | [RSCH-02-02-03-12DF — Артефакты практических бизнес-результатов.md](./RSCH/RSCH-02/RSCH-02-02-00-12DF/RSCH-02-02-03-12DF — Артефакты практических бизнес-результатов.md) |
 
 ## Workflow
 
@@ -123,8 +123,8 @@ cp -r SYST/templates/concept PRDT/concepts/my-concept
 | Тип | Путь |
 |-----|------|
 | Research (продукт) | [RSCH/RSCH-01/products/notion/](./RSCH/RSCH-01/products/notion/) |
-| Methodology (MCode) | [RSCH/RSCH-02/02-01-00-MCode/](./RSCH/RSCH-02/02-01-00-MCode/) |
-| Methodology (12DF) | [RSCH/RSCH-02/02-02-00-12DF/](./RSCH/RSCH-02/02-02-00-12DF/) |
+| Methodology (MCode) | [RSCH/RSCH-02/RSCH-02-01-00-MCode/](./RSCH/RSCH-02/RSCH-02-01-00-MCode/) |
+| Methodology (12DF) | [RSCH/RSCH-02/RSCH-02-02-00-12DF/](./RSCH/RSCH-02/RSCH-02-02-00-12DF/) |
 | Concept | [PRDT/concepts/vaibee-notes/prototype/](./PRDT/concepts/vaibee-notes/prototype/) |
 
 ## Работа с Cursor
