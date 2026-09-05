@@ -131,3 +131,4 @@ cp -r SYST/templates/concept PRDT/concepts/my-concept
 
 - «Исследуй {продукт} и залогируй в Vaibee» → создаст research + обновит catalog
 - «Создай click-through концепт на основе research {slug}» → concepts + prototype
+- «Собери мокап 12DF артефактов» → [PRDT/concepts/12df-artifacts/AGENT-PROMPT.md](./PRDT/concepts/12df-artifacts/AGENT-PROMPT.md) (SSOT: [RSCH-02-02-03-12DF](./RSCH/RSCH-02/RSCH-02-02-00-12DF/RSCH-02-02-03-12DF — Артефакты практических бизнес-результатов.md))
