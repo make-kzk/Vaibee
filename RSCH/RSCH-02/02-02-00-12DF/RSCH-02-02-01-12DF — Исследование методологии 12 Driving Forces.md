@@ -404,8 +404,8 @@ Behavior (DISC) — измеряется
 
 ## Источники
 
-- [02-02-02-12DF — Результат для бизнеса](./02-02-02-12DF.md)
-- [02-02-03-12DF — Артефакты практических результатов](./02-02-03-12DF.md)
+- [RSCH-02-02-02-12DF — Результат 12 Driving Forces для бизнеса](./RSCH-02-02-02-12DF — Результат 12 Driving Forces для бизнеса.md)
+- [RSCH-02-02-03-12DF — Артефакты практических бизнес-результатов](./RSCH-02-02-03-12DF — Артефакты практических бизнес-результатов.md)
 - [TTI Success Insights — 12 Driving Forces](https://www.ttisi.com/assessments/12-driving-forces/)
 - [12 Driving Forces Manual (TTI, 2016)](https://new.ttisuccessinsightsvaa.co.uk/wp-content/uploads/2021/02/12df_manual.pdf)
 - [Motivation Insights Technical Manual (TTI, 2020)](https://new.ttisuccessinsightsvaa.co.uk/wp-content/uploads/2020/10/PIAV2techman_2020_v1.pdf)
