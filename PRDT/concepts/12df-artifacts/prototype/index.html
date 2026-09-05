@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>12DF Artifacts</title>
+  <link rel="stylesheet" href="../../../../SYST/assets/mockup.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="mockup-frame">
+    <header class="mockup-header">
+      <button class="back-btn" hidden aria-label="Назад">←</button>
+      <h1 class="mockup-title">12DF Artifacts</h1>
+    </header>
+
+    <main class="mockup-screens">
+
+      <!-- HOME -->
+      <section class="screen active" data-screen="home">
+        <p class="screen-label">12 Driving Forces · TTI</p>
+        <h2>Артефакты A–H</h2>
+        <p style="font-size:12px">Демо: Иван Петров · команда «Продукт Альфа»</p>
+
+        <div class="overview-card">
+          <h3>Цепочка артефактов</h3>
+          <div class="flow-chain">
+            Отчёт TTI → <strong>Карточка кластера</strong> → <strong>Лист разбора</strong> → <strong>План действий</strong><br>
+            ↓ (команда) <strong>Карта команды</strong> → <strong>Матрица напряжений</strong><br>
+            ↓ (роль) <strong>Эталон должности</strong> · <strong>Протокол 1:1</strong>
+          </div>
+        </div>
+
+        <div class="overview-card">
+          <h3>Кейс: удержание (§11)</h3>
+          <p style="margin-bottom:8px;font-size:11px;color:var(--muted)">Сильный Product Lead демотивирован после «заморозки» инициативы</p>
+          <div class="case-steps">
+            <button class="case-step" data-nav="report-a">
+              <span class="case-step-num">1</span>
+              <span class="case-step-body">Отчёт TTI — первичный кластер<span class="case-step-artifact"> · A</span></span>
+            </button>
+            <button class="case-step" data-nav="cluster-b">
+              <span class="case-step-num">2</span>
+              <span class="case-step-body">Карточка: отдача, видимость, новизна<span class="case-step-artifact"> · B</span></span>
+            </button>
+            <button class="case-step" data-nav="debrief-c">
+              <span class="case-step-num">3</span>
+              <span class="case-step-body">Разбор: заморозка ударила по 4 драйверам<span class="case-step-artifact"> · C</span></span>
+            </button>
+            <button class="case-step" data-nav="plan-d">
+              <span class="case-step-num">4</span>
+              <span class="case-step-body">План: пилот + показатели + исследование<span class="case-step-artifact"> · D</span></span>
+            </button>
+            <button class="case-step" data-nav="oneone-h">
+              <span class="case-step-num">5</span>
+              <span class="case-step-body">1:1 через месяц — энергия вернулась<span class="case-step-artifact"> · H</span></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="nav-grid">
+          <button class="nav-card" data-nav="report-a">
+            <span class="nav-card-icon">📄</span>
+            <span class="nav-card-label">Отчёт</span>
+            <span class="nav-card-desc">Артефакт A</span>
+          </button>
+          <button class="nav-card" data-nav="cluster-b">
+            <span class="nav-card-icon">🎯</span>
+            <span class="nav-card-label">Кластер</span>
+            <span class="nav-card-desc">Артефакт B</span>
+          </button>
+          <button class="nav-card" data-nav="debrief-c">
+            <span class="nav-card-icon">💬</span>
+            <span class="nav-card-label">Разбор</span>
+            <span class="nav-card-desc">Артефакт C</span>
+          </button>
+          <button class="nav-card" data-nav="plan-d">
+            <span class="nav-card-icon">✅</span>
+            <span class="nav-card-label">План</span>
+            <span class="nav-card-desc">Артефакт D</span>
+          </button>
+          <button class="nav-card" data-nav="team-e">
+            <span class="nav-card-icon">👥</span>
+            <span class="nav-card-label">Команда</span>
+            <span class="nav-card-desc">Артефакт E</span>
+          </button>
+          <button class="nav-card" data-nav="tension-f">
+            <span class="nav-card-icon">⚡</span>
+            <span class="nav-card-label">Напряжения</span>
+            <span class="nav-card-desc">Артефакт F</span>
+          </button>
+          <button class="nav-card" data-nav="benchmark-g">
+            <span class="nav-card-icon">📋</span>
+            <span class="nav-card-label">Эталон</span>
+            <span class="nav-card-desc">Артефакт G</span>
+          </button>
+          <button class="nav-card" data-nav="oneone-h">
+            <span class="nav-card-icon">🤝</span>
+            <span class="nav-card-label">1:1</span>
+            <span class="nav-card-desc">Артефакт H</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- REPORT A -->
+      <section class="screen" data-screen="report-a">
+        <p class="screen-label">Артефакт A · Персональный отчёт</p>
+        <h2>Иван Петров</h2>
+        <dl class="meta-grid">
+          <dt>Дата</dt><dd>2026-09-05</dd>
+          <dt>Отчёт</dt><dd>12 Driving Forces, ~14 стр.</dd>
+          <dt>Роль</dt><dd>Руководитель продукта</dd>
+        </dl>
+
+        <div class="overview-card">
+          <h3>Топ-4 (первичный кластер)</h3>
+          <div class="dim-bar-row">
+            <div class="dim-bar-item primary">
+              <div class="dim-bar-header"><span class="dim-bar-name">Прагматичный</span><span class="dim-bar-value">94</span></div>
+              <div class="dim-bar-track"><div class="dim-bar-fill primary" style="width:94%"></div></div>
+            </div>
+            <div class="dim-bar-item primary">
+              <div class="dim-bar-header"><span class="dim-bar-name">Директивный</span><span class="dim-bar-value">89</span></div>
+              <div class="dim-bar-track"><div class="dim-bar-fill primary" style="width:89%"></div></div>
+            </div>
+            <div class="dim-bar-item primary">
+              <div class="dim-bar-header"><span class="dim-bar-name">Интеллектуальный</span><span class="dim-bar-value">86</span></div>
+              <div class="dim-bar-track"><div class="dim-bar-fill primary" style="width:86%"></div></div>
+            </div>
+            <div class="dim-bar-item primary">
+              <div class="dim-bar-header"><span class="dim-bar-name">Восприимчивый</span><span class="dim-bar-value">82</span></div>
+              <div class="dim-bar-track"><div class="dim-bar-fill primary" style="width:82%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="link-row">
+          <button class="btn" data-nav="report-a2">Все 12 сил →</button>
+          <button class="btn" data-nav="report-a3">Портрет и кластеры →</button>
+          <button class="btn" data-nav="report-a4">Стресс и коммуникация →</button>
+        </div>
+      </section>
+
+      <!-- REPORT A2 -->
+      <section class="screen" data-screen="report-a2">
+        <p class="screen-label">A2 · Ранжирование</p>
+        <h2>12 движущих сил</h2>
+
+        <div class="dim-bar-row">
+          <div class="dim-bar-item primary">
+            <div class="dim-bar-header"><span class="dim-bar-name">1. Прагматичный <span class="tag tag-primary">Первичный</span></span><span class="dim-bar-value">94 · Польза</span></div>
+            <div class="dim-bar-track"><div class="dim-bar-fill primary" style="width:94%"></div></div>
+          </div>
+          <div class="dim-bar-item primary">
+            <div class="dim-bar-header"><span class="dim-bar-name">2. Директивный <span class="tag tag-primary">Первичный</span></span><span class="dim-bar-value">89 · Власть</span></div>
+            <div class="dim-bar-track"><div class="dim-bar-fill primary" style="width:89%"></div></div>
+          </div>
+          <div class="dim-bar-item primary">
+            <div class="dim-bar-header"><span class="dim-bar-name">3. Интеллектуальный <span class="tag tag-primary">Первичный</span></span><span class="dim-bar-value">86 · Знание</span></div>
+            <div class="dim-bar-track"><div class="dim-bar-fill primary" style="width:86%"></div></div>
+          </div>
+          <div class="dim-bar-item primary">
+            <div class="dim-bar-header"><span class="dim-bar-name">4. Восприимчивый <span class="tag tag-primary">Первичный</span></span><span class="dim-bar-value">82 · Метод</span></div>
+            <div class="dim-bar-track"><div class="dim-bar-fill primary" style="width:82%"></div></div>
+          </div>
+          <div class="dim-bar-item">
+            <div class="dim-bar-header"><span class="dim-bar-name">5. Целенаправленный <span class="tag tag-situational">Ситуативный</span></span><span class="dim-bar-value">71 · Люди</span></div>
+            <div class="dim-bar-track"><div class="dim-bar-fill situational" style="width:71%"></div></div>
+          </div>
+          <div class="dim-bar-item">
+            <div class="dim-bar-header"><span class="dim-bar-name">6. Объективный <span class="tag tag-situational">Ситуативный</span></span><span class="dim-bar-value">68 · Окружение</span></div>
+            <div class="dim-bar-track"><div class="dim-bar-fill situational" style="width:68%"></div></div>
+          </div>
+          <div class="dim-bar-item">
+            <div class="dim-bar-header"><span class="dim-bar-name">7. Структурированный <span class="tag tag-situational">Ситуативный</span></span><span class="dim-bar-value">65 · Метод</span></div>
+            <div class="dim-bar-track"><div class="dim-bar-fill situational" style="width:65%"></div></div>
+          </div>
+          <div class="dim-bar-item">
+            <div class="dim-bar-header"><span class="dim-bar-name">8. Инстинктивный <span class="tag tag-situational">Ситуативный</span></span><span class="dim-bar-value">62 · Знание</span></div>
+            <div class="dim-bar-track"><div class="dim-bar-fill situational" style="width:62%"></div></div>
+          </div>
+          <div class="dim-bar-item">
+            <div class="dim-bar-header"><span class="dim-bar-name">9. Коллективный <span class="tag tag-indifferent">Безразличный</span></span><span class="dim-bar-value">45 · Власть</span></div>
+            <div class="dim-bar-track"><div class="dim-bar-fill indifferent" style="width:45%"></div></div>
+          </div>
+          <div class="dim-bar-item">
+            <div class="dim-bar-header"><span class="dim-bar-name">10. Бескорыстный <span class="tag tag-indifferent">Безразличный</span></span><span class="dim-bar-value">38 · Польза</span></div>
+            <div class="dim-bar-track"><div class="dim-bar-fill indifferent" style="width:38%"></div></div>
+          </div>
+          <div class="dim-bar-item">
+            <div class="dim-bar-header"><span class="dim-bar-name">11. Гармоничный <span class="tag tag-indifferent">Безразличный</span></span><span class="dim-bar-value">22 · Окружение</span></div>
+            <div class="dim-bar-track"><div class="dim-bar-fill indifferent" style="width:22%"></div></div>
+          </div>
+          <div class="dim-bar-item">
+            <div class="dim-bar-header"><span class="dim-bar-name">12. Альтруистичный <span class="tag tag-indifferent">Безразличный</span></span><span class="dim-bar-value">12 · Люди</span></div>
+            <div class="dim-bar-track"><div class="dim-bar-fill indifferent" style="width:12%"></div></div>
+          </div>
+        </div>
+
+        <button class="btn" data-nav="report-a3">Портрет →</button>
+      </section>
+
+      <!-- REPORT A3 -->
+      <section class="screen" data-screen="report-a3">
+        <p class="screen-label">A3 · Интерпретация</p>
+        <h2>Портрет</h2>
+
+        <div class="portrait-block">
+          <h4>Общие характеристики</h4>
+          <p>Иван ориентирован на <strong>измеримый результат</strong> и личное влияние на направление продукта. Энергия растёт, когда видна связь между усилиями, данными и отдачей для бизнеса.</p>
+          <p>Сочетает аналитическую глубину с запросом на новизну — важно понимать рынок не ради абстракции, а чтобы быстрее найти работающий подход.</p>
+        </div>
+
+        <div class="portrait-block">
+          <h4>Первичный кластер</h4>
+          <p><strong>Прагматичный + Директивный + Интеллектуальный + Восприимчивый</strong> — профиль «лидера-новатора с фокусом на отдачу».</p>
+          <p>Запуск нового продукта «кормит» весь кластер; рутинная отчётность без влияния на решения — не кормит ни одну из четырёх.</p>
+        </div>
+
+        <div class="portrait-block">
+          <h4>Ситуативный кластер</h4>
+          <ul>
+            <li><strong>Целенаправленный</strong> — взаимная выгода со стейкхолдерами</li>
+            <li><strong>Объективный</strong> — функциональность, не «красота» презентации</li>
+            <li><strong>Структурированный</strong> — регламенты при масштабировании</li>
+            <li><strong>Инстинктивный</strong> — опыт, когда нет времени на исследование</li>
+          </ul>
+        </div>
+
+        <div class="portrait-block">
+          <h4>Безразличный кластер</h4>
+          <ul>
+            <li>Может недооценивать инициативы «ради людей» без бизнес-отдачи</li>
+            <li>Командное признание без личной видимости результата не заряжает</li>
+            <li>Долгие обсуждения «атмосферы» без решения задачи — раздражение</li>
+          </ul>
+        </div>
+
+        <div class="portrait-block">
+          <h4>Зоны осознанности</h4>
+          <table class="data-table">
+            <tr><th>Драйвер</th><th>Риск</th></tr>
+            <tr><td>Прагматичный</td><td>Трудоголизм; «даю только если есть return»</td></tr>
+            <tr><td>Директивный</td><td>Контроль ради статуса</td></tr>
+            <tr><td>Интеллектуальный</td><td>Анализ без действия</td></tr>
+            <tr><td>Восприимчивый</td><td>Изменения ради изменений</td></tr>
+          </table>
+        </div>
+
+        <button class="btn" data-nav="cluster-b">Карточка кластера →</button>
+      </section>
+
+      <!-- REPORT A4 -->
+      <section class="screen" data-screen="report-a4">
+        <p class="screen-label">A4 · Стресс и коммуникация</p>
+        <h2>Факторы стресса</h2>
+
+        <table class="data-table">
+          <tr><th>#</th><th>Фактор</th><th>Драйвер</th></tr>
+          <tr><td>1</td><td>Время и ресурсы без измеримой отдачи</td><td>Прагматичный</td></tr>
+          <tr><td>2</td><td>Работа «за кулисами» без видимости и полномочий</td><td>Директивный</td></tr>
+          <tr><td>3</td><td>Решения без данных; ограничение доступа к информации</td><td>Интеллектуальный</td></tr>
+          <tr><td>4</td><td>Блокировка экспериментов: «мы всегда так делали»</td><td>Восприимчивый</td></tr>
+        </table>
+
+        <h2 style="font-size:16px;margin-top:8px">Советы по коммуникации</h2>
+        <table class="data-table">
+          <tr><th>#</th><th>Совет</th></tr>
+          <tr><td>1</td><td>Опирайтесь на метрики, ROI, эффективность</td></tr>
+          <tr><td>2</td><td>Давайте статус решения: кто принимает, где видно</td></tr>
+          <tr><td>3</td><td>Подкрепляйте аргументы фактами и полным контекстом</td></tr>
+          <tr><td>4</td><td>Новые подходы — как гипотезы с критериями проверки</td></tr>
+        </table>
+
+        <button class="btn" data-nav="debrief-c">Лист разбора →</button>
+      </section>
+
+      <!-- CLUSTER B -->
+      <section class="screen" data-screen="cluster-b">
+        <p class="screen-label">Артефакт B</p>
+        <div class="cluster-card">
+          <div class="cluster-card-header">Карточка первичного кластера</div>
+          <div class="cluster-section">
+            <dl class="meta-grid">
+              <dt>Сотрудник</dt><dd>Иван Петров</dd>
+              <dt>Роль</dt><dd>Руководитель продукта</dd>
+              <dt>Дата</dt><dd>2026-09-05</dd>
+            </dl>
+          </div>
+          <div class="cluster-section">
+            <h4>Первичный кластер (топ-4)</h4>
+            <div class="cluster-drivers">
+              <div class="cluster-driver"><span>1. Прагматичный</span><span class="cluster-driver-desc">ROI, эффективность</span></div>
+              <div class="cluster-driver"><span>2. Директивный</span><span class="cluster-driver-desc">статус, контроль</span></div>
+              <div class="cluster-driver"><span>3. Интеллектуальный</span><span class="cluster-driver-desc">обучение, исследование</span></div>
+              <div class="cluster-driver"><span>4. Восприимчивый</span><span class="cluster-driver-desc">новые методы, эксперименты</span></div>
+            </div>
+          </div>
+          <div class="cluster-section">
+            <h4>Формулировка</h4>
+            <p>«Ищет измеримый результат через новые подходы, опираясь на знания и личное влияние.»</p>
+          </div>
+          <div class="cluster-section">
+            <div class="two-col">
+              <div class="charge-col charge">
+                <h4>Что заряжает</h4>
+                <ul>
+                  <li>KPI с видимостью</li>
+                  <li>Задачи на исследование</li>
+                  <li>Пилоты и инновации</li>
+                </ul>
+              </div>
+              <div class="charge-col drain">
+                <h4>Что истощает</h4>
+                <ul>
+                  <li>Работа без отдачи</li>
+                  <li>Микроменеджмент без полномочий</li>
+                  <li>«Делаем как всегда»</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="cluster-section">
+            <h4>Безразличный кластер (риск конфликта)</h4>
+            <p>Альтруистичный · Коллективный · Гармоничный · Бескорыстный</p>
+          </div>
+        </div>
+
+        <div class="link-row">
+          <button class="btn" data-nav="report-a3">Полный портрет →</button>
+          <button class="btn" data-nav="debrief-c">Лист разбора →</button>
+        </div>
+      </section>
+
+      <!-- DEBRIEF C -->
+      <section class="screen" data-screen="debrief-c">
+        <p class="screen-label">Артефакт C · ~45–60 мин</p>
+        <h2>Лист разбора</h2>
+        <p class="hint">Техника: верно — неверно — уточнить</p>
+
+        <div class="debrief-row">
+          <div class="q">Общие характеристики</div>
+          <div class="a">«Да, про поиск эффективности — точно»</div>
+          <span class="status-badge ok">✅ Верно</span>
+        </div>
+        <div class="debrief-row">
+          <div class="q">Первичный кластер</div>
+          <div class="a">«Прагматичный и директивный резонируют сильнее всего»</div>
+          <span class="status-badge ok">✅ Верно</span>
+        </div>
+        <div class="debrief-row">
+          <div class="q">Роль сегодня</div>
+          <div class="a">«Запуск продукта — да; рутина отчётов — нет»</div>
+          <span class="status-badge warn">⚠️ Уточнить</span>
+        </div>
+        <div class="debrief-row">
+          <div class="q">Стресс</div>
+          <div class="a">«Нет полномочий принимать решения»</div>
+          <span class="status-badge ok">✅ Верно</span>
+        </div>
+        <div class="debrief-row">
+          <div class="q">Безразличие</div>
+          <div class="a">«С аналитиком, которому важна помощь людям»</div>
+          <span class="status-badge ok">✅ Верно</span>
+        </div>
+
+        <div class="overview-card">
+          <h3>Итог сессии</h3>
+          <p>1. «Заморозка» пилота ударила по всем четырём драйверам первичного кластера.</p>
+          <p>2. Риск: роль без видимости решений и экспериментов → цинизм за 2–3 месяца.</p>
+          <p>3. Изменение: показатели пилота на комитет + 4 ч/нед на исследование рынка.</p>
+        </div>
+
+        <button class="btn primary" data-nav="plan-d">План из итога сессии →</button>
+      </section>
+
+      <!-- PLAN D -->
+      <section class="screen" data-screen="plan-d">
+        <p class="screen-label">Артефакт D</p>
+        <h2>План действий</h2>
+
+        <div class="action-row">
+          <div class="action-check"></div>
+          <div class="action-text">
+            <strong>1.</strong> Вынести показатели нового продукта на комитет руководства
+            <div class="action-meta">Директивный · 2 нед. · Иван + CEO</div>
+          </div>
+        </div>
+        <div class="action-row">
+          <div class="action-check"></div>
+          <div class="action-text">
+            <strong>2.</strong> Выделить 4 ч/нед на исследование рынка
+            <div class="action-meta">Интеллектуальный · постоянно · Иван</div>
+          </div>
+        </div>
+        <div class="action-row">
+          <div class="action-check"></div>
+          <div class="action-text">
+            <strong>3.</strong> Пилот нового процесса исследования (не в регламенте)
+            <div class="action-meta">Восприимчивый · 1 мес. · Иван + команда</div>
+          </div>
+        </div>
+        <div class="action-row">
+          <div class="action-check"></div>
+          <div class="action-text">
+            <strong>4.</strong> Привязать бонус Q4 к измеримому возврату пилота
+            <div class="action-meta">Прагматичный · квартал · кадры + руководитель</div>
+          </div>
+        </div>
+
+        <div class="overview-card">
+          <h3>Критерий успеха (3 мес.)</h3>
+          <div class="action-row" style="margin:0;padding:8px 0;background:none;border:none">
+            <div class="action-check"></div>
+            <div class="action-text">≥2 пункта плана «дают энергию»</div>
+          </div>
+          <div class="action-row" style="margin:0;padding:8px 0;background:none;border:none">
+            <div class="action-check"></div>
+            <div class="action-text">Нет новых сигналов выгорания</div>
+          </div>
+          <div class="action-row" style="margin:0;padding:8px 0;background:none;border:none">
+            <div class="action-check"></div>
+            <div class="action-text">Руководитель адаптировал ≥1 элемент награды</div>
+          </div>
+        </div>
+
+        <button class="btn" data-nav="oneone-h">Протокол через месяц →</button>
+      </section>
+
+      <!-- TEAM E -->
+      <section class="screen" data-screen="team-e">
+        <p class="screen-label">Артефакт E</p>
+        <h2>Карта команды</h2>
+        <dl class="meta-grid">
+          <dt>Команда</dt><dd>Продукт «Альфа»</dd>
+          <dt>Лидер</dt><dd>Мария Соколова</dd>
+          <dt>Размер</dt><dd>6 человек</dd>
+          <dt>Задача</dt><dd>Запуск MVP за Q4</dd>
+        </dl>
+
+        <p style="font-size:12px;margin-top:4px">Нажмите участника для профиля</p>
+        <div class="note-list">
+          <button class="list-item" data-nav="member-ivan">
+            <div class="member-avatar a1">И</div>
+            <div class="list-item-body">
+              <div class="list-item-title">Иван · Руководитель продукта</div>
+              <div class="dim-pills">
+                <span class="dim-pill">Прагматичный</span>
+                <span class="dim-pill">Директивный</span>
+                <span class="dim-pill">Интеллектуальный</span>
+                <span class="dim-pill">Восприимчивый</span>
+              </div>
+            </div>
+          </button>
+          <button class="list-item" data-nav="member-oleg">
+            <div class="member-avatar a2">О</div>
+            <div class="list-item-body">
+              <div class="list-item-title">Олег · Бэкенд</div>
+              <div class="dim-pills">
+                <span class="dim-pill">Инстинктивный</span>
+                <span class="dim-pill">Объективный</span>
+                <span class="dim-pill">Прагматичный</span>
+                <span class="dim-pill">Структурированный</span>
+              </div>
+            </div>
+          </button>
+          <button class="list-item" data-nav="member-anna">
+            <div class="member-avatar a3">А</div>
+            <div class="list-item-body">
+              <div class="list-item-title">Анна · UX</div>
+              <div class="dim-pills">
+                <span class="dim-pill">Гармоничный</span>
+                <span class="dim-pill">Альтруистичный</span>
+                <span class="dim-pill">Интеллектуальный</span>
+                <span class="dim-pill">Коллективный</span>
+              </div>
+            </div>
+          </button>
+          <button class="list-item" data-nav="member-dmitry">
+            <div class="member-avatar a4">Д</div>
+            <div class="list-item-body">
+              <div class="list-item-title">Дмитрий · QA</div>
+              <div class="dim-pills">
+                <span class="dim-pill">Структурированный</span>
+                <span class="dim-pill">Объективный</span>
+                <span class="dim-pill">Инстинктивный</span>
+                <span class="dim-pill">Прагматичный</span>
+              </div>
+            </div>
+          </button>
+          <button class="list-item" data-nav="member-elena">
+            <div class="member-avatar a5">Е</div>
+            <div class="list-item-body">
+              <div class="list-item-title">Елена · Маркетинг</div>
+              <div class="dim-pills">
+                <span class="dim-pill">Директивный</span>
+                <span class="dim-pill">Прагматичный</span>
+                <span class="dim-pill">Целенаправленный</span>
+                <span class="dim-pill">Восприимчивый</span>
+              </div>
+            </div>
+          </button>
+          <button class="list-item" data-nav="member-maria">
+            <div class="member-avatar a6">М</div>
+            <div class="list-item-body">
+              <div class="list-item-title">Мария · Руководитель команды</div>
+              <div class="dim-pills">
+                <span class="dim-pill">Альтруистичный</span>
+                <span class="dim-pill">Коллективный</span>
+                <span class="dim-pill">Гармоничный</span>
+                <span class="dim-pill">Целенаправленный</span>
+              </div>
+            </div>
+          </button>
+        </div>
+
+        <div class="overview-card">
+          <h3>Сводка E3 (в первичном)</h3>
+          <div class="dim-bar-row">
+            <div class="dim-bar-item"><div class="dim-bar-header"><span>Прагматичный</span><span>4 чел.</span></div><div class="dim-bar-track"><div class="dim-bar-fill primary" style="width:67%"></div></div></div>
+            <div class="dim-bar-item"><div class="dim-bar-header"><span>Директивный</span><span>2</span></div><div class="dim-bar-track"><div class="dim-bar-fill primary" style="width:33%"></div></div></div>
+            <div class="dim-bar-item"><div class="dim-bar-header"><span>Структурированный</span><span>2</span></div><div class="dim-bar-track"><div class="dim-bar-fill situational" style="width:33%"></div></div></div>
+            <div class="dim-bar-item"><div class="dim-bar-header"><span>Интеллектуальный</span><span>2</span></div><div class="dim-bar-track"><div class="dim-bar-fill situational" style="width:33%"></div></div></div>
+            <div class="dim-bar-item"><div class="dim-bar-header"><span>Восприимчивый</span><span>2</span></div><div class="dim-bar-track"><div class="dim-bar-fill situational" style="width:33%"></div></div></div>
+          </div>
+          <p style="margin-top:8px;font-size:11px">Сильный «прагматичный» уклон — нужны измеримые цели; пара «структура / восприимчивость» — риск при изменениях.</p>
+        </div>
+
+        <button class="btn" data-nav="tension-f">Матрица напряжений →</button>
+      </section>
+
+      <!-- MEMBERS -->
+      <section class="screen" data-screen="member-ivan">
+        <p class="screen-label">E2 · Первичный кластер</p>
+        <h2>Иван Петров</h2>
+        <p>Руководитель продукта</p>
+        <div class="motivation-list">
+          <div class="motivation-item"><span class="motivation-rank">1</span> Прагматичный</div>
+          <div class="motivation-item"><span class="motivation-rank">2</span> Директивный</div>
+          <div class="motivation-item"><span class="motivation-rank">3</span> Интеллектуальный</div>
+          <div class="motivation-item"><span class="motivation-rank">4</span> Восприимчивый</div>
+        </div>
+        <button class="btn" data-nav="report-a">Полный отчёт →</button>
+      </section>
+
+      <section class="screen" data-screen="member-oleg">
+        <p class="screen-label">E2 · Первичный кластер</p>
+        <h2>Олег</h2>
+        <p>Бэкенд-разработчик</p>
+        <div class="motivation-list">
+          <div class="motivation-item"><span class="motivation-rank">1</span> Инстинктивный</div>
+          <div class="motivation-item"><span class="motivation-rank">2</span> Объективный</div>
+          <div class="motivation-item"><span class="motivation-rank">3</span> Прагматичный</div>
+          <div class="motivation-item"><span class="motivation-rank">4</span> Структурированный</div>
+        </div>
+        <button class="btn" data-nav="team-e">← К команде</button>
+      </section>
+
+      <section class="screen" data-screen="member-anna">
+        <p class="screen-label">E2 · Первичный кластер</p>
+        <h2>Анна</h2>
+        <p>UX</p>
+        <div class="motivation-list">
+          <div class="motivation-item"><span class="motivation-rank">1</span> Гармоничный</div>
+          <div class="motivation-item"><span class="motivation-rank">2</span> Альтруистичный</div>
+          <div class="motivation-item"><span class="motivation-rank">3</span> Интеллектуальный</div>
+          <div class="motivation-item"><span class="motivation-rank">4</span> Коллективный</div>
+        </div>
+        <button class="btn" data-nav="team-e">← К команде</button>
+      </section>
+
+      <section class="screen" data-screen="member-dmitry">
+        <p class="screen-label">E2 · Первичный кластер</p>
+        <h2>Дмитрий</h2>
+        <p>QA</p>
+        <div class="motivation-list">
+          <div class="motivation-item"><span class="motivation-rank">1</span> Структурированный</div>
+          <div class="motivation-item"><span class="motivation-rank">2</span> Объективный</div>
+          <div class="motivation-item"><span class="motivation-rank">3</span> Инстинктивный</div>
+          <div class="motivation-item"><span class="motivation-rank">4</span> Прагматичный</div>
+        </div>
+        <button class="btn" data-nav="team-e">← К команде</button>
+      </section>
+
+      <section class="screen" data-screen="member-elena">
+        <p class="screen-label">E2 · Первичный кластер</p>
+        <h2>Елена</h2>
+        <p>Маркетинг</p>
+        <div class="motivation-list">
+          <div class="motivation-item"><span class="motivation-rank">1</span> Директивный</div>
+          <div class="motivation-item"><span class="motivation-rank">2</span> Прагматичный</div>
+          <div class="motivation-item"><span class="motivation-rank">3</span> Целенаправленный</div>
+          <div class="motivation-item"><span class="motivation-rank">4</span> Восприимчивый</div>
+        </div>
+        <button class="btn" data-nav="team-e">← К команде</button>
+      </section>
+
+      <section class="screen" data-screen="member-maria">
+        <p class="screen-label">E2 · Первичный кластер</p>
+        <h2>Мария Соколова</h2>
+        <p>Руководитель команды</p>
+        <div class="motivation-list">
+          <div class="motivation-item"><span class="motivation-rank">1</span> Альтруистичный</div>
+          <div class="motivation-item"><span class="motivation-rank">2</span> Коллективный</div>
+          <div class="motivation-item"><span class="motivation-rank">3</span> Гармоничный</div>
+          <div class="motivation-item"><span class="motivation-rank">4</span> Целенаправленный</div>
+        </div>
+        <button class="btn" data-nav="team-e">← К команде</button>
+      </section>
+
+      <!-- TENSION F -->
+      <section class="screen" data-screen="tension-f">
+        <p class="screen-label">Артефакт F</p>
+        <h2>Матрица напряжений</h2>
+        <p class="hint">Пересечение безразличного одного и первичного другого</p>
+
+        <div class="matrix-mini">
+          <table>
+            <tr><th></th><th>Иван<br><small>безр.: альтр.</small></th><th>Анна<br><small>перв.: альтр.</small></th><th>Олег<br><small>перв.: структ.</small></th></tr>
+            <tr><th>Иван<br><small>перв.: прагм.</small></th><td>—</td><td>⚡</td><td>✅</td></tr>
+            <tr><th>Анна<br><small>перв.: альтр.</small></th><td>⚡</td><td>—</td><td>⚡</td></tr>
+            <tr><th>Мария<br><small>перв.: колл.</small></th><td>✅</td><td>✅</td><td>⚠️</td></tr>
+          </table>
+        </div>
+
+        <h2 style="font-size:16px;margin-top:12px">F2 · Ключевые пары</h2>
+
+        <div class="tension-row tension-flash">
+          <span class="tension-icon">⚡</span>
+          <div class="tension-body">
+            <div class="tension-pair">Иван ↔ Анна</div>
+            <div class="tension-desc">«Польза для бизнеса» vs «польза для людей»</div>
+          </div>
+        </div>
+        <div class="tension-row tension-warn">
+          <span class="tension-icon">⚠️</span>
+          <div class="tension-body">
+            <div class="tension-pair">Иван ↔ Мария</div>
+            <div class="tension-desc">Иван не заряжается «командным успехом»; Мария — да</div>
+          </div>
+        </div>
+        <div class="tension-row tension-flash">
+          <span class="tension-icon">⚡</span>
+          <div class="tension-body">
+            <div class="tension-pair">Иван ↔ Олег</div>
+            <div class="tension-desc">Пилоты и изменения vs стабильный процесс</div>
+          </div>
+        </div>
+        <div class="tension-row tension-flash">
+          <span class="tension-icon">⚡</span>
+          <div class="tension-body">
+            <div class="tension-pair">Иван ↔ Дмитрий</div>
+            <div class="tension-desc">Тот же риск на линии продукт → QA</div>
+          </div>
+        </div>
+        <div class="tension-row tension-ok">
+          <span class="tension-icon">✅</span>
+          <div class="tension-body">
+            <div class="tension-pair">Иван ↔ Елена</div>
+            <div class="tension-desc">Синергия по метрикам и видимости</div>
+          </div>
+        </div>
+        <div class="tension-row tension-flash">
+          <span class="tension-icon">⚡</span>
+          <div class="tension-body">
+            <div class="tension-pair">Анна ↔ Олег</div>
+            <div class="tension-desc">UX-опыт vs функциональность «здесь и сейчас»</div>
+          </div>
+        </div>
+        <div class="tension-row tension-warn">
+          <span class="tension-icon">⚠️</span>
+          <div class="tension-body">
+            <div class="tension-pair">Олег ↔ Елена</div>
+            <div class="tension-desc">Маркетинг хочет новое; бэкенд — предсказуемость</div>
+          </div>
+        </div>
+        <div class="tension-row tension-ok">
+          <span class="tension-icon">✅</span>
+          <div class="tension-body">
+            <div class="tension-pair">Елена ↔ Дмитрий</div>
+            <div class="tension-desc">Общий язык «что измеряем и когда релиз»</div>
+          </div>
+        </div>
+        <div class="tension-row tension-warn">
+          <span class="tension-icon">⚠️</span>
+          <div class="tension-body">
+            <div class="tension-pair">Мария ↔ команда</div>
+            <div class="tension-desc">Лидеру важна забота; команде — KPI запуска MVP</div>
+          </div>
+        </div>
+
+        <button class="btn" data-nav="team-e">← К карте команды</button>
+      </section>
+
+      <!-- BENCHMARK G -->
+      <section class="screen" data-screen="benchmark-g">
+        <p class="screen-label">Артефакт G</p>
+        <h2>Эталон должности</h2>
+        <dl class="meta-grid">
+          <dt>Должность</dt><dd>Руководитель продукта (B2B SaaS)</dd>
+          <dt>Дата</dt><dd>2026-09-05</dd>
+        </dl>
+
+        <div class="portrait-block">
+          <h4>G1 · Желаемый первичный кластер</h4>
+          <table class="data-table">
+            <tr><th>Приоритет</th><th>Сила</th><th>Зачем</th></tr>
+            <tr><td>Высокий</td><td>Прагматичный</td><td>Выручка и экономика юнита</td></tr>
+            <tr><td>Высокий</td><td>Директивный</td><td>Видимость направления</td></tr>
+            <tr><td>Средний</td><td>Интеллектуальный</td><td>Рынок и конкуренты</td></tr>
+            <tr><td>Средний</td><td>Восприимч. / Структур.</td><td>Зависит от стадии продукта</td></tr>
+          </table>
+        </div>
+
+        <div class="portrait-block">
+          <h4>G2 · Красные флаги</h4>
+          <table class="data-table">
+            <tr><th>Сигнал</th><th>Риск</th></tr>
+            <tr><td>Только коллективный + альтруистичный</td><td>Нет личной ответственности</td></tr>
+            <tr><td>Безразличный: прагматичный</td><td>Игнор ROI</td></tr>
+            <tr><td>Только гармоничный</td><td>Конфликт с дедлайнами</td></tr>
+          </table>
+        </div>
+
+        <div class="portrait-block">
+          <h4>G3 · Сравнение кандидатов</h4>
+          <table class="data-table">
+            <tr><th>Драйвер</th><th>Эталон</th><th>Канд. A</th><th>Канд. B</th></tr>
+            <tr><td>Прагматичный</td><td>Высокий</td><td>✅ Первичн.</td><td>⚠️ Ситуат.</td></tr>
+            <tr><td>Директивный</td><td>Высокий</td><td>✅ Первичн.</td><td>❌ Безразл.</td></tr>
+            <tr><td>Интеллектуальный</td><td>Средний</td><td>✅ Первичн.</td><td>✅ Первичн.</td></tr>
+            <tr><td>Восприимчивый</td><td>Средний</td><td>✅ Первичн.</td><td>✅ Первичн.</td></tr>
+          </table>
+          <p style="margin-top:8px">Оба подходят с разными акцентами; канд. B — риск по видимости → уточняющие вопросы.</p>
+        </div>
+      </section>
+
+      <!-- ONEONE H -->
+      <section class="screen" data-screen="oneone-h">
+        <p class="screen-label">Артефакт H · 2026-10-01</p>
+        <h2>Протокол 1:1</h2>
+        <p style="font-size:12px">Мария (руководитель) · Иван (сотрудник)</p>
+
+        <div class="portrait-block">
+          <h4>H1 · Сверка с реальностью</h4>
+          <table class="data-table">
+            <tr><th>Вопрос</th><th>Ответ / Действие</th></tr>
+            <tr><td>Что удовлетворено?</td><td>Прагматичный (пилот), интеллектуальный (конф.) → Продолжить</td></tr>
+            <tr><td>Что «голодно»?</td><td>Директивный — нет места на комитете → Эскалация CEO</td></tr>
+            <tr><td>Новые стрессоры?</td><td>Отмена пилота без объяснения → Прозрачность</td></tr>
+          </table>
+        </div>
+
+        <div class="portrait-block">
+          <h4>H2 · Награда / признание</h4>
+          <table class="data-table">
+            <tr><th>Было</th><th>Стало</th><th>Драйвер</th></tr>
+            <tr><td>Благодарность в чате</td><td>Презентация пилота на общей встрече</td><td>Директивный</td></tr>
+            <tr><td>—</td><td>Бонус привязан к метрике пилота</td><td>Прагматичный</td></tr>
+          </table>
+        </div>
+
+        <div class="overview-card">
+          <h3>H3 · Следующие шаги</h3>
+          <div class="action-row" style="margin:0;padding:8px 0;background:none;border:none">
+            <div class="action-check"></div>
+            <div class="action-text">Следующая 1:1 через 4 недели</div>
+          </div>
+          <div class="action-row" style="margin:0;padding:8px 0;background:none;border:none">
+            <div class="action-check"></div>
+            <div class="action-text">Обновить план действий (D)</div>
+          </div>
+          <div class="action-row" style="margin:0;padding:8px 0;background:none;border:none">
+            <div class="action-check"></div>
+            <div class="action-text">При необходимости — карта команды (E)</div>
+          </div>
+        </div>
+
+        <button class="btn" data-nav="plan-d">← К плану действий</button>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

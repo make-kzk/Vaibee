@@ -126,6 +126,7 @@ cp -r SYST/templates/concept PRDT/concepts/my-concept
 | Methodology (MCode) | [RSCH/RSCH-02/RSCH-02-01-00-MCode/](./RSCH/RSCH-02/RSCH-02-01-00-MCode/) |
 | Methodology (12DF) | [RSCH/RSCH-02/RSCH-02-02-00-12DF/](./RSCH/RSCH-02/RSCH-02-02-00-12DF/) |
 | Concept | [PRDT/concepts/vaibee-notes/prototype/](./PRDT/concepts/vaibee-notes/prototype/) |
+| Concept (12DF) | [PRDT/concepts/12df-artifacts/prototype/](./PRDT/concepts/12df-artifacts/prototype/) |
 
 ## Работа с Cursor
 
