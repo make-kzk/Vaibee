@@ -4,11 +4,34 @@ Product research lab: исследуйте продукты, логируйте 
 
 **Live:** после настройки GitHub Pages → `https://make-kzk.github.io/Vaibee/`
 
-## Структура
+## Архитектура
 
 ```
 Vaibee/
 ├── index.html              # Portal — каталог research & concepts
+<<<<<<< HEAD
+├── RSCH/                   # Исследования
+│   ├── RSCH-01/            # Бизнес (product research)
+│   ├── RSCH-02/            # Методологии (MCode, 12DF, …)
+│   └── RSCH-03/            # События
+├── PRDT/                   # Продукт
+│   └── concepts/           # Click-through концепты
+└── SYST/                   # Система
+    ├── catalog.json        # Индекс всех записей
+    ├── templates/          # Шаблоны для копирования
+    ├── assets/             # Общие стили и JS для прототипов
+    └── docs/               # Документация
+```
+
+| Раздел | ID | Назначение |
+|--------|----|------------|
+| RSCH | — | Исследования |
+| | RSCH-01 | Бизнес — продукты, рынки |
+| | RSCH-02 | Методологии — фреймворки и модели |
+| | RSCH-03 | События — конференции, воркшопы |
+| PRDT | — | Продуктовые артефакты и прототипы |
+| SYST | — | Шаблоны, каталог, инфраструктура |
+=======
 ├── catalog.json            # Индекс всех записей (обновляйте при добавлении)
 ├── assets/                 # Общие стили и JS для прототипов
 ├── 02-01-00-MCode/         # Раздел: Motivation Code
@@ -69,24 +92,25 @@ Vaibee/
 | Исследование | [02-01-01-MCode.md](./02-01-00-MCode/02-01-01-MCode.md) |
 | Практика | [02-01-02-MCode.md](./02-01-00-MCode/02-01-02-MCode.md) |
 | Исследование | [02-02-01-12DF.md](./02-02-00-12DF/02-02-01-12DF.md) |
+>>>>>>> origin/main
 
 ## Workflow
 
 ### 1. Исследовать продукт
 
 ```bash
-cp -r templates/research research/products/my-product
+cp -r SYST/templates/research RSCH/RSCH-01/products/my-product
 # Заполните README.md, sources.md, insights.md
-# Добавьте запись в catalog.json → "research"
+# Добавьте запись в SYST/catalog.json → "research"
 ```
 
 ### 2. Создать click-through концепт
 
 ```bash
-cp -r templates/concept concepts/my-concept
+cp -r SYST/templates/concept PRDT/concepts/my-concept
 # Заполните README.md
 # Отредактируйте prototype/index.html — добавьте экраны
-# Добавьте запись в catalog.json → "concepts"
+# Добавьте запись в SYST/catalog.json → "concepts"
 ```
 
 ### 3. Навигация в прототипе
@@ -98,7 +122,7 @@ cp -r templates/concept concepts/my-concept
 <button data-nav="detail">Открыть</button>
 ```
 
-Общая логика в `assets/mockup.js`, стили телефонного фрейма в `assets/mockup.css`.
+Общая логика в `SYST/assets/mockup.js`, стили телефонного фрейма в `SYST/assets/mockup.css`.
 
 ### 4. Опубликовать
 
@@ -110,8 +134,9 @@ cp -r templates/concept concepts/my-concept
 
 | Тип | Путь |
 |-----|------|
-| Research | [research/products/notion/](research/products/notion/) |
-| Concept | [concepts/vaibee-notes/prototype/](concepts/vaibee-notes/prototype/) |
+| Research | [RSCH/RSCH-01/products/notion/](RSCH/RSCH-01/products/notion/) |
+| Methodology | [RSCH/RSCH-02/02-01-00-MCode/](RSCH/RSCH-02/02-01-00-MCode/) |
+| Concept | [PRDT/concepts/vaibee-notes/prototype/](PRDT/concepts/vaibee-notes/prototype/) |
 
 ## Работа с Cursor
 
