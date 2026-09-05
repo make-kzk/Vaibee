@@ -20,7 +20,7 @@
 
 ## Research-источники
 
-- [product-slug](../../research/products/product-slug/)
+- [product-slug](../../../RSCH/RSCH-01/products/product-slug/)
 
 ## Прототип
 

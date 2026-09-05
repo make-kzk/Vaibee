@@ -20,7 +20,7 @@
 
 ## Research-источники
 
-- [Notion](../../research/products/notion/)
+- [Notion](../../../RSCH/RSCH-01/products/notion/)
 
 ## Прототип
 

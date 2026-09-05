@@ -37,4 +37,4 @@ All-in-one workspace: заметки, базы данных, wiki, задачи.
 
 ## Связанные концепты
 
-- [Vaibee Notes](../../concepts/vaibee-notes/)
+- [Vaibee Notes](../../../PRDT/concepts/vaibee-notes/)
