@@ -1,6 +1,14 @@
 {
   "research": [
     {
+      "slug": "mcode",
+      "title": "MCode / Motivation Code",
+      "status": "complete",
+      "date": "2026-09-05",
+      "tags": ["motivation", "team", "methodology"],
+      "summary": "Motivational assessment framework: 8 dimensions, 32 motivations, team alignment."
+    },
+    {
       "slug": "notion",
       "title": "Notion",
       "status": "complete",
@@ -10,6 +18,15 @@
     }
   ],
   "concepts": [
+    {
+      "slug": "team-motivational-map",
+      "title": "Team Motivational Map",
+      "status": "draft",
+      "date": "2026-09-05",
+      "tags": ["mcode", "team", "motivation"],
+      "summary": "Interactive example of a filled MCode Team Motivational Map template.",
+      "research": ["mcode"]
+    },
     {
       "slug": "vaibee-notes",
       "title": "Vaibee Notes",
