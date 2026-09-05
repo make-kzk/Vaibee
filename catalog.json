@@ -1,7 +1,13 @@
 {
   "research": [
     {
-      "slug": "mcode",
+      "slug": "12df",
+      "title": "12 Driving Forces (TTI)",
+      "status": "complete",
+      "date": "2026-09-05",
+      "tags": ["motivation", "team", "methodology", "tti"],
+      "summary": "TTI motivators assessment: 12 poles, clusters, business outcomes, artifact templates."
+    },
       "title": "MCode / Motivation Code",
       "status": "complete",
       "date": "2026-09-05",
