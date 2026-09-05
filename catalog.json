@@ -1,0 +1,23 @@
+{
+  "research": [
+    {
+      "slug": "notion",
+      "title": "Notion",
+      "status": "complete",
+      "date": "2026-09-05",
+      "tags": ["knowledge-base", "collaboration"],
+      "summary": "All-in-one workspace: notes, databases, wikis."
+    }
+  ],
+  "concepts": [
+    {
+      "slug": "vaibee-notes",
+      "title": "Vaibee Notes",
+      "status": "draft",
+      "date": "2026-09-05",
+      "tags": ["notes", "knowledge-base"],
+      "summary": "Minimal note-taking concept inspired by Notion research.",
+      "research": ["notion"]
+    }
+  ]
+}

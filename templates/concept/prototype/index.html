@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{Concept Name}</title>
+  <link rel="stylesheet" href="../../../assets/mockup.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="mockup-frame">
+    <header class="mockup-header">
+      <button class="back-btn" data-nav="home" hidden aria-label="Назад">←</button>
+      <h1 class="mockup-title">{Concept Name}</h1>
+    </header>
+
+    <main class="mockup-screens">
+      <!-- Screen: home -->
+      <section class="screen active" data-screen="home">
+        <p class="screen-label">Home</p>
+        <h2>Главный экран</h2>
+        <p>Описание экрана.</p>
+        <button class="btn primary" data-nav="detail">Далее →</button>
+      </section>
+
+      <!-- Screen: detail -->
+      <section class="screen" data-screen="detail">
+        <p class="screen-label">Detail</p>
+        <h2>Детальный экран</h2>
+        <p>Описание экрана.</p>
+        <button class="btn" data-nav="home">← Назад</button>
+      </section>
+    </main>
+  </div>
+
+  <script src="../../../assets/mockup.js"></script>
+</body>
+</html>

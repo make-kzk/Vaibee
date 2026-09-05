@@ -1,0 +1,29 @@
+.note-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 12px 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font: inherit;
+  font-size: 14px;
+}
+
+.note-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.mockup-screens {
+  position: relative;
+}

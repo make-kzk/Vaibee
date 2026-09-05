@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vaibee Notes</title>
+  <link rel="stylesheet" href="../../../assets/mockup.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="mockup-frame">
+    <header class="mockup-header">
+      <button class="back-btn" data-nav="home" hidden aria-label="Назад">←</button>
+      <h1 class="mockup-title">Vaibee Notes</h1>
+    </header>
+
+    <main class="mockup-screens">
+      <!-- Home -->
+      <section class="screen active" data-screen="home">
+        <p class="screen-label">Home</p>
+        <div class="search-bar">
+          <input type="text" placeholder="Поиск заметок…" readonly>
+        </div>
+        <div class="note-list">
+          <button class="list-item" data-nav="detail">
+            <div>
+              <div class="list-item-title">Product research workflow</div>
+              <div class="list-item-meta">Сегодня · Research, GitHub Pages</div>
+            </div>
+          </button>
+          <button class="list-item" data-nav="detail">
+            <div>
+              <div class="list-item-title">Notion UX patterns</div>
+              <div class="list-item-meta">Вчера · Slash menu, sidebar</div>
+            </div>
+          </button>
+          <button class="list-item" data-nav="detail">
+            <div>
+              <div class="list-item-title">Ideas for Vaibee</div>
+              <div class="list-item-meta">3 дня назад · Concepts, templates</div>
+            </div>
+          </button>
+        </div>
+        <button class="fab" data-nav="new" aria-label="Новая заметка">+</button>
+      </section>
+
+      <!-- Detail -->
+      <section class="screen" data-screen="detail">
+        <p class="screen-label">Detail</p>
+        <h2>Product research workflow</h2>
+        <div class="chip-row">
+          <span class="chip">research</span>
+          <span class="chip">workflow</span>
+        </div>
+        <div class="note-body">
+          <p>1. Исследовать продукт → research/products/</p>
+          <p>2. Выделить insights → insights.md</p>
+          <p>3. Создать click-through концепт → concepts/</p>
+          <p>4. Залогировать в catalog.json</p>
+        </div>
+        <button class="btn" data-nav="home">← К списку</button>
+      </section>
+
+      <!-- New -->
+      <section class="screen" data-screen="new">
+        <p class="screen-label">New note</p>
+        <div class="field">
+          <label>Заголовок</label>
+          <input type="text" placeholder="Название заметки" value="">
+        </div>
+        <div class="field">
+          <label>Содержание</label>
+          <textarea placeholder="Начните писать…"></textarea>
+        </div>
+        <button class="btn primary" data-nav="home">Сохранить</button>
+      </section>
+    </main>
+  </div>
+
+  <script src="../../../assets/mockup.js"></script>
+</body>
+</html>

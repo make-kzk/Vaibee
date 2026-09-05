@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vaibee — Product Lab</title>
+  <style>
+    :root {
+      --bg: #08080a;
+      --surface: #12121a;
+      --border: #22222e;
+      --text: #e8e8ed;
+      --muted: #7878a0;
+      --accent: #6c5ce7;
+      --green: #00b894;
+      --yellow: #fdcb6e;
+      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    header {
+      margin-bottom: 48px;
+    }
+
+    header h1 {
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    header p {
+      color: var(--muted);
+      margin-top: 8px;
+      font-size: 15px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    section h2 {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .cards {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .card {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 18px 20px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.15s, transform 0.15s;
+    }
+
+    .card:hover {
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    .card-body { flex: 1; }
+
+    .card-title {
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .card-summary {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .card-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 10px;
+    }
+
+    .badge {
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: rgba(108, 92, 231, 0.12);
+      color: var(--accent);
+    }
+
+    .badge.status-complete { background: rgba(0, 184, 148, 0.12); color: var(--green); }
+    .badge.status-draft { background: rgba(253, 203, 110, 0.12); color: var(--yellow); }
+
+    .card-arrow {
+      color: var(--muted);
+      font-size: 18px;
+      margin-top: 2px;
+    }
+
+    .empty {
+      color: var(--muted);
+      font-size: 14px;
+      padding: 20px;
+      border: 1px dashed var(--border);
+      border-radius: 14px;
+    }
+
+    footer {
+      margin-top: 60px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    footer a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Vaibee</h1>
+      <p>Product research &amp; interactive concepts</p>
+    </header>
+
+    <section id="concepts-section">
+      <h2>Concepts</h2>
+      <div class="cards" id="concepts"></div>
+    </section>
+
+    <section id="research-section">
+      <h2>Research</h2>
+      <div class="cards" id="research"></div>
+    </section>
+
+    <footer>
+      <p>Добавить запись: скопируйте шаблон из <code>templates/</code>, обновите <code>catalog.json</code>.</p>
+    </footer>
+  </div>
+
+  <script>
+    fetch('catalog.json')
+      .then((r) => r.json())
+      .then(render)
+      .catch(() => {
+        document.getElementById('concepts').innerHTML = '<p class="empty">Не удалось загрузить catalog.json</p>';
+      });
+
+    function render(data) {
+      const conceptsEl = document.getElementById('concepts');
+      const researchEl = document.getElementById('research');
+
+      if (!data.concepts?.length) {
+        conceptsEl.innerHTML = '<p class="empty">Пока нет концептов</p>';
+      } else {
+        conceptsEl.innerHTML = data.concepts.map((c) => `
+          <a class="card" href="concepts/${c.slug}/prototype/index.html">
+            <div class="card-body">
+              <div class="card-title">${c.title}</div>
+              <div class="card-summary">${c.summary}</div>
+              <div class="card-meta">
+                <span class="badge status-${c.status}">${c.status}</span>
+                ${(c.tags || []).map((t) => `<span class="badge">${t}</span>`).join('')}
+              </div>
+            </div>
+            <span class="card-arrow">→</span>
+          </a>
+        `).join('');
+      }
+
+      if (!data.research?.length) {
+        researchEl.innerHTML = '<p class="empty">Пока нет исследований</p>';
+      } else {
+        researchEl.innerHTML = data.research.map((r) => `
+          <a class="card" href="https://github.com/make-kzk/Vaibee/blob/main/research/products/${r.slug}/README.md" target="_blank" rel="noopener">
+            <div class="card-body">
+              <div class="card-title">${r.title}</div>
+              <div class="card-summary">${r.summary}</div>
+              <div class="card-meta">
+                <span class="badge status-${r.status}">${r.status}</span>
+                ${(r.tags || []).map((t) => `<span class="badge">${t}</span>`).join('')}
+              </div>
+            </div>
+            <span class="card-arrow">→</span>
+          </a>
+        `).join('');
+      }
+    }
+  </script>
+</body>
+</html>
