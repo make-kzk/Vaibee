@@ -1,12 +1,16 @@
-# Team Motivational Map
+# team-motivational-map — Team Motivational Map
 
 **Status:** draft  
 **Date:** 2026-09-05  
 **Tags:** mcode, team, motivation
 
+## Правила подписи
+
+**Формат:** `# {slug} — {название}`. Имя папки на диске — только slug.
+
 ## Идея
 
-Интерактивный click-through пример заполненной Team Motivational Map — визуализация результата шаблона [02-01-02-MCode](../../../RSCH/RSCH-02/02-01-00-MCode/02-01-02-MCode.md).
+Интерактивный click-through пример заполненной Team Motivational Map — визуализация результата шаблона [02-01-02-MCode — Шаблон Team Motivational Map](../../../RSCH/RSCH-02/02-01-00-MCode/02-01-02-MCode.md).
 
 ## Гипотеза
 

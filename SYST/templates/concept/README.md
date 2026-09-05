@@ -4,6 +4,10 @@
 **Date:** YYYY-MM-DD  
 **Tags:** tag1, tag2
 
+## Правила подписи
+
+**Формат:** `# {slug} — {название}`. Имя папки на диске — только slug (латиница, без пробелов).
+
 ## Идея
 
 Одно предложение: что это и для кого.
@@ -20,7 +24,7 @@
 
 ## Research-источники
 
-- [product-slug](../../../RSCH/RSCH-01/products/product-slug/)
+- [product-slug — {название продукта}](../../../RSCH/RSCH-01/products/product-slug/)
 
 ## Прототип
 

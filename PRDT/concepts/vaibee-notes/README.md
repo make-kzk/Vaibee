@@ -1,8 +1,12 @@
-# Vaibee Notes
+# vaibee-notes — Vaibee Notes
 
 **Status:** draft  
 **Date:** 2026-09-05  
 **Tags:** notes, knowledge-base
+
+## Правила подписи
+
+**Формат:** `# {slug} — {название}`. Имя папки на диске — только slug.
 
 ## Идея
 
@@ -20,7 +24,7 @@
 
 ## Research-источники
 
-- [Notion](../../../RSCH/RSCH-01/products/notion/)
+- [notion — Notion](../../../RSCH/RSCH-01/products/notion/)
 
 ## Прототип
 

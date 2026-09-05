@@ -1,8 +1,12 @@
-# Notion — Product Research
+# notion — Notion
 
 **Status:** complete  
 **Date:** 2026-09-05  
 **Tags:** knowledge-base, collaboration
+
+## Правила подписи
+
+**Формат:** `# {slug} — {название}`. Имя папки на диске — только slug.
 
 ## Что это
 
@@ -37,4 +41,4 @@ All-in-one workspace: заметки, базы данных, wiki, задачи.
 
 ## Связанные концепты
 
-- [Vaibee Notes](../../../PRDT/concepts/vaibee-notes/)
+- [vaibee-notes — Vaibee Notes](../../../PRDT/concepts/vaibee-notes/)
