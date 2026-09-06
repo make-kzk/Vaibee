@@ -128,10 +128,11 @@
     const done = (state.companySaved ? 1 : 0) + (state.hhConnected ? 1 : 0);
     const complete = isSetupComplete();
 
-    document.getElementById('setup-badge')?.textContent = complete
-      ? 'Настройка завершена'
-      : `Настройка: ${done} / 2`;
-    document.getElementById('setup-badge')?.classList.toggle('done', complete);
+    const setupBadge = document.getElementById('setup-badge');
+    if (setupBadge) {
+      setupBadge.textContent = complete ? 'Настройка завершена' : `Настройка: ${done} / 2`;
+      setupBadge.classList.toggle('done', complete);
+    }
 
     ['check-company'].forEach((id) => {
       const el = document.getElementById(id);
