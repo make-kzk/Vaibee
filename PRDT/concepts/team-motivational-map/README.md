@@ -1,12 +1,16 @@
-# Team Motivational Map
+# team-motivational-map - Team Motivational Map
 
 **Status:** draft  
 **Date:** 2026-09-05  
 **Tags:** mcode, team, motivation
 
+## Правила подписи
+
+**Формат:** `# {slug} - {название}`. Имя папки на диске — только slug.
+
 ## Идея
 
-Интерактивный пример заполненной мотивационной карты команды — визуализация шаблона [02-01-02-MCode](../../../RSCH/RSCH-02/RSCH-02-01-00-MCode/02-01-02-MCode.md) и [RSCH-02-01-03--Пример](../../../RSCH/RSCH-02/RSCH-02-01-00-MCode/RSCH-02-01-03--Пример.md).
+Интерактивный click-through пример заполненной Team Motivational Map — визуализация шаблона [RSCH-02-01-02-0-MCode - Шаблон Team Motivational Map](../../../RSCH/RSCH-02-00-00/RSCH-02-01-MCode/RSCH-02-01-02-0-MCode.md) и примера [RSCH-02-01-03-0-MCode - Платформа](../../../RSCH/RSCH-02-00-00/RSCH-02-01-MCode/RSCH-02-01-03-0-MCode.md).
 
 ## Гипотеза
 
@@ -24,8 +28,9 @@
 
 ## Источники
 
-- [02-01-02-MCode — Шаблон Team Motivational Map](../../../RSCH/RSCH-02/RSCH-02-01-00-MCode/02-01-02-MCode.md)
-- [02-01-01-MCode — Исследование MCode](../../../RSCH/RSCH-02/RSCH-02-01-00-MCode/02-01-01-MCode.md)
+- [RSCH-02-01-02-0-MCode - Шаблон Team Motivational Map](../../../RSCH/RSCH-02-00-00/RSCH-02-01-MCode/RSCH-02-01-02-0-MCode.md)
+- [RSCH-02-01-01-0-MCode - Исследование MCode](../../../RSCH/RSCH-02-00-00/RSCH-02-01-MCode/RSCH-02-01-01-0-MCode.md)
+- [RSCH-02-01-03-0-MCode - Пример «Платформа»](../../../RSCH/RSCH-02-00-00/RSCH-02-01-MCode/RSCH-02-01-03-0-MCode.md)
 
 ## Прототип
 

@@ -1,16 +1,20 @@
-# SYST — Система
+# SYST - Система
 
-Инфраструктура репозитория: шаблоны, ассеты, каталог, документация.
+**ID:** `SYST` · Шаблоны, ассеты, каталог, документация.
 
-## Содержимое
+## Навигация
 
 | Путь | Описание |
 |------|----------|
-| [templates/](./templates/) | Шаблоны для research и concept |
-| [assets/](./assets/) | Общие стили и JS для прототипов (`mockup.css`, `mockup.js`) |
-| [catalog.json](./catalog.json) | Индекс всех записей research & concepts |
-| [docs/](./docs/) | Методологическая и служебная документация |
+| [templates/](./templates/) | Шаблоны research и concept |
+| [assets/](./assets/) | mockup.css, mockup.js |
+| [catalog.json](./catalog.json) | Индекс research & concepts |
+| [docs/](./docs/) | Служебная документация |
+
+## Нейминг
+
+Миграция на `DOMAIN-XX-YY-ZZ-Q-key` — в следующей фазе. Спецификация: [корневой README](../README.md#нейминг)
 
 ## Портал
 
-Корневой [index.html](../index.html) читает `SYST/catalog.json` и отображает каталог.
+[index.html](../index.html) читает `SYST/catalog.json`.
