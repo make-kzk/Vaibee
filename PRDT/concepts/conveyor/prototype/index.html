@@ -196,7 +196,7 @@
           <footer class="site-footer">
             <div class="container footer-inner">
               <span class="wordmark wordmark-sm">VIBEHUNT</span>
-              <span class="footer-meta">Конвейер HR · единый прототип</span>
+              <span class="footer-meta">Конвейер HR · единый прототип · шаги 1–3</span>
             </div>
           </footer>
         </div>
@@ -475,6 +475,7 @@
             <nav class="sidebar-nav">
               <button class="nav-item" type="button" disabled><span>◉</span> Обзор</button>
               <button class="nav-item active" data-nav="vacancies"><span>☰</span> Вакансии</button>
+              <button class="nav-item disabled hidden" type="button" id="nav-candidates" data-nav="candidates"><span>◎</span> Кандидаты</button>
               <button class="nav-item" type="button" disabled><span>▣</span> Компания</button>
               <button class="nav-item" type="button" disabled><span>⇄</span> Интеграции</button>
             </nav>
@@ -791,13 +792,175 @@
               <div class="success-icon">✓</div>
               <h2>Вакансия опубликована</h2>
               <p>Конвейер готов к шагу 3 — назначение встречи с кандидатами из откликов и активного поиска HH.</p>
-              <button class="btn btn-primary" data-nav="vacancies">К списку вакансий</button>
+              <button class="btn btn-primary" data-nav="candidates">Перейти к кандидатам →</button>
             </div>
 
             <div class="next-step-teaser" style="max-width:520px;margin:32px auto 0">
               <span class="next-label">Следующий шаг</span>
               <strong>3. Назначение встречи с кандидатом</strong>
               <p>Топ кандидаты · fit-score · вопросы и рекомендации к интервью</p>
+              <button class="btn btn-primary btn-sm" type="button" data-nav="candidates" style="margin-top:12px">Перейти к кандидатам →</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Step 3: Candidates shortlist -->
+      <section class="screen" data-screen="candidates">
+        <div class="app-layout">
+          <aside class="sidebar">
+            <div class="sidebar-brand"><span class="wordmark wordmark-sm">VIBEHUNT</span><small>Конвейер · шаг 3</small></div>
+            <nav class="sidebar-nav">
+              <button class="nav-item" data-nav="vacancies"><span>☰</span> Вакансии</button>
+              <button class="nav-item active" data-nav="candidates"><span>◎</span> Кандидаты</button>
+            </nav>
+            <div class="sidebar-user"><div class="avatar">АС</div><div><div class="user-name">Айгуль Смагулова</div></div></div>
+          </aside>
+          <div class="main-pane">
+            <header class="page-header">
+              <h1>Кандидаты</h1>
+              <span class="status-pill done" id="candidates-vacancy-title">Product Manager</span>
+            </header>
+            <div class="callout">
+              <strong>Шаг 3.</strong> Shortlist из откликов и активного поиска HH · fit-score по профилю личности и роли.
+            </div>
+            <div class="stats-row">
+              <div class="stat-mini"><strong>12</strong><span>откликов HH</span></div>
+              <div class="stat-mini"><strong>3</strong><span>в топ-мэтче</span></div>
+              <div class="stat-mini"><strong>48ч</strong><span>time-to-first-interview</span></div>
+            </div>
+            <p class="section-label">Топ кандидаты</p>
+            <div class="candidate-list" id="candidate-list"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Step 3: Candidate detail -->
+      <section class="screen" data-screen="candidate-detail">
+        <div class="app-layout">
+          <aside class="sidebar">
+            <div class="sidebar-brand"><span class="wordmark wordmark-sm">VIBEHUNT</span><small>Конвейер · шаг 3</small></div>
+            <nav class="sidebar-nav">
+              <button class="nav-item" data-nav="candidates"><span>◎</span> Кандидаты</button>
+            </nav>
+            <div class="sidebar-user"><div class="avatar">АС</div><div><div class="user-name">Айгуль Смагулова</div></div></div>
+          </aside>
+          <div class="main-pane wizard-layout">
+            <header class="page-header">
+              <button class="btn btn-ghost btn-sm" data-nav="candidates">← К shortlist</button>
+            </header>
+            <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px">
+              <div class="candidate-avatar" id="detail-avatar" style="width:56px;height:56px;font-size:18px">АК</div>
+              <div>
+                <h1 id="detail-name" style="font-family:var(--vh-font-display);font-size:1.5rem;font-weight:700">—</h1>
+                <p id="detail-title" style="color:var(--vh-color-muted);font-size:14px">—</p>
+              </div>
+              <div class="fit-badge" style="margin-left:auto">
+                <span class="fit-score high" id="detail-fit">—</span>
+                <span class="fit-label">fit-score</span>
+              </div>
+            </div>
+            <p class="section-label">Совпадение с профилем позиции</p>
+            <div class="match-tags" id="detail-tags"></div>
+            <div class="review-block">
+              <h3>Источник</h3>
+              <p id="detail-source">—</p>
+            </div>
+            <div class="wizard-actions">
+              <button class="btn btn-primary btn-full" data-nav="interview-prep">Подготовить интервью →</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Step 3: Interview prep -->
+      <section class="screen" data-screen="interview-prep">
+        <div class="app-layout">
+          <aside class="sidebar">
+            <div class="sidebar-brand"><span class="wordmark wordmark-sm">VIBEHUNT</span><small>Конвейер · шаг 3</small></div>
+            <nav class="sidebar-nav">
+              <button class="nav-item" data-nav="candidates"><span>◎</span> Кандидаты</button>
+            </nav>
+            <div class="sidebar-user"><div class="avatar">АС</div><div><div class="user-name">Айгуль Смагулова</div></div></div>
+          </aside>
+          <div class="main-pane wizard-layout">
+            <header class="page-header"><h1>Подготовка интервью</h1></header>
+            <p class="section-label">Этап 1 · <span id="prep-stage-name">Скрининг HR</span></p>
+            <div class="ai-tip">
+              <strong>AI-рекомендации</strong>
+              <span id="prep-ai-tip">Кандидат сильный в стратегии — уточните опыт запуска продуктов с нуля и работу с метриками удержания.</span>
+            </div>
+            <p class="section-label">Рекомендуемая адженда</p>
+            <ul class="agenda-list" id="prep-agenda">
+              <li><span class="agenda-num">01</span> Опыт и мотивация — почему Product Manager, почему сейчас</li>
+              <li><span class="agenda-num">02</span> Кейс: запуск фичи от идеи до метрик</li>
+              <li><span class="agenda-num">03</span> Работа с командой и стейкхолдерами</li>
+              <li><span class="agenda-num">04</span> Вопросы кандидата · следующие шаги</li>
+            </ul>
+            <div class="wizard-actions">
+              <button class="btn btn-ghost" data-nav="candidate-detail">← Назад</button>
+              <button class="btn btn-primary btn-full" data-nav="meeting-schedule">Назначить встречу →</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Step 3: Schedule meeting -->
+      <section class="screen" data-screen="meeting-schedule">
+        <div class="app-layout">
+          <aside class="sidebar">
+            <div class="sidebar-brand"><span class="wordmark wordmark-sm">VIBEHUNT</span><small>Конвейер · шаг 3</small></div>
+            <nav class="sidebar-nav">
+              <button class="nav-item" data-nav="candidates"><span>◎</span> Кандидаты</button>
+            </nav>
+            <div class="sidebar-user"><div class="avatar">АС</div><div><div class="user-name">Айгуль Смагулова</div></div></div>
+          </aside>
+          <div class="main-pane wizard-layout">
+            <header class="page-header"><h1>Назначить встречу</h1></header>
+            <div class="review-block">
+              <h3>Кандидат</h3>
+              <p><strong id="schedule-candidate">—</strong></p>
+            </div>
+            <div class="review-block">
+              <h3>Адженда</h3>
+              <p id="schedule-agenda" style="font-size:13px;color:var(--vh-color-muted)">Скрининг HR · 4 блока · запись с согласия</p>
+            </div>
+            <p class="section-label">Слот из календаря</p>
+            <div class="slots-grid" id="schedule-slots"></div>
+            <label class="consent-row" style="margin-top:20px">
+              <input type="checkbox" checked>
+              <span>Кандидат получит письмо с согласием на запись интервью (хранение в KZ)</span>
+            </label>
+            <div class="wizard-actions">
+              <button class="btn btn-ghost" data-nav="interview-prep">← Назад</button>
+              <button class="btn btn-primary btn-full" data-nav="meeting-done">Подтвердить встречу →</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Step 3: Meeting scheduled -->
+      <section class="screen" data-screen="meeting-done">
+        <div class="app-layout">
+          <aside class="sidebar">
+            <div class="sidebar-brand"><span class="wordmark wordmark-sm">VIBEHUNT</span><small>Конвейер · шаг 3</small></div>
+            <nav class="sidebar-nav">
+              <button class="nav-item active" data-nav="candidates"><span>◎</span> Кандидаты</button>
+            </nav>
+            <div class="sidebar-user"><div class="avatar">АС</div><div><div class="user-name">Айгуль Смагулова</div></div></div>
+          </aside>
+          <div class="main-pane">
+            <div class="success-panel">
+              <div class="success-icon">✓</div>
+              <h2>Встреча назначена</h2>
+              <p id="meeting-done-summary">Алмас Касымов · Вт 11:00 · Скрининг HR</p>
+              <p style="font-size:13px;color:var(--vh-color-muted);margin-bottom:24px">Кандидат получит приглашение и запрос согласия на запись. Daily.co создаст комнату с записью в KZ.</p>
+              <button class="btn btn-primary" data-nav="candidates">К кандидатам</button>
+            </div>
+            <div class="next-step-teaser" style="max-width:520px;margin:32px auto 0">
+              <span class="next-label">Следующий шаг</span>
+              <strong>4. Проведение интервью</strong>
+              <p>Напоминание · ссылка Daily · запись · анализ и решение по этапу</p>
             </div>
           </div>
         </div>
