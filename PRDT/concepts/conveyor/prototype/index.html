@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VibeHunt — Конвейер HR</title>
+  <title>VibeHunt — Конвейер</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -196,7 +196,7 @@
           <footer class="site-footer">
             <div class="container footer-inner">
               <span class="wordmark wordmark-sm">VIBEHUNT</span>
-              <span class="footer-meta">Конвейер HR · прототип шага 1</span>
+              <span class="footer-meta">Конвейер HR · единый прототип</span>
             </div>
           </footer>
         </div>
@@ -266,7 +266,7 @@
                 <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 9h10M9 4v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
                 Интеграции
               </button>
-              <button class="nav-item disabled" type="button">
+              <button class="nav-item disabled" type="button" id="nav-vacancies" data-nav="vacancies">
                 <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 5h12M3 9h12M3 13h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
                 Вакансии
               </button>
@@ -309,10 +309,18 @@
               </button>
             </div>
 
+            <div class="callout hidden" id="setup-ready-callout" style="margin-top:16px">
+              <strong>Онбординг завершён!</strong> Переходите к публикации первой вакансии.
+              <div style="margin-top:12px">
+                <button class="btn btn-primary btn-sm" type="button" data-nav="vacancies">Перейти к вакансиям →</button>
+              </div>
+            </div>
+
             <div class="next-step-teaser">
-              <span class="next-label">Следующий шаг</span>
+              <span class="next-label">Следующий шаг конвейера</span>
               <strong>2. Публикация вакансии</strong>
-              <p id="next-step-hint">Доступно после настройки компании и HH · <a href="../conveyor/prototype/index.html" style="color:var(--vh-color-primary);font-weight:600">единый прототип →</a></p>
+              <p id="next-step-hint">Завершите настройку компании и HeadHunter</p>
+              <button class="btn btn-ghost btn-sm" type="button" id="next-step-btn" data-nav="vacancies" disabled style="margin-top:12px">Создать вакансию →</button>
             </div>
           </div>
         </div>
@@ -338,6 +346,10 @@
               <button class="nav-item" data-nav="cabinet-integrations">
                 <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 9h10M9 4v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
                 Интеграции
+              </button>
+              <button class="nav-item disabled" type="button" data-nav="vacancies">
+                <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 5h12M3 9h12M3 13h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                Вакансии
               </button>
             </nav>
             <div class="sidebar-user">
@@ -410,6 +422,10 @@
                 <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 9h10M9 4v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
                 Интеграции
               </button>
+              <button class="nav-item disabled" type="button" data-nav="vacancies">
+                <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 5h12M3 9h12M3 13h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                Вакансии
+              </button>
             </nav>
             <div class="sidebar-user">
               <div class="avatar">АС</div>
@@ -447,6 +463,346 @@
           </div>
         </div>
       </section>
+
+<!-- Vacancies list -->
+      <section class="screen" data-screen="vacancies">
+        <div class="app-layout">
+          <aside class="sidebar">
+            <div class="sidebar-brand">
+              <span class="wordmark wordmark-sm">VIBEHUNT</span>
+              <small>Конвейер</small>
+            </div>
+            <nav class="sidebar-nav">
+              <button class="nav-item" type="button" disabled><span>◉</span> Обзор</button>
+              <button class="nav-item active" data-nav="vacancies"><span>☰</span> Вакансии</button>
+              <button class="nav-item" type="button" disabled><span>▣</span> Компания</button>
+              <button class="nav-item" type="button" disabled><span>⇄</span> Интеграции</button>
+            </nav>
+            <div class="sidebar-user">
+              <div class="avatar">АС</div>
+              <div>
+                <div class="user-name">Айгуль Смагулова</div>
+                <div class="user-email">hr@techflow.kz</div>
+              </div>
+            </div>
+          </aside>
+
+          <div class="main-pane">
+            <header class="page-header">
+              <h1>Вакансии</h1>
+              <button class="btn btn-primary btn-sm" data-nav="wizard-role">+ Создать вакансию</button>
+            </header>
+
+            <div class="callout">
+              <strong>Шаг 2.</strong> Опубликуйте вакансию: задайте роль, профиль личности, этапы интервью и слоты для встреч.
+            </div>
+
+            <div id="vacancies-empty" class="empty-state">
+              <h2>Пока нет вакансий</h2>
+              <p>Создайте первую вакансию — конвейер проведёт вас через настройку роли, опросника, этапов и календаря.</p>
+              <button class="btn btn-primary" data-nav="wizard-role">Создать вакансию →</button>
+            </div>
+
+            <div id="vacancy-list" class="hidden"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Wizard: Role -->
+      <section class="screen" data-screen="wizard-role">
+        <div class="app-layout">
+          <aside class="sidebar">
+            <div class="sidebar-brand"><span class="wordmark wordmark-sm">VIBEHUNT</span><small>Конвейер</small></div>
+            <nav class="sidebar-nav">
+              <button class="nav-item" data-nav="vacancies"><span>☰</span> Вакансии</button>
+            </nav>
+            <div class="sidebar-user"><div class="avatar">АС</div><div><div class="user-name">Айгуль Смагулова</div></div></div>
+          </aside>
+
+          <div class="main-pane wizard-layout">
+            <header class="page-header">
+              <h1>Новая вакансия</h1>
+              <button class="btn btn-ghost btn-sm theme-toggle" type="button" aria-label="Переключить тему">◐</button>
+            </header>
+
+            <div class="wizard-steps">
+              <div class="wizard-step active" data-wizard-step="0">Роль</div>
+              <div class="wizard-step" data-wizard-step="1">Профиль</div>
+              <div class="wizard-step" data-wizard-step="2">Этапы</div>
+              <div class="wizard-step" data-wizard-step="3">Календарь</div>
+              <div class="wizard-step" data-wizard-step="4">Публикация</div>
+            </div>
+
+            <p class="section-label">Функционал роли</p>
+
+            <div class="field">
+              <label for="job-title">Название вакансии</label>
+              <input type="text" id="job-title" placeholder="Product Manager">
+            </div>
+            <div class="field">
+              <label for="job-role">Функционал и задачи</label>
+              <textarea id="job-role" placeholder="Опишите зону ответственности, KPI и ключевые задачи на первые 90 дней…"></textarea>
+              <p class="field-hint">Используется для мэтча кандидатов и AI-рекомендаций к интервью</p>
+            </div>
+            <div class="field">
+              <label for="job-location">Локация / формат</label>
+              <select id="job-location">
+                <option value="remote">Удалённо</option>
+                <option value="hybrid" selected>Гибрид · Алматы</option>
+                <option value="office">Офис · Алматы</option>
+              </select>
+            </div>
+
+            <div class="wizard-actions">
+              <button class="btn btn-ghost" data-nav="vacancies">Отмена</button>
+              <button class="btn btn-primary btn-full" data-nav="wizard-personality">Далее: профиль личности →</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Wizard: Personality -->
+      <section class="screen" data-screen="wizard-personality">
+        <div class="app-layout">
+          <aside class="sidebar">
+            <div class="sidebar-brand"><span class="wordmark wordmark-sm">VIBEHUNT</span><small>Конвейер</small></div>
+            <nav class="sidebar-nav"><button class="nav-item" data-nav="vacancies"><span>☰</span> Вакансии</button></nav>
+            <div class="sidebar-user"><div class="avatar">АС</div><div><div class="user-name">Айгуль Смагулова</div></div></div>
+          </aside>
+
+          <div class="main-pane wizard-layout">
+            <header class="page-header"><h1>Профиль личности</h1></header>
+
+            <div class="wizard-steps">
+              <div class="wizard-step done" data-wizard-step="0">Роль</div>
+              <div class="wizard-step active" data-wizard-step="1">Профиль</div>
+              <div class="wizard-step" data-wizard-step="2">Этапы</div>
+              <div class="wizard-step" data-wizard-step="3">Календарь</div>
+              <div class="wizard-step" data-wizard-step="4">Публикация</div>
+            </div>
+
+            <p class="section-label">Свой опросник · желаемый профиль кандидата</p>
+            <p class="field-hint" style="margin-bottom:16px">Fit-score на шаге 3 будет считаться по совпадению профиля кандидата с выбранным опросником.</p>
+
+            <div class="option-grid">
+              <button class="option-card selected" type="button" data-personality="standard">
+                <input type="radio" name="personality" checked>
+                <div>
+                  <strong>VibeHunt Standard</strong>
+                  <p>12 шкал личности · подходит для большинства ролей · ~15 мин на прохождение</p>
+                </div>
+              </button>
+              <button class="option-card" type="button" data-personality="leadership">
+                <input type="radio" name="personality">
+                <div>
+                  <strong>Leadership Fit</strong>
+                  <p>Акцент на управленческие компетенции · для team lead и C-level</p>
+                </div>
+              </button>
+              <button class="option-card" type="button" data-personality="custom">
+                <input type="radio" name="personality">
+                <div>
+                  <strong>Шаблон компании</strong>
+                  <p>Свой опросник TechFlow KZ · настроен HRD</p>
+                </div>
+              </button>
+            </div>
+
+            <div class="wizard-actions">
+              <button class="btn btn-ghost" data-nav="wizard-role">← Назад</button>
+              <button class="btn btn-primary btn-full" data-nav="wizard-pipeline">Далее: этапы и согласования →</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Wizard: Pipeline -->
+      <section class="screen" data-screen="wizard-pipeline">
+        <div class="app-layout">
+          <aside class="sidebar">
+            <div class="sidebar-brand"><span class="wordmark wordmark-sm">VIBEHUNT</span><small>Конвейер</small></div>
+            <nav class="sidebar-nav"><button class="nav-item" data-nav="vacancies"><span>☰</span> Вакансии</button></nav>
+            <div class="sidebar-user"><div class="avatar">АС</div><div><div class="user-name">Айгуль Смагулова</div></div></div>
+          </aside>
+
+          <div class="main-pane wizard-layout">
+            <header class="page-header"><h1>Этапы и согласования</h1></header>
+
+            <div class="wizard-steps">
+              <div class="wizard-step done" data-wizard-step="0">Роль</div>
+              <div class="wizard-step done" data-wizard-step="1">Профиль</div>
+              <div class="wizard-step active" data-wizard-step="2">Этапы</div>
+              <div class="wizard-step" data-wizard-step="3">Календарь</div>
+              <div class="wizard-step" data-wizard-step="4">Публикация</div>
+            </div>
+
+            <p class="section-label">Количество этапов интервью</p>
+            <div class="stage-counter">
+              <button type="button" id="stage-minus" aria-label="Уменьшить">−</button>
+              <span id="stage-count">2</span>
+              <button type="button" id="stage-plus" aria-label="Увеличить">+</button>
+              <span class="field-hint">По умолчанию 2, максимум 5</span>
+            </div>
+
+            <div id="stage-list" class="stage-list"></div>
+
+            <p class="section-label">Участники согласования</p>
+            <p class="field-hint" style="margin-bottom:12px">Кто подтверждает адженду и решение по каждому этапу</p>
+            <div class="participant-chips">
+              <button class="chip selected" type="button" data-participant="hr">HR</button>
+              <button class="chip selected" type="button" data-participant="hm">Hiring manager</button>
+              <button class="chip" type="button" data-participant="ceo">CEO</button>
+            </div>
+
+            <div class="wizard-actions">
+              <button class="btn btn-ghost" data-nav="wizard-personality">← Назад</button>
+              <button class="btn btn-primary btn-full" data-nav="wizard-calendar">Далее: календарь и слоты →</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Wizard: Calendar -->
+      <section class="screen" data-screen="wizard-calendar">
+        <div class="app-layout">
+          <aside class="sidebar">
+            <div class="sidebar-brand"><span class="wordmark wordmark-sm">VIBEHUNT</span><small>Конвейер</small></div>
+            <nav class="sidebar-nav"><button class="nav-item" data-nav="vacancies"><span>☰</span> Вакансии</button></nav>
+            <div class="sidebar-user"><div class="avatar">АС</div><div><div class="user-name">Айгуль Смагулова</div></div></div>
+          </aside>
+
+          <div class="main-pane wizard-layout">
+            <header class="page-header"><h1>Календарь и слоты</h1></header>
+
+            <div class="wizard-steps">
+              <div class="wizard-step done" data-wizard-step="0">Роль</div>
+              <div class="wizard-step done" data-wizard-step="1">Профиль</div>
+              <div class="wizard-step done" data-wizard-step="2">Этапы</div>
+              <div class="wizard-step active" data-wizard-step="3">Календарь</div>
+              <div class="wizard-step" data-wizard-step="4">Публикация</div>
+            </div>
+
+            <div class="calendar-card" id="calendar-pending">
+              <div class="calendar-icon">📅</div>
+              <div class="integration-body">
+                <strong>Google Calendar</strong>
+                <p>Синхронизация слотов для назначения интервью</p>
+                <span class="status-tag">Не подключён</span>
+              </div>
+              <button class="btn btn-primary btn-sm" type="button" id="connect-calendar">Подключить</button>
+            </div>
+
+            <div class="calendar-card connected hidden" id="calendar-connected">
+              <div class="calendar-icon">📅</div>
+              <div class="integration-body">
+                <strong>Google Calendar</strong>
+                <p>hr@techflow.kz · синхронизировано</p>
+                <span class="status-tag ok">✓ Connected</span>
+              </div>
+            </div>
+
+            <p class="section-label">Свободные слоты на этой неделе</p>
+            <p class="field-hint" style="margin-bottom:12px">Выберите окна, когда HR и участники могут проводить интервью</p>
+            <div class="slots-grid">
+              <button class="slot-chip" type="button" data-slot="Пн 10:00">Пн 10:00</button>
+              <button class="slot-chip" type="button" data-slot="Пн 14:00">Пн 14:00</button>
+              <button class="slot-chip selected" type="button" data-slot="Вт 11:00">Вт 11:00</button>
+              <button class="slot-chip selected" type="button" data-slot="Вт 15:30">Вт 15:30</button>
+              <button class="slot-chip" type="button" data-slot="Ср 10:00">Ср 10:00</button>
+              <button class="slot-chip" type="button" data-slot="Чт 14:00">Чт 14:00</button>
+              <button class="slot-chip" type="button" data-slot="Пт 11:00">Пт 11:00</button>
+            </div>
+
+            <div class="wizard-actions">
+              <button class="btn btn-ghost" data-nav="wizard-pipeline">← Назад</button>
+              <button class="btn btn-primary btn-full" data-nav="wizard-review">Далее: проверка →</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Wizard: Review -->
+      <section class="screen" data-screen="wizard-review">
+        <div class="app-layout">
+          <aside class="sidebar">
+            <div class="sidebar-brand"><span class="wordmark wordmark-sm">VIBEHUNT</span><small>Конвейер</small></div>
+            <nav class="sidebar-nav"><button class="nav-item" data-nav="vacancies"><span>☰</span> Вакансии</button></nav>
+            <div class="sidebar-user"><div class="avatar">АС</div><div><div class="user-name">Айгуль Смагулова</div></div></div>
+          </aside>
+
+          <div class="main-pane wizard-layout">
+            <header class="page-header"><h1>Проверка и публикация</h1></header>
+
+            <div class="wizard-steps">
+              <div class="wizard-step done" data-wizard-step="0">Роль</div>
+              <div class="wizard-step done" data-wizard-step="1">Профиль</div>
+              <div class="wizard-step done" data-wizard-step="2">Этапы</div>
+              <div class="wizard-step done" data-wizard-step="3">Календарь</div>
+              <div class="wizard-step active" data-wizard-step="4">Публикация</div>
+            </div>
+
+            <div class="review-block">
+              <h3>Роль</h3>
+              <p><strong id="review-title">—</strong></p>
+              <p id="review-role" style="margin-top:6px;color:var(--vh-color-muted)">—</p>
+            </div>
+            <div class="review-block">
+              <h3>Профиль личности</h3>
+              <p id="review-personality">—</p>
+            </div>
+            <div class="review-block">
+              <h3>Этапы интервью</h3>
+              <p id="review-stages">—</p>
+            </div>
+            <div class="review-block">
+              <h3>Участники согласования</h3>
+              <p id="review-participants">—</p>
+            </div>
+            <div class="review-block">
+              <h3>Календарь</h3>
+              <p id="review-calendar">—</p>
+            </div>
+
+            <div class="callout" style="margin-top:20px">
+              Вакансия будет опубликована на <strong>HeadHunter</strong> и станет доступна для мэтча кандидатов на шаге 3.
+            </div>
+
+            <div class="wizard-actions">
+              <button class="btn btn-ghost" data-nav="wizard-calendar">← Назад</button>
+              <button class="btn btn-primary btn-full" data-nav="published">Опубликовать на HH →</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Published success -->
+      <section class="screen" data-screen="published">
+        <div class="app-layout">
+          <aside class="sidebar">
+            <div class="sidebar-brand"><span class="wordmark wordmark-sm">VIBEHUNT</span><small>Конвейер</small></div>
+            <nav class="sidebar-nav">
+              <button class="nav-item active" data-nav="vacancies"><span>☰</span> Вакансии</button>
+            </nav>
+            <div class="sidebar-user"><div class="avatar">АС</div><div><div class="user-name">Айгуль Смагулова</div></div></div>
+          </aside>
+
+          <div class="main-pane">
+            <div class="success-panel">
+              <div class="success-icon">✓</div>
+              <h2>Вакансия опубликована</h2>
+              <p>Конвейер готов к шагу 3 — назначение встречи с кандидатами из откликов и активного поиска HH.</p>
+              <button class="btn btn-primary" data-nav="vacancies">К списку вакансий</button>
+            </div>
+
+            <div class="next-step-teaser" style="max-width:520px;margin:32px auto 0">
+              <span class="next-label">Следующий шаг</span>
+              <strong>3. Назначение встречи с кандидатом</strong>
+              <p>Топ кандидаты · fit-score · вопросы и рекомендации к интервью</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
     </main>
   </div>
