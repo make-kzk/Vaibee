@@ -1,199 +1,235 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VibeHunt — Конвейер HR</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <meta name="theme-color" content="#fafafa">
-  <link rel="stylesheet" href="../../../../SYST/assets/mockup.css">
+  <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#101014">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="mockup-frame vh-frame">
-    <main class="mockup-screens">
+  <div class="app-root">
+    <main class="screens">
 
-      <!-- Landing — маркетинг AJTBD (Замесин) -->
+      <!-- Landing -->
       <section class="screen active" data-screen="home">
+        <header class="topbar">
+          <div class="topbar-inner">
+            <a class="wordmark" href="#" data-nav="home">VIBEHUNT</a>
+            <span class="product-badge">Конвейер</span>
+            <div class="topbar-actions">
+              <button class="btn btn-ghost btn-sm theme-toggle" type="button" aria-label="Переключить тему">◐</button>
+              <button class="btn btn-outline btn-sm" data-nav="register">Войти</button>
+            </div>
+          </div>
+        </header>
+
         <div class="landing">
-          <div class="landing-nav">
-            <span class="brand">
-              <span class="brand-mark">◎</span>
-              VibeHunt
-              <span class="brand-sub">Конвейер</span>
-            </span>
-            <button class="link-btn" data-nav="register">Войти</button>
-          </div>
-
-          <div class="landing-hero">
-            <span class="ajtbd-label">Big Job</span>
-            <h1>Нанять человека, который <span class="gradient-text">покажет результат</span> на позиции</h1>
-            <p class="lead">
-              <strong>Core Job:</strong> когда ведёте найм, хотите пройти путь от вакансии до оффера в одном конвейере —
-              с мэтчем кандидатов, записью интервью и рекомендациями на каждом этапе.
-            </p>
-            <div class="hero-cta-row">
-              <button class="btn vh-primary" data-nav="register">Запустить конвейер →</button>
-              <span class="hero-note">Регистрация HR · настройка за 10 минут</span>
-            </div>
-          </div>
-
-          <div class="landing-section">
-            <h2 class="section-title">Кому подходит</h2>
-            <p class="section-sub">Квалифицирующий блок — выберите свой контекст</p>
-            <div class="segment-grid">
-              <button class="segment-card" type="button" data-nav="register">
-                <strong>HR / рекрутер</strong>
-                <p>Закрываете вакансии сами и тонете в откликах HH</p>
-                <span class="segment-cta">Это про меня →</span>
-              </button>
-              <button class="segment-card" type="button" data-nav="register">
-                <strong>HRD</strong>
-                <p>Нужен прозрачный процесс и согласования с hiring manager</p>
-                <span class="segment-cta">Это про меня →</span>
-              </button>
-              <button class="segment-card" type="button" data-nav="register">
-                <strong>CEO / founder</strong>
-                <p>Нанимаете руководителей, где ошибка стоит дорого</p>
-                <span class="segment-cta">Это про меня →</span>
-              </button>
-            </div>
-          </div>
-
-          <div class="landing-section">
-            <h2 class="section-title">Почему текущий найм буксует</h2>
-            <p class="section-sub">Проблемы решений, которые «увольняем»</p>
-            <ul class="pain-list">
-              <li>
-                <span class="pain-icon">✕</span>
-                <div>
-                  <strong>HH + Excel + календарь + Zoom</strong>
-                  <p>Граф работ разорван — кандидаты теряются между инструментами</p>
-                </div>
-              </li>
-              <li>
-                <span class="pain-icon">✕</span>
-                <div>
-                  <strong>100 откликов, 5 релевантных</strong>
-                  <p>Нет fit-score — сильные кандидаты уходят, пока вы скрините вручную</p>
-                </div>
-              </li>
-              <li>
-                <span class="pain-icon">✕</span>
-                <div>
-                  <strong>Интервью без структуры</strong>
-                  <p>Нет адженды, записи и анализа — решения на ощущениях</p>
-                </div>
-              </li>
-              <li>
-                <span class="pain-icon">✕</span>
-                <div>
-                  <strong>Согласования тормозят оффер</strong>
-                  <p>Hiring manager и CEO не в одном конвейере — сроки растут</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-
-          <div class="landing-section">
-            <h2 class="section-title">Core Jobs</h2>
-            <p class="section-sub">Как конвейер упрощает граф работ и даёт ценность</p>
-            <div class="jtbd-list">
-              <article class="jtbd-card">
-                <span class="jtbd-rank">01</span>
-                <span class="ajtbd-tag">Core Job</span>
-                <p class="job-story"><em>Когда</em> открыта вакансия, <em>хочу</em> быстро получить shortlist релевантных кандидатов, <em>чтобы</em> не тратить недели на скрининг.</p>
-                <div class="value-row">
-                  <span class="value-label">Ценность</span>
-                  <p>Мэтч из откликов и активного поиска HH · fit-score · топ-N на экране</p>
-                </div>
-              </article>
-              <article class="jtbd-card">
-                <span class="jtbd-rank">02</span>
-                <span class="ajtbd-tag">Core Job</span>
-                <p class="job-story"><em>Когда</em> назначаю интервью, <em>хочу</em> вопросы, адженду и слоты в одном месте, <em>чтобы</em> провести встречу структурированно.</p>
-                <div class="value-row">
-                  <span class="value-label">Ценность</span>
-                  <p>AI-рекомендации · календарь · запись через Daily · согласие кандидата</p>
-                </div>
-              </article>
-              <article class="jtbd-card">
-                <span class="jtbd-rank">03</span>
-                <span class="ajtbd-tag">Core Job</span>
-                <p class="job-story"><em>Когда</em> интервью завершено, <em>хочу</em> анализ и решение по этапу, <em>чтобы</em> быстро довести сильного кандидата до оффера.</p>
-                <div class="value-row">
-                  <span class="value-label">Ценность</span>
-                  <p>Транскрипт · рекомендации · N этапов · согласование с hiring manager</p>
-                </div>
-              </article>
-            </div>
-          </div>
-
-          <div class="landing-section">
-            <h2 class="section-title">Почему VibeHunt</h2>
-            <div class="rtb-grid">
-              <div class="rtb-item">
-                <strong>↓ Time-to-offer</strong>
-                <p>Один конвейер вместо 4–5 инструментов</p>
-              </div>
-              <div class="rtb-item">
-                <strong>↑ Quality of hire</strong>
-                <p>Мэтч по профилю позиции и личности</p>
-              </div>
-              <div class="rtb-item">
-                <strong>KZ compliance</strong>
-                <p>Запись хранится в Казахстане</p>
+          <section class="hero">
+            <div class="container hero-inner">
+              <p class="eyebrow">Big Job · AJTBD</p>
+              <h1>Нанять человека, который <span class="text-accent">покажет результат</span> на позиции</h1>
+              <p class="hero-lead">
+                <strong>Core Job:</strong> когда ведёте найм, хотите пройти путь от вакансии до оффера в одном конвейере —
+                с мэтчем кандидатов, записью интервью и рекомендациями на каждом этапе.
+              </p>
+              <div class="hero-actions">
+                <button class="btn btn-primary btn-lg" data-nav="register">Запустить конвейер →</button>
+                <span class="hero-note">Регистрация HR · настройка за 10 минут</span>
               </div>
             </div>
-          </div>
+          </section>
 
-          <div class="landing-section">
-            <h2 class="section-title">Снимаем барьеры</h2>
-            <div class="faq-list">
-              <details class="faq-item" open>
-                <summary>«У нас уже есть HH — зачем конвейер?»</summary>
-                <p>HH — источник кандидатов. Конвейер — граф работ от shortlist до оффера: мэтч, интервью, запись, согласования.</p>
-              </details>
-              <details class="faq-item">
-                <summary>«Кандидаты не согласятся на запись»</summary>
-                <p>Согласие при регистрации и перед каждой записью. Запись — в KZ, только для анализа и рекомендаций HR.</p>
-              </details>
-              <details class="faq-item">
-                <summary>«Сложно внедрять»</summary>
-                <p>Онбординг: регистрация → компания → HH. Дальше — одна вакансия и первый shortlist.</p>
-              </details>
+          <section class="section">
+            <div class="container">
+              <h2 class="section-heading">Кому подходит</h2>
+              <p class="section-desc">Квалифицирующий блок — выберите свой контекст</p>
+              <div class="card-grid cols-3">
+                <button class="card card-interactive" type="button" data-nav="register">
+                  <span class="card-num">01</span>
+                  <strong class="card-title">HR / рекрутер</strong>
+                  <p class="card-body">Закрываете вакансии сами и тонете в откликах HH</p>
+                  <span class="card-link">Это про меня →</span>
+                </button>
+                <button class="card card-interactive" type="button" data-nav="register">
+                  <span class="card-num">02</span>
+                  <strong class="card-title">HRD</strong>
+                  <p class="card-body">Нужен прозрачный процесс и согласования с hiring manager</p>
+                  <span class="card-link">Это про меня →</span>
+                </button>
+                <button class="card card-interactive" type="button" data-nav="register">
+                  <span class="card-num">03</span>
+                  <strong class="card-title">CEO / founder</strong>
+                  <p class="card-body">Нанимаете руководителей, где ошибка стоит дорого</p>
+                  <span class="card-link">Это про меня →</span>
+                </button>
+              </div>
             </div>
-          </div>
+          </section>
 
-          <div class="landing-final">
-            <h2>Закройте следующую вакансию через конвейер</h2>
-            <p>Big Job не меняется — меняется граф работ, по которому вы её достигаете.</p>
-            <button class="btn vh-primary" data-nav="register">Начать бесплатно →</button>
-          </div>
+          <section class="section section-surface">
+            <div class="container">
+              <h2 class="section-heading">Почему текущий найм буксует</h2>
+              <p class="section-desc">Проблемы решений, которые «увольняем»</p>
+              <ul class="pain-grid">
+                <li class="pain-card">
+                  <span class="pain-icon" aria-hidden="true">✕</span>
+                  <div>
+                    <strong>HH + Excel + календарь + Zoom</strong>
+                    <p>Граф работ разорван — кандидаты теряются между инструментами</p>
+                  </div>
+                </li>
+                <li class="pain-card">
+                  <span class="pain-icon" aria-hidden="true">✕</span>
+                  <div>
+                    <strong>100 откликов, 5 релевантных</strong>
+                    <p>Нет fit-score — сильные кандидаты уходят, пока вы скрините вручную</p>
+                  </div>
+                </li>
+                <li class="pain-card">
+                  <span class="pain-icon" aria-hidden="true">✕</span>
+                  <div>
+                    <strong>Интервью без структуры</strong>
+                    <p>Нет адженды, записи и анализа — решения на ощущениях</p>
+                  </div>
+                </li>
+                <li class="pain-card">
+                  <span class="pain-icon" aria-hidden="true">✕</span>
+                  <div>
+                    <strong>Согласования тормозят оффер</strong>
+                    <p>Hiring manager и CEO не в одном конвейере — сроки растут</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="container">
+              <h2 class="section-heading">Core Jobs</h2>
+              <p class="section-desc">Как конвейер упрощает граф работ и даёт ценность</p>
+              <div class="card-grid cols-3">
+                <article class="card">
+                  <span class="card-num-lg">01</span>
+                  <span class="tag">Core Job</span>
+                  <p class="job-story"><em>Когда</em> открыта вакансия, <em>хочу</em> быстро получить shortlist релевантных кандидатов, <em>чтобы</em> не тратить недели на скрининг.</p>
+                  <div class="value-block">
+                    <span class="value-label">Ценность</span>
+                    <p>Мэтч из откликов и активного поиска HH · fit-score · топ-N на экране</p>
+                  </div>
+                </article>
+                <article class="card">
+                  <span class="card-num-lg">02</span>
+                  <span class="tag">Core Job</span>
+                  <p class="job-story"><em>Когда</em> назначаю интервью, <em>хочу</em> вопросы, адженду и слоты в одном месте, <em>чтобы</em> провести встречу структурированно.</p>
+                  <div class="value-block">
+                    <span class="value-label">Ценность</span>
+                    <p>AI-рекомендации · календарь · запись через Daily · согласие кандидата</p>
+                  </div>
+                </article>
+                <article class="card">
+                  <span class="card-num-lg">03</span>
+                  <span class="tag">Core Job</span>
+                  <p class="job-story"><em>Когда</em> интервью завершено, <em>хочу</em> анализ и решение по этапу, <em>чтобы</em> быстро довести сильного кандидата до оффера.</p>
+                  <div class="value-block">
+                    <span class="value-label">Ценность</span>
+                    <p>Транскрипт · рекомендации · N этапов · согласование с hiring manager</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <section class="section section-surface">
+            <div class="container">
+              <h2 class="section-heading">Почему VibeHunt</h2>
+              <div class="stat-grid">
+                <div class="stat-card">
+                  <strong class="stat-value">↓ Time-to-offer</strong>
+                  <p>Один конвейер вместо 4–5 инструментов</p>
+                </div>
+                <div class="stat-card">
+                  <strong class="stat-value">↑ Quality of hire</strong>
+                  <p>Мэтч по профилю позиции и личности</p>
+                </div>
+                <div class="stat-card">
+                  <strong class="stat-value">KZ</strong>
+                  <p>Запись хранится в Казахстане</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="container narrow">
+              <h2 class="section-heading">Снимаем барьеры</h2>
+              <div class="faq-list">
+                <details class="faq-item" open>
+                  <summary>«У нас уже есть HH — зачем конвейер?»</summary>
+                  <p>HH — источник кандидатов. Конвейер — граф работ от shortlist до оффера: мэтч, интервью, запись, согласования.</p>
+                </details>
+                <details class="faq-item">
+                  <summary>«Кандидаты не согласятся на запись»</summary>
+                  <p>Согласие при регистрации и перед каждой записью. Запись — в KZ, только для анализа и рекомендаций HR.</p>
+                </details>
+                <details class="faq-item">
+                  <summary>«Сложно внедрять»</summary>
+                  <p>Онбординг: регистрация → компания → HH. Дальше — одна вакансия и первый shortlist.</p>
+                </details>
+              </div>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="container">
+              <div class="cta-panel">
+                <h2>Закройте следующую вакансию через конвейер</h2>
+                <p>Big Job не меняется — меняется граф работ, по которому вы её достигаете.</p>
+                <button class="btn btn-primary btn-lg" data-nav="register">Начать бесплатно →</button>
+              </div>
+            </div>
+          </section>
+
+          <footer class="site-footer">
+            <div class="container footer-inner">
+              <span class="wordmark wordmark-sm">VIBEHUNT</span>
+              <span class="footer-meta">Конвейер HR · прототип шага 1</span>
+            </div>
+          </footer>
         </div>
       </section>
 
       <!-- Register -->
       <section class="screen" data-screen="register">
+        <header class="topbar">
+          <div class="topbar-inner">
+            <button class="btn btn-ghost btn-sm back-btn" data-nav="home">← На главную</button>
+            <a class="wordmark" href="#" data-nav="home">VIBEHUNT</a>
+            <div class="topbar-actions">
+              <button class="btn btn-ghost btn-sm theme-toggle" type="button" aria-label="Переключить тему">◐</button>
+            </div>
+          </div>
+        </header>
+
         <div class="auth-page">
-          <button class="back-link" data-nav="home">← На главную</button>
-          <span class="brand compact"><span class="brand-mark">◎</span> VibeHunt</span>
-          <h2>Регистрация HR</h2>
+          <div class="step-dots" aria-hidden="true"><span class="dot active"></span><span class="dot"></span></div>
+          <h1>Регистрация HR</h1>
           <p class="auth-sub">Создайте аккаунт. Компанию и HH настраиваете в личном кабинете.</p>
 
           <div class="field">
-            <label>Имя и фамилия</label>
-            <input type="text" placeholder="Айгуль Смагулова">
+            <label for="reg-name">Имя и фамилия</label>
+            <input id="reg-name" type="text" placeholder="Айгуль Смагулова">
           </div>
           <div class="field">
-            <label>Email</label>
-            <input type="email" placeholder="hr@company.kz">
+            <label for="reg-email">Email</label>
+            <input id="reg-email" type="email" placeholder="hr@company.kz">
           </div>
           <div class="field">
-            <label>Пароль</label>
-            <input type="password" placeholder="••••••••">
+            <label for="reg-pass">Пароль</label>
+            <input id="reg-pass" type="password" placeholder="••••••••">
           </div>
 
           <label class="consent-row">
@@ -205,7 +241,7 @@
             <span>Принимаю условия сервиса VibeHunt</span>
           </label>
 
-          <button class="btn vh-primary full" data-nav="cabinet">Создать аккаунт</button>
+          <button class="btn btn-primary btn-full" data-nav="cabinet">Создать аккаунт</button>
         </div>
       </section>
 
@@ -214,22 +250,25 @@
         <div class="app-layout">
           <aside class="sidebar">
             <div class="sidebar-brand">
-              <span class="brand-mark">◎</span>
-              VibeHunt
+              <span class="wordmark wordmark-sm">VIBEHUNT</span>
               <small>Конвейер</small>
             </div>
             <nav class="sidebar-nav">
               <button class="nav-item active" data-nav="cabinet">
-                <span class="nav-icon">◉</span> Обзор
+                <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><rect x="2.5" y="2.5" width="5.5" height="5.5" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="10" y="2.5" width="5.5" height="5.5" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="2.5" y="10" width="5.5" height="5.5" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="10" y="10" width="5.5" height="5.5" rx="1.5" stroke="currentColor" stroke-width="1.5"/></svg>
+                Обзор
               </button>
               <button class="nav-item" data-nav="cabinet-company">
-                <span class="nav-icon">▣</span> Компания
+                <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><rect x="3" y="4" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M6 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1" stroke="currentColor" stroke-width="1.5"/></svg>
+                Компания
               </button>
               <button class="nav-item" data-nav="cabinet-integrations">
-                <span class="nav-icon">⇄</span> Интеграции
+                <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 9h10M9 4v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                Интеграции
               </button>
               <button class="nav-item disabled" type="button">
-                <span class="nav-icon">☰</span> Вакансии
+                <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 5h12M3 9h12M3 13h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                Вакансии
               </button>
             </nav>
             <div class="sidebar-user">
@@ -244,7 +283,7 @@
           <div class="main-pane">
             <header class="page-header">
               <h1>Личный кабинет</h1>
-              <span class="setup-badge" id="setup-badge">Настройка: 0 / 2</span>
+              <span class="status-pill" id="setup-badge">Настройка: 0 / 2</span>
             </header>
 
             <div class="callout">
@@ -283,11 +322,23 @@
       <section class="screen" data-screen="cabinet-company">
         <div class="app-layout">
           <aside class="sidebar">
-            <div class="sidebar-brand"><span class="brand-mark">◎</span> VibeHunt<small>Конвейер</small></div>
+            <div class="sidebar-brand">
+              <span class="wordmark wordmark-sm">VIBEHUNT</span>
+              <small>Конвейер</small>
+            </div>
             <nav class="sidebar-nav">
-              <button class="nav-item" data-nav="cabinet"><span class="nav-icon">◉</span> Обзор</button>
-              <button class="nav-item active" data-nav="cabinet-company"><span class="nav-icon">▣</span> Компания</button>
-              <button class="nav-item" data-nav="cabinet-integrations"><span class="nav-icon">⇄</span> Интеграции</button>
+              <button class="nav-item" data-nav="cabinet">
+                <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><rect x="2.5" y="2.5" width="5.5" height="5.5" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="10" y="2.5" width="5.5" height="5.5" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="2.5" y="10" width="5.5" height="5.5" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="10" y="10" width="5.5" height="5.5" rx="1.5" stroke="currentColor" stroke-width="1.5"/></svg>
+                Обзор
+              </button>
+              <button class="nav-item active" data-nav="cabinet-company">
+                <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><rect x="3" y="4" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M6 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1" stroke="currentColor" stroke-width="1.5"/></svg>
+                Компания
+              </button>
+              <button class="nav-item" data-nav="cabinet-integrations">
+                <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 9h10M9 4v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                Интеграции
+              </button>
             </nav>
             <div class="sidebar-user">
               <div class="avatar">АС</div>
@@ -300,11 +351,11 @@
 
             <div class="form-page">
               <div class="field">
-                <label>Название компании</label>
+                <label for="company-name">Название компании</label>
                 <input type="text" id="company-name" placeholder="TechFlow KZ">
               </div>
               <div class="field">
-                <label>Отрасль</label>
+                <label for="company-industry">Отрасль</label>
                 <select id="company-industry">
                   <option value="">Выберите отрасль</option>
                   <option value="it">IT / SaaS</option>
@@ -316,7 +367,7 @@
                 </select>
               </div>
               <div class="field">
-                <label>Размер команды</label>
+                <label for="company-size">Размер команды</label>
                 <select id="company-size">
                   <option value="">Выберите размер</option>
                   <option value="1-10">1–10 человек</option>
@@ -327,11 +378,11 @@
                 </select>
               </div>
               <div class="field">
-                <label>Сайт</label>
+                <label for="company-site">Сайт</label>
                 <input type="url" id="company-site" placeholder="https://company.kz">
               </div>
 
-              <button class="btn vh-primary" type="button" id="save-company">Сохранить</button>
+              <button class="btn btn-primary" type="button" id="save-company">Сохранить</button>
               <p class="save-toast hidden" id="company-saved">✓ Сохранено</p>
             </div>
           </div>
@@ -342,11 +393,23 @@
       <section class="screen" data-screen="cabinet-integrations">
         <div class="app-layout">
           <aside class="sidebar">
-            <div class="sidebar-brand"><span class="brand-mark">◎</span> VibeHunt<small>Конвейер</small></div>
+            <div class="sidebar-brand">
+              <span class="wordmark wordmark-sm">VIBEHUNT</span>
+              <small>Конвейер</small>
+            </div>
             <nav class="sidebar-nav">
-              <button class="nav-item" data-nav="cabinet"><span class="nav-icon">◉</span> Обзор</button>
-              <button class="nav-item" data-nav="cabinet-company"><span class="nav-icon">▣</span> Компания</button>
-              <button class="nav-item active" data-nav="cabinet-integrations"><span class="nav-icon">⇄</span> Интеграции</button>
+              <button class="nav-item" data-nav="cabinet">
+                <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><rect x="2.5" y="2.5" width="5.5" height="5.5" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="10" y="2.5" width="5.5" height="5.5" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="2.5" y="10" width="5.5" height="5.5" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="10" y="10" width="5.5" height="5.5" rx="1.5" stroke="currentColor" stroke-width="1.5"/></svg>
+                Обзор
+              </button>
+              <button class="nav-item" data-nav="cabinet-company">
+                <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><rect x="3" y="4" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M6 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1" stroke="currentColor" stroke-width="1.5"/></svg>
+                Компания
+              </button>
+              <button class="nav-item active" data-nav="cabinet-integrations">
+                <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 9h10M9 4v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                Интеграции
+              </button>
             </nav>
             <div class="sidebar-user">
               <div class="avatar">АС</div>
@@ -364,7 +427,7 @@
                 <p>Отклики, активный поиск, публикация вакансий</p>
                 <span class="status-tag">Не подключён</span>
               </div>
-              <button class="btn vh-primary compact" type="button" id="hh-connect">Подключить</button>
+              <button class="btn btn-primary btn-sm" type="button" id="hh-connect">Подключить</button>
             </div>
 
             <div class="integration-card connected hidden" id="hh-connected">
