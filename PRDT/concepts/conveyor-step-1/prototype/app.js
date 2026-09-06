@@ -1,6 +1,18 @@
 (function () {
   const screens = document.querySelectorAll('[data-screen]');
+  const root = document.documentElement;
   let history = ['home'];
+
+  document.querySelectorAll('.theme-toggle').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+      root.dataset.theme = next;
+      document.querySelector('meta[name="theme-color"]')?.setAttribute(
+        'content',
+        next === 'dark' ? '#101014' : '#fafafa',
+      );
+    });
+  });
 
   const state = {
     companySaved: false,
@@ -36,7 +48,8 @@
   }
 
   document.querySelectorAll('[data-nav]').forEach((el) => {
-    el.addEventListener('click', () => {
+    el.addEventListener('click', (e) => {
+      e.preventDefault();
       const target = el.dataset.nav;
       if (target === 'home' && history.length > 1) {
         history = ['home'];
