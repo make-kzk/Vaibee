@@ -3,12 +3,49 @@
   const root = document.documentElement;
   const WIZARD = ['wizard-role', 'wizard-personality', 'wizard-pipeline', 'wizard-calendar', 'wizard-review'];
   const CABINET = ['cabinet', 'cabinet-company', 'cabinet-integrations'];
+  const STEP3 = ['candidates', 'candidate-detail', 'interview-prep', 'meeting-schedule', 'meeting-done'];
   let history = ['home'];
+
+  const CANDIDATES = [
+    {
+      id: 'almaz',
+      initials: 'АК',
+      name: 'Алмас Касымов',
+      title: 'Senior PM · FinTech · 5 лет',
+      fit: 92,
+      source: 'Отклик HH',
+      tags: ['Стратегия', 'Data-driven', 'Кросс-функциональность'],
+      aiTip: 'Кандидат сильный в стратегии — уточните опыт запуска продуктов с нуля и работу с метриками удержания.',
+    },
+    {
+      id: 'dina',
+      initials: 'ДО',
+      name: 'Дина Оспанова',
+      title: 'Product Owner · E-commerce · 4 года',
+      fit: 87,
+      source: 'Активный поиск HH',
+      tags: ['Коммуникация', 'Agile', 'Метрики роста'],
+      aiTip: 'Хороший fit по коммуникации — проверьте опыт работы с dev-командой и приоритизацию бэклога.',
+    },
+    {
+      id: 'sergey',
+      initials: 'СВ',
+      name: 'Сергей Волков',
+      title: 'PM · SaaS · 3 года',
+      fit: 74,
+      source: 'Отклик HH',
+      tags: ['Технический бэкграунд', 'B2B'],
+      aiTip: 'Технический профиль — оцените глубину продуктового мышления vs инженерного.',
+    },
+  ];
 
   const state = {
     companySaved: false,
     hhConnected: false,
     vacancyPublished: false,
+    meetingScheduled: false,
+    selectedCandidateId: null,
+    selectedSlot: 'Вт 11:00',
     personality: 'standard',
     stages: 2,
     participants: ['hr', 'hm'],
@@ -19,6 +56,14 @@
 
   function isSetupComplete() {
     return state.companySaved && state.hhConnected;
+  }
+
+  function getCandidate(id) {
+    return CANDIDATES.find((c) => c.id === id);
+  }
+
+  function getJobTitle() {
+    return document.getElementById('job-title')?.value || 'Product Manager';
   }
 
   document.querySelectorAll('.theme-toggle').forEach((btn) => {
@@ -41,15 +86,28 @@
       showScreen('cabinet');
       return;
     }
+    if (STEP3.includes(id) && !state.vacancyPublished) {
+      showScreen(state.vacancyPublished ? 'vacancies' : 'cabinet');
+      return;
+    }
 
     screens.forEach((s) => s.classList.toggle('active', s.dataset.screen === id));
     syncNav(id);
     updateSetupUI();
     updateWizardSteps(id);
+
     if (id === 'wizard-review') updateReview();
     if (id === 'published') {
       state.vacancyPublished = true;
       updateVacancyList();
+    }
+    if (id === 'candidates') renderCandidateList();
+    if (id === 'candidate-detail') renderCandidateDetail();
+    if (id === 'interview-prep') renderInterviewPrep();
+    if (id === 'meeting-schedule') renderMeetingSchedule();
+    if (id === 'meeting-done') {
+      state.meetingScheduled = true;
+      renderMeetingDone();
     }
   }
 
@@ -61,6 +119,7 @@
       if (nav === 'vacancies' && (current === 'vacancies' || WIZARD.includes(current) || current === 'published')) {
         active = true;
       }
+      if (nav === 'candidates' && STEP3.includes(current)) active = true;
       btn.classList.toggle('active', active);
     });
   }
@@ -93,6 +152,19 @@
       el.classList.toggle('disabled', !complete);
       el.toggleAttribute('disabled', !complete);
     });
+
+    const candidatesNav = document.getElementById('nav-candidates');
+    if (candidatesNav) {
+      candidatesNav.classList.toggle('hidden', !state.vacancyPublished);
+      candidatesNav.classList.toggle('disabled', !state.vacancyPublished);
+      candidatesNav.toggleAttribute('disabled', !state.vacancyPublished);
+    }
+
+    const vacanciesCallout = document.querySelector('[data-screen="vacancies"] .callout');
+    if (vacanciesCallout && state.vacancyPublished) {
+      vacanciesCallout.innerHTML =
+        '<strong>Шаг 3.</strong> Вакансия опубликована — перейдите к shortlist кандидатов и назначьте первую встречу.';
+    }
 
     const nextBtn = document.getElementById('next-step-btn');
     if (nextBtn) {
@@ -167,40 +239,115 @@
   function updateVacancyList() {
     const list = document.getElementById('vacancy-list');
     const empty = document.getElementById('vacancies-empty');
-    const title = document.getElementById('job-title')?.value || 'Product Manager';
+    const title = getJobTitle();
     if (!list || !empty) return;
     if (state.vacancyPublished) {
+      const responses = state.meetingScheduled ? '12 откликов · 1 встреча' : '12 откликов · 3 в топе';
       list.innerHTML = `
-        <div class="vacancy-card">
+        <button class="vacancy-card card-interactive" type="button" data-nav="candidates">
           <div>
             <strong>${title}</strong>
-            <p>Опубликовано на HH · ${state.stages} этапа · 0 откликов</p>
+            <p>Опубликовано на HH · ${responses}</p>
           </div>
-          <span class="status-tag ok">Активна</span>
-        </div>
+          <span class="status-tag ok">${state.meetingScheduled ? 'Встреча назначена' : 'Активна'}</span>
+        </button>
       `;
       list.classList.remove('hidden');
       empty.classList.add('hidden');
     }
   }
 
-  document.querySelectorAll('[data-nav]').forEach((el) => {
-    el.addEventListener('click', (e) => {
-      e.preventDefault();
-      const target = el.dataset.nav;
-      if (!target || el.disabled || el.classList.contains('disabled')) return;
-
-      if (target === 'home' && history.length > 1) {
-        history = ['home'];
-        showScreen('home');
-        return;
-      }
-      if (target && target !== history[history.length - 1]) {
-        if (target === 'home') history = ['home'];
-        else history.push(target);
-        showScreen(target);
-      }
+  function renderCandidateList() {
+    const list = document.getElementById('candidate-list');
+    const titleEl = document.getElementById('candidates-vacancy-title');
+    if (titleEl) titleEl.textContent = getJobTitle();
+    if (!list) return;
+    list.innerHTML = CANDIDATES.map((c, i) => `
+      <button class="candidate-card ${i === 0 ? 'top' : ''}" type="button" data-candidate="${c.id}">
+        <div class="candidate-avatar">${c.initials}</div>
+        <div class="candidate-body">
+          <strong>${c.name}</strong>
+          <p>${c.title}</p>
+          <span class="candidate-source">${c.source}</span>
+        </div>
+        <div class="fit-badge">
+          <span class="fit-score ${c.fit >= 85 ? 'high' : ''}">${c.fit}</span>
+          <span class="fit-label">fit</span>
+        </div>
+      </button>
+    `).join('');
+    list.querySelectorAll('[data-candidate]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        state.selectedCandidateId = btn.dataset.candidate;
+        showScreen('candidate-detail');
+      });
     });
+  }
+
+  function renderCandidateDetail() {
+    const c = getCandidate(state.selectedCandidateId) || CANDIDATES[0];
+    state.selectedCandidateId = c.id;
+    document.getElementById('detail-avatar').textContent = c.initials;
+    document.getElementById('detail-name').textContent = c.name;
+    document.getElementById('detail-title').textContent = c.title;
+    document.getElementById('detail-fit').textContent = c.fit;
+    document.getElementById('detail-fit').className = `fit-score ${c.fit >= 85 ? 'high' : ''}`;
+    document.getElementById('detail-source').textContent = c.source;
+    document.getElementById('detail-tags').innerHTML = c.tags
+      .map((t) => `<span class="match-tag">${t}</span>`)
+      .join('');
+  }
+
+  function renderInterviewPrep() {
+    const c = getCandidate(state.selectedCandidateId) || CANDIDATES[0];
+    document.getElementById('prep-stage-name').textContent = state.stageNames[0] || 'Скрининг HR';
+    document.getElementById('prep-ai-tip').textContent = c.aiTip;
+  }
+
+  function renderMeetingSchedule() {
+    const c = getCandidate(state.selectedCandidateId) || CANDIDATES[0];
+    document.getElementById('schedule-candidate').textContent = `${c.name} · ${state.stageNames[0]}`;
+    const slotsEl = document.getElementById('schedule-slots');
+    if (!slotsEl) return;
+    slotsEl.innerHTML = state.slots
+      .map(
+        (slot) =>
+          `<button class="slot-chip ${slot === state.selectedSlot ? 'selected' : ''}" type="button" data-schedule-slot="${slot}">${slot}</button>`,
+      )
+      .join('');
+    slotsEl.querySelectorAll('[data-schedule-slot]').forEach((chip) => {
+      chip.addEventListener('click', () => {
+        state.selectedSlot = chip.dataset.scheduleSlot;
+        slotsEl.querySelectorAll('.slot-chip').forEach((c) => c.classList.remove('selected'));
+        chip.classList.add('selected');
+      });
+    });
+  }
+
+  function renderMeetingDone() {
+    const c = getCandidate(state.selectedCandidateId) || CANDIDATES[0];
+    document.getElementById('meeting-done-summary').textContent =
+      `${c.name} · ${state.selectedSlot} · ${state.stageNames[0]}`;
+    updateVacancyList();
+  }
+
+  document.body.addEventListener('click', (e) => {
+    const el = e.target.closest('[data-nav]');
+    if (!el) return;
+    e.preventDefault();
+    const target = el.dataset.nav;
+    if (!target || el.disabled || el.classList.contains('disabled')) return;
+
+    if (target === 'home' && history.length > 1) {
+      history = ['home'];
+      showScreen('home');
+      return;
+    }
+    if (target && target !== history[history.length - 1]) {
+      if (target === 'home') history = ['home'];
+      else history.push(target);
+      showScreen(target);
+    }
   });
 
   document.getElementById('save-company')?.addEventListener('click', () => {
@@ -263,7 +410,7 @@
     state.calendarConnected = true;
   });
 
-  document.querySelectorAll('.slot-chip').forEach((chip) => {
+  document.querySelectorAll('.slot-chip:not([data-schedule-slot])').forEach((chip) => {
     chip.addEventListener('click', () => {
       chip.classList.toggle('selected');
       const slot = chip.dataset.slot;

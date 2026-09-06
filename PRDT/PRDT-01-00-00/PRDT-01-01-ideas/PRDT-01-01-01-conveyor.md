@@ -141,7 +141,7 @@ HR тратит время на ручную координацию: поиск 
 
 1. ~~Click-through прототип шага 1~~ → [conveyor-step-1](../../concepts/conveyor-step-1/prototype/index.html)
 2. **Technical spike Daily → KZ S3** — см. [PRDT-01-01-02-daily](./PRDT-01-01-02-daily.md)
-3. ~~Click-through прототип шага 2 (вакансия)~~ → [conveyor-step-2](../../concepts/conveyor-step-2/prototype/index.html) · **единый прототип шагов 1–2** → [conveyor](../../concepts/conveyor/prototype/index.html) · шаг 3 (назначение встречи) — TBD
+3. ~~Click-through прототип шага 2 (вакансия)~~ → [conveyor-step-2](../../concepts/conveyor-step-2/prototype/index.html) · **единый прототип шагов 1–3** → [conveyor](../../concepts/conveyor/prototype/index.html) · шаг 4 (интервью) — TBD
 4. Описать модель данных: компания, вакансия, кандидат, этап, встреча, оффер
 5. Согласовать интеграцию HH (API / OAuth)
-6. Проработать экран «топ кандидатов + рекомендации к интервью»
+6. ~~Проработать экран «топ кандидатов + рекомендации к интервью»~~ → шаг 3 в [едином прототипе](../../concepts/conveyor/prototype/index.html)
