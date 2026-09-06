@@ -3,34 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Конвейер — HR</title>
+  <title>VibeHunt — Конвейер HR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../../../SYST/assets/mockup.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="mockup-frame notion-frame">
+  <div class="mockup-frame vh-frame">
+    <div class="vh-glow vh-glow-a"></div>
+    <div class="vh-glow vh-glow-b"></div>
+
     <main class="mockup-screens">
 
       <!-- Landing + JTBD -->
       <section class="screen active" data-screen="home">
         <div class="landing">
           <div class="landing-nav">
-            <span class="brand">⬡ Конвейер</span>
+            <span class="brand">
+              <span class="brand-mark">◎</span>
+              VibeHunt
+              <span class="brand-sub">Конвейер</span>
+            </span>
             <button class="link-btn" data-nav="register">Войти</button>
           </div>
 
           <div class="landing-hero">
-            <h1>Найм без ручной координации</h1>
-            <p class="lead">От вакансии до оффера — в одном потоке с мэтчем кандидатов, записью интервью и AI-рекомендациями для HR.</p>
-            <button class="btn notion-primary" data-nav="register">Начать бесплатно</button>
+            <span class="hero-badge">👋 HR · найм с vibe-match</span>
+            <h1>Охоться за <span class="gradient-text">топ-кандидатами</span>, не за откликами</h1>
+            <p class="lead">Конвейер VibeHunt: от вакансии до оффера — мэтч, интервью с записью и AI-рекомендации для HR.</p>
+            <button class="btn vh-primary" data-nav="register">Начать охоту →</button>
           </div>
 
           <div class="jtbd-block">
             <h2 class="section-title">Jobs To Be Done</h2>
-            <p class="section-sub">Какую работу выполняет сервис для HR</p>
+            <p class="section-sub">Какую работу выполняет сервис</p>
 
             <div class="jtbd-list">
               <article class="jtbd-card">
+                <span class="jtbd-rank">01</span>
                 <span class="jtbd-when">Когда</span>
                 <p>мне нужно закрыть вакансию быстрее</p>
                 <span class="jtbd-want">Я хочу</span>
@@ -40,6 +52,7 @@
               </article>
 
               <article class="jtbd-card">
+                <span class="jtbd-rank">02</span>
                 <span class="jtbd-when">Когда</span>
                 <p>я назначаю интервью</p>
                 <span class="jtbd-want">Я хочу</span>
@@ -49,6 +62,7 @@
               </article>
 
               <article class="jtbd-card">
+                <span class="jtbd-rank">03</span>
                 <span class="jtbd-when">Когда</span>
                 <p>интервью завершено</p>
                 <span class="jtbd-want">Я хочу</span>
@@ -65,8 +79,9 @@
       <section class="screen" data-screen="register">
         <div class="auth-page">
           <button class="back-link" data-nav="home">← На главную</button>
+          <span class="brand compact"><span class="brand-mark">◎</span> VibeHunt</span>
           <h2>Регистрация HR</h2>
-          <p class="auth-sub">Создайте аккаунт. Настройку компании и HH — в личном кабинете.</p>
+          <p class="auth-sub">Создайте аккаунт. Компанию и HH настраиваете в личном кабинете.</p>
 
           <div class="field">
             <label>Имя и фамилия</label>
@@ -87,10 +102,10 @@
           </label>
           <label class="consent-row">
             <input type="checkbox" checked>
-            <span>Принимаю условия сервиса</span>
+            <span>Принимаю условия сервиса VibeHunt</span>
           </label>
 
-          <button class="btn notion-primary full" data-nav="cabinet">Создать аккаунт</button>
+          <button class="btn vh-primary full" data-nav="cabinet">Создать аккаунт</button>
         </div>
       </section>
 
@@ -98,19 +113,23 @@
       <section class="screen" data-screen="cabinet">
         <div class="app-layout">
           <aside class="sidebar">
-            <div class="sidebar-brand">⬡ Конвейер</div>
+            <div class="sidebar-brand">
+              <span class="brand-mark">◎</span>
+              VibeHunt
+              <small>Конвейер</small>
+            </div>
             <nav class="sidebar-nav">
               <button class="nav-item active" data-nav="cabinet">
-                <span class="nav-icon">🏠</span> Обзор
+                <span class="nav-icon">◉</span> Обзор
               </button>
               <button class="nav-item" data-nav="cabinet-company">
-                <span class="nav-icon">🏢</span> Компания
+                <span class="nav-icon">▣</span> Компания
               </button>
               <button class="nav-item" data-nav="cabinet-integrations">
-                <span class="nav-icon">🔗</span> Интеграции
+                <span class="nav-icon">⇄</span> Интеграции
               </button>
               <button class="nav-item disabled" type="button">
-                <span class="nav-icon">📋</span> Вакансии
+                <span class="nav-icon">☰</span> Вакансии
               </button>
             </nav>
             <div class="sidebar-user">
@@ -129,7 +148,7 @@
             </header>
 
             <div class="callout">
-              <strong>Добро пожаловать!</strong> Заполните профиль компании и подключите HeadHunter, чтобы начать работу с конвейером.
+              <strong>Добро пожаловать в VibeHunt!</strong> Заполните профиль компании и подключите HeadHunter, чтобы запустить конвейер.
             </div>
 
             <div class="checklist">
@@ -152,7 +171,7 @@
             </div>
 
             <div class="next-step-teaser">
-              <span class="next-label">Следующий шаг конвейера</span>
+              <span class="next-label">Следующий шаг</span>
               <strong>2. Публикация вакансии</strong>
               <p>Доступно после настройки компании и HH</p>
             </div>
@@ -164,32 +183,22 @@
       <section class="screen" data-screen="cabinet-company">
         <div class="app-layout">
           <aside class="sidebar">
-            <div class="sidebar-brand">⬡ Конвейер</div>
+            <div class="sidebar-brand"><span class="brand-mark">◎</span> VibeHunt<small>Конвейер</small></div>
             <nav class="sidebar-nav">
-              <button class="nav-item" data-nav="cabinet">
-                <span class="nav-icon">🏠</span> Обзор
-              </button>
-              <button class="nav-item active" data-nav="cabinet-company">
-                <span class="nav-icon">🏢</span> Компания
-              </button>
-              <button class="nav-item" data-nav="cabinet-integrations">
-                <span class="nav-icon">🔗</span> Интеграции
-              </button>
+              <button class="nav-item" data-nav="cabinet"><span class="nav-icon">◉</span> Обзор</button>
+              <button class="nav-item active" data-nav="cabinet-company"><span class="nav-icon">▣</span> Компания</button>
+              <button class="nav-item" data-nav="cabinet-integrations"><span class="nav-icon">⇄</span> Интеграции</button>
             </nav>
             <div class="sidebar-user">
               <div class="avatar">АС</div>
-              <div>
-                <div class="user-name">Айгуль Смагулова</div>
-              </div>
+              <div><div class="user-name">Айгуль Смагулова</div></div>
             </div>
           </aside>
 
           <div class="main-pane">
-            <header class="page-header">
-              <h1>Компания</h1>
-            </header>
+            <header class="page-header"><h1>Компания</h1></header>
 
-            <div class="notion-page">
+            <div class="form-page">
               <div class="field">
                 <label>Название компании</label>
                 <input type="text" id="company-name" placeholder="TechFlow KZ">
@@ -222,7 +231,7 @@
                 <input type="url" id="company-site" placeholder="https://company.kz">
               </div>
 
-              <button class="btn notion-primary" type="button" id="save-company">Сохранить</button>
+              <button class="btn vh-primary" type="button" id="save-company">Сохранить</button>
               <p class="save-toast hidden" id="company-saved">✓ Сохранено</p>
             </div>
           </div>
@@ -233,30 +242,20 @@
       <section class="screen" data-screen="cabinet-integrations">
         <div class="app-layout">
           <aside class="sidebar">
-            <div class="sidebar-brand">⬡ Конвейер</div>
+            <div class="sidebar-brand"><span class="brand-mark">◎</span> VibeHunt<small>Конвейер</small></div>
             <nav class="sidebar-nav">
-              <button class="nav-item" data-nav="cabinet">
-                <span class="nav-icon">🏠</span> Обзор
-              </button>
-              <button class="nav-item" data-nav="cabinet-company">
-                <span class="nav-icon">🏢</span> Компания
-              </button>
-              <button class="nav-item active" data-nav="cabinet-integrations">
-                <span class="nav-icon">🔗</span> Интеграции
-              </button>
+              <button class="nav-item" data-nav="cabinet"><span class="nav-icon">◉</span> Обзор</button>
+              <button class="nav-item" data-nav="cabinet-company"><span class="nav-icon">▣</span> Компания</button>
+              <button class="nav-item active" data-nav="cabinet-integrations"><span class="nav-icon">⇄</span> Интеграции</button>
             </nav>
             <div class="sidebar-user">
               <div class="avatar">АС</div>
-              <div>
-                <div class="user-name">Айгуль Смагулова</div>
-              </div>
+              <div><div class="user-name">Айгуль Смагулова</div></div>
             </div>
           </aside>
 
           <div class="main-pane">
-            <header class="page-header">
-              <h1>Интеграции</h1>
-            </header>
+            <header class="page-header"><h1>Интеграции</h1></header>
 
             <div class="integration-card" id="hh-pending">
               <div class="integration-logo hh">hh</div>
@@ -265,7 +264,7 @@
                 <p>Отклики, активный поиск, публикация вакансий</p>
                 <span class="status-tag">Не подключён</span>
               </div>
-              <button class="btn notion-primary compact" type="button" id="hh-connect">Подключить</button>
+              <button class="btn vh-primary compact" type="button" id="hh-connect">Подключить</button>
             </div>
 
             <div class="integration-card connected hidden" id="hh-connected">
@@ -273,7 +272,7 @@
               <div class="integration-body">
                 <strong>HeadHunter</strong>
                 <p>hr@techflow.kz</p>
-                <span class="status-tag ok">✓ Подключён</span>
+                <span class="status-tag ok">✓ Verified</span>
               </div>
             </div>
 
