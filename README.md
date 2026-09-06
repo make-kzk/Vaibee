@@ -29,7 +29,8 @@ Vaibee/
 │   ├── RSCH-01-00-00/                 # RSCH-01-00-00 - Бизнес
 │   ├── RSCH-02-00-00/                 # RSCH-02-00-00 - Методологии
 │   │   ├── RSCH-02-01-MCode/          # RSCH-02-01-MCode - Motivation Code
-│   │   └── RSCH-02-02-12DF/           # RSCH-02-02-12DF - 12 Driving Forces
+│   │   ├── RSCH-02-02-12DF/           # RSCH-02-02-12DF - 12 Driving Forces
+│   │   └── RSCH-02-03-7STEP/          # RSCH-02-03-7STEP - 7-Step Problem-Solving
 │   └── RSCH-03-00-00/                 # RSCH-03-00-00 - События
 ├── PRDT/                              # PRDT - Продукт
 └── SYST/                              # SYST - Система
