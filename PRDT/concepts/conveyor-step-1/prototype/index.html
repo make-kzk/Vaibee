@@ -3,195 +3,292 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Конвейер — Шаг 1: Онбординг HR</title>
+  <title>Конвейер — HR</title>
   <link rel="stylesheet" href="../../../../SYST/assets/mockup.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="mockup-frame">
-    <header class="mockup-header">
-      <button class="back-btn" data-nav="home" hidden aria-label="Назад">←</button>
-      <h1 class="mockup-title">Конвейер</h1>
-      <span class="step-badge">1 / 1</span>
-    </header>
-
+  <div class="mockup-frame notion-frame">
     <main class="mockup-screens">
-      <!-- Welcome -->
-      <section class="screen active" data-screen="home">
-        <p class="screen-label">Шаг 1 · Онбординг</p>
-        <h2>Конвейер найма</h2>
-        <p>От публикации вакансии до оффера — в одном потоке с мэтчем кандидатов и AI-рекомендациями.</p>
 
-        <div class="feature-list">
-          <div class="feature-item">
-            <span class="feature-icon">🔗</span>
-            <span>HeadHunter — отклики и активный поиск</span>
+      <!-- Landing + JTBD -->
+      <section class="screen active" data-screen="home">
+        <div class="landing">
+          <div class="landing-nav">
+            <span class="brand">⬡ Конвейер</span>
+            <button class="link-btn" data-nav="register">Войти</button>
           </div>
-          <div class="feature-item">
-            <span class="feature-icon">🎯</span>
-            <span>Мэтч кандидатов по профилю позиции</span>
+
+          <div class="landing-hero">
+            <h1>Найм без ручной координации</h1>
+            <p class="lead">От вакансии до оффера — в одном потоке с мэтчем кандидатов, записью интервью и AI-рекомендациями для HR.</p>
+            <button class="btn notion-primary" data-nav="register">Начать бесплатно</button>
           </div>
-          <div class="feature-item">
-            <span class="feature-icon">📹</span>
-            <span>Запись интервью и рекомендации HR</span>
+
+          <div class="jtbd-block">
+            <h2 class="section-title">Jobs To Be Done</h2>
+            <p class="section-sub">Какую работу выполняет сервис для HR</p>
+
+            <div class="jtbd-list">
+              <article class="jtbd-card">
+                <span class="jtbd-when">Когда</span>
+                <p>мне нужно закрыть вакансию быстрее</p>
+                <span class="jtbd-want">Я хочу</span>
+                <p>видеть только релевантных кандидатов из HH и активного поиска</p>
+                <span class="jtbd-so">Чтобы</span>
+                <p>не тратить время на irrelevant отклики и ручной скрининг</p>
+              </article>
+
+              <article class="jtbd-card">
+                <span class="jtbd-when">Когда</span>
+                <p>я назначаю интервью</p>
+                <span class="jtbd-want">Я хочу</span>
+                <p>получать вопросы, адженду и fit-score по каждому кандидату</p>
+                <span class="jtbd-so">Чтобы</span>
+                <p>проводить структурированные встречи и не терять сильных кандидатов</p>
+              </article>
+
+              <article class="jtbd-card">
+                <span class="jtbd-when">Когда</span>
+                <p>интервью завершено</p>
+                <span class="jtbd-want">Я хочу</span>
+                <p>запись, анализ и рекомендацию по следующему этапу</p>
+                <span class="jtbd-so">Чтобы</span>
+                <p>быстро согласовать оффер с hiring manager и CEO</p>
+              </article>
+            </div>
           </div>
         </div>
-
-        <button class="btn primary" data-nav="register">Начать регистрацию →</button>
-        <button class="btn ghost" type="button">Уже есть аккаунт</button>
       </section>
 
       <!-- Register -->
       <section class="screen" data-screen="register">
-        <p class="screen-label">1.1 · Регистрация HR</p>
-        <h2>Создайте аккаунт</h2>
-        <p>Для HR-специалиста, который будет вести вакансии в конвейере.</p>
+        <div class="auth-page">
+          <button class="back-link" data-nav="home">← На главную</button>
+          <h2>Регистрация HR</h2>
+          <p class="auth-sub">Создайте аккаунт. Настройку компании и HH — в личном кабинете.</p>
 
-        <div class="field">
-          <label>Имя и фамилия</label>
-          <input type="text" value="Айгуль Смагулова" readonly>
-        </div>
-        <div class="field">
-          <label>Email</label>
-          <input type="email" value="hr@company.kz" readonly>
-        </div>
-        <div class="field">
-          <label>Пароль</label>
-          <input type="password" value="••••••••" readonly>
-        </div>
+          <div class="field">
+            <label>Имя и фамилия</label>
+            <input type="text" placeholder="Айгуль Смагулова">
+          </div>
+          <div class="field">
+            <label>Email</label>
+            <input type="email" placeholder="hr@company.kz">
+          </div>
+          <div class="field">
+            <label>Пароль</label>
+            <input type="password" placeholder="••••••••">
+          </div>
 
-        <button class="btn primary" data-nav="company">Продолжить →</button>
+          <label class="consent-row">
+            <input type="checkbox" checked>
+            <span>Согласие на обработку данных и запись интервью (хранение в KZ)</span>
+          </label>
+          <label class="consent-row">
+            <input type="checkbox" checked>
+            <span>Принимаю условия сервиса</span>
+          </label>
+
+          <button class="btn notion-primary full" data-nav="cabinet">Создать аккаунт</button>
+        </div>
+      </section>
+
+      <!-- HR Cabinet -->
+      <section class="screen" data-screen="cabinet">
+        <div class="app-layout">
+          <aside class="sidebar">
+            <div class="sidebar-brand">⬡ Конвейер</div>
+            <nav class="sidebar-nav">
+              <button class="nav-item active" data-nav="cabinet">
+                <span class="nav-icon">🏠</span> Обзор
+              </button>
+              <button class="nav-item" data-nav="cabinet-company">
+                <span class="nav-icon">🏢</span> Компания
+              </button>
+              <button class="nav-item" data-nav="cabinet-integrations">
+                <span class="nav-icon">🔗</span> Интеграции
+              </button>
+              <button class="nav-item disabled" type="button">
+                <span class="nav-icon">📋</span> Вакансии
+              </button>
+            </nav>
+            <div class="sidebar-user">
+              <div class="avatar">АС</div>
+              <div>
+                <div class="user-name">Айгуль Смагулова</div>
+                <div class="user-email">hr@company.kz</div>
+              </div>
+            </div>
+          </aside>
+
+          <div class="main-pane">
+            <header class="page-header">
+              <h1>Личный кабинет</h1>
+              <span class="setup-badge" id="setup-badge">Настройка: 0 / 2</span>
+            </header>
+
+            <div class="callout">
+              <strong>Добро пожаловать!</strong> Заполните профиль компании и подключите HeadHunter, чтобы начать работу с конвейером.
+            </div>
+
+            <div class="checklist">
+              <button class="checklist-item" data-nav="cabinet-company">
+                <span class="check empty" id="check-company">○</span>
+                <div>
+                  <strong>Информация о компании</strong>
+                  <p>Название, отрасль, размер команды</p>
+                </div>
+                <span class="chevron">›</span>
+              </button>
+              <button class="checklist-item" data-nav="cabinet-integrations">
+                <span class="check empty" id="check-hh">○</span>
+                <div>
+                  <strong>Подключить HeadHunter</strong>
+                  <p>Отклики и активный поиск</p>
+                </div>
+                <span class="chevron">›</span>
+              </button>
+            </div>
+
+            <div class="next-step-teaser">
+              <span class="next-label">Следующий шаг конвейера</span>
+              <strong>2. Публикация вакансии</strong>
+              <p>Доступно после настройки компании и HH</p>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- Company -->
-      <section class="screen" data-screen="company">
-        <p class="screen-label">1.2 · Компания</p>
-        <h2>Информация о компании</h2>
-        <p>Данные используются в вакансиях и при согласовании этапов найма.</p>
+      <section class="screen" data-screen="cabinet-company">
+        <div class="app-layout">
+          <aside class="sidebar">
+            <div class="sidebar-brand">⬡ Конвейер</div>
+            <nav class="sidebar-nav">
+              <button class="nav-item" data-nav="cabinet">
+                <span class="nav-icon">🏠</span> Обзор
+              </button>
+              <button class="nav-item active" data-nav="cabinet-company">
+                <span class="nav-icon">🏢</span> Компания
+              </button>
+              <button class="nav-item" data-nav="cabinet-integrations">
+                <span class="nav-icon">🔗</span> Интеграции
+              </button>
+            </nav>
+            <div class="sidebar-user">
+              <div class="avatar">АС</div>
+              <div>
+                <div class="user-name">Айгуль Смагулова</div>
+              </div>
+            </div>
+          </aside>
 
-        <div class="field">
-          <label>Название компании</label>
-          <input type="text" value="TechFlow KZ" readonly>
-        </div>
-        <div class="field">
-          <label>Отрасль</label>
-          <input type="text" value="IT / SaaS" readonly>
-        </div>
-        <div class="field">
-          <label>Размер команды</label>
-          <input type="text" value="50–200 человек" readonly>
-        </div>
-        <div class="field">
-          <label>Сайт</label>
-          <input type="text" value="https://techflow.kz" readonly>
-        </div>
+          <div class="main-pane">
+            <header class="page-header">
+              <h1>Компания</h1>
+            </header>
 
-        <button class="btn primary" data-nav="consent">Далее →</button>
-      </section>
+            <div class="notion-page">
+              <div class="field">
+                <label>Название компании</label>
+                <input type="text" id="company-name" placeholder="TechFlow KZ">
+              </div>
+              <div class="field">
+                <label>Отрасль</label>
+                <select id="company-industry">
+                  <option value="">Выберите отрасль</option>
+                  <option value="it">IT / SaaS</option>
+                  <option value="fintech">FinTech</option>
+                  <option value="retail">Retail / E-commerce</option>
+                  <option value="production">Производство</option>
+                  <option value="services">Услуги</option>
+                  <option value="other">Другое</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>Размер команды</label>
+                <select id="company-size">
+                  <option value="">Выберите размер</option>
+                  <option value="1-10">1–10 человек</option>
+                  <option value="11-50">11–50 человек</option>
+                  <option value="51-200">51–200 человек</option>
+                  <option value="201-500">201–500 человек</option>
+                  <option value="500+">500+ человек</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>Сайт</label>
+                <input type="url" id="company-site" placeholder="https://company.kz">
+              </div>
 
-      <!-- Consent -->
-      <section class="screen" data-screen="consent">
-        <p class="screen-label">1.3 · Согласие</p>
-        <h2>Обработка данных и запись</h2>
-        <p>Подтверждение требуется при регистрации. Кандидаты получат отдельное согласие перед каждой записью.</p>
-
-        <label class="consent-item checked">
-          <input type="checkbox" checked disabled>
-          <span>
-            <strong>Обработка персональных данных</strong>
-            <small>Согласие на хранение и обработку данных участников процесса найма</small>
-          </span>
-        </label>
-        <label class="consent-item checked">
-          <input type="checkbox" checked disabled>
-          <span>
-            <strong>Запись интервью</strong>
-            <small>Записи хранятся в Казахстане; используются для анализа и рекомендаций HR</small>
-          </span>
-        </label>
-        <label class="consent-item checked">
-          <input type="checkbox" checked disabled>
-          <span>
-            <strong>Условия сервиса</strong>
-            <small>Пользовательское соглашение и политика конфиденциальности</small>
-          </span>
-        </label>
-
-        <div class="hint">Запись интервью: серверы в KZ · Daily.co для видеозвонка · согласие кандидата перед каждой записью</div>
-
-        <button class="btn primary" data-nav="hh">Принимаю и продолжаю →</button>
-      </section>
-
-      <!-- HeadHunter -->
-      <section class="screen" data-screen="hh">
-        <p class="screen-label">1.4 · HeadHunter</p>
-        <h2>Подключите HH</h2>
-        <p>Импорт откликов и доступ к активному поиску кандидатов.</p>
-
-        <div class="integration-card pending" id="hh-pending">
-          <div class="integration-logo hh">hh</div>
-          <div class="integration-body">
-            <strong>HeadHunter</strong>
-            <span class="integration-status">Не подключён</span>
-          </div>
-          <button class="btn primary compact" type="button" id="hh-connect">Подключить</button>
-        </div>
-
-        <div class="integration-card connected hidden" id="hh-connected">
-          <div class="integration-logo hh">hh</div>
-          <div class="integration-body">
-            <strong>HeadHunter</strong>
-            <span class="integration-status ok">✓ Подключён · hr@techflow.kz</span>
+              <button class="btn notion-primary" type="button" id="save-company">Сохранить</button>
+              <p class="save-toast hidden" id="company-saved">✓ Сохранено</p>
+            </div>
           </div>
         </div>
-
-        <ul class="scope-list">
-          <li>Чтение откликов на вакансии</li>
-          <li>Активный поиск резюме</li>
-          <li>Публикация вакансий (шаг 2)</li>
-        </ul>
-
-        <button class="btn primary hidden" id="hh-done" data-nav="done">Завершить онбординг →</button>
       </section>
 
-      <!-- Done -->
-      <section class="screen" data-screen="done">
-        <p class="screen-label">Готово</p>
-        <div class="success-icon">✓</div>
-        <h2>Онбординг завершён</h2>
-        <p>Компания настроена, HH подключён. Следующий шаг — разместить вакансию.</p>
+      <!-- Integrations -->
+      <section class="screen" data-screen="cabinet-integrations">
+        <div class="app-layout">
+          <aside class="sidebar">
+            <div class="sidebar-brand">⬡ Конвейер</div>
+            <nav class="sidebar-nav">
+              <button class="nav-item" data-nav="cabinet">
+                <span class="nav-icon">🏠</span> Обзор
+              </button>
+              <button class="nav-item" data-nav="cabinet-company">
+                <span class="nav-icon">🏢</span> Компания
+              </button>
+              <button class="nav-item active" data-nav="cabinet-integrations">
+                <span class="nav-icon">🔗</span> Интеграции
+              </button>
+            </nav>
+            <div class="sidebar-user">
+              <div class="avatar">АС</div>
+              <div>
+                <div class="user-name">Айгуль Смагулова</div>
+              </div>
+            </div>
+          </aside>
 
-        <div class="summary-card">
-          <dl class="summary-grid">
-            <dt>HR</dt>
-            <dd>Айгуль Смагулова</dd>
-            <dt>Компания</dt>
-            <dd>TechFlow KZ</dd>
-            <dt>HH</dt>
-            <dd>Подключён</dd>
-            <dt>Согласия</dt>
-            <dd>Подтверждены</dd>
-          </dl>
+          <div class="main-pane">
+            <header class="page-header">
+              <h1>Интеграции</h1>
+            </header>
+
+            <div class="integration-card" id="hh-pending">
+              <div class="integration-logo hh">hh</div>
+              <div class="integration-body">
+                <strong>HeadHunter</strong>
+                <p>Отклики, активный поиск, публикация вакансий</p>
+                <span class="status-tag">Не подключён</span>
+              </div>
+              <button class="btn notion-primary compact" type="button" id="hh-connect">Подключить</button>
+            </div>
+
+            <div class="integration-card connected hidden" id="hh-connected">
+              <div class="integration-logo hh">hh</div>
+              <div class="integration-body">
+                <strong>HeadHunter</strong>
+                <p>hr@techflow.kz</p>
+                <span class="status-tag ok">✓ Подключён</span>
+              </div>
+            </div>
+
+            <ul class="scope-list">
+              <li>Чтение откликов на вакансии</li>
+              <li>Активный поиск резюме</li>
+              <li>Публикация вакансий (шаг 2 конвейера)</li>
+            </ul>
+          </div>
         </div>
-
-        <div class="next-step-teaser">
-          <span class="next-label">Следующий шаг</span>
-          <strong>2. Публикация вакансии</strong>
-          <p>Функционал, профиль личности, этапы интервью, календарь</p>
-        </div>
-
-        <button class="btn primary" type="button" disabled title="Прототип шага 2 — скоро">Создать вакансию →</button>
       </section>
+
     </main>
   </div>
 
-  <script src="../../../../SYST/assets/mockup.js"></script>
-  <script>
-    document.getElementById('hh-connect').addEventListener('click', () => {
-      document.getElementById('hh-pending').classList.add('hidden');
-      document.getElementById('hh-connected').classList.remove('hidden');
-      document.getElementById('hh-done').classList.remove('hidden');
-    });
-  </script>
+  <script src="app.js"></script>
 </body>
 </html>
