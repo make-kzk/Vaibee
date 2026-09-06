@@ -17,7 +17,7 @@
 
     <main class="mockup-screens">
 
-      <!-- Landing + JTBD -->
+      <!-- Landing — маркетинг AJTBD (Замесин) -->
       <section class="screen active" data-screen="home">
         <div class="landing">
           <div class="landing-nav">
@@ -30,47 +30,149 @@
           </div>
 
           <div class="landing-hero">
-            <span class="hero-badge">👋 HR · найм с vibe-match</span>
-            <h1>Охоться за <span class="gradient-text">топ-кандидатами</span>, не за откликами</h1>
-            <p class="lead">Конвейер VibeHunt: от вакансии до оффера — мэтч, интервью с записью и AI-рекомендации для HR.</p>
-            <button class="btn vh-primary" data-nav="register">Начать охоту →</button>
+            <span class="ajtbd-label">Big Job</span>
+            <h1>Нанять человека, который <span class="gradient-text">покажет результат</span> на позиции</h1>
+            <p class="lead">
+              <strong>Core Job:</strong> когда ведёте найм, хотите пройти путь от вакансии до оффера в одном конвейере —
+              с мэтчем кандидатов, записью интервью и рекомендациями на каждом этапе.
+            </p>
+            <div class="hero-cta-row">
+              <button class="btn vh-primary" data-nav="register">Запустить конвейер →</button>
+              <span class="hero-note">Регистрация HR · настройка за 10 минут</span>
+            </div>
           </div>
 
-          <div class="jtbd-block">
-            <h2 class="section-title">Jobs To Be Done</h2>
-            <p class="section-sub">Какую работу выполняет сервис</p>
+          <div class="landing-section">
+            <h2 class="section-title">Кому подходит</h2>
+            <p class="section-sub">Квалифицирующий блок — выберите свой контекст</p>
+            <div class="segment-grid">
+              <button class="segment-card" type="button" data-nav="register">
+                <strong>HR / рекрутер</strong>
+                <p>Закрываете вакансии сами и тонете в откликах HH</p>
+                <span class="segment-cta">Это про меня →</span>
+              </button>
+              <button class="segment-card" type="button" data-nav="register">
+                <strong>HRD</strong>
+                <p>Нужен прозрачный процесс и согласования с hiring manager</p>
+                <span class="segment-cta">Это про меня →</span>
+              </button>
+              <button class="segment-card" type="button" data-nav="register">
+                <strong>CEO / founder</strong>
+                <p>Нанимаете руководителей, где ошибка стоит дорого</p>
+                <span class="segment-cta">Это про меня →</span>
+              </button>
+            </div>
+          </div>
 
+          <div class="landing-section">
+            <h2 class="section-title">Почему текущий найм буксует</h2>
+            <p class="section-sub">Проблемы решений, которые «увольняем»</p>
+            <ul class="pain-list">
+              <li>
+                <span class="pain-icon">✕</span>
+                <div>
+                  <strong>HH + Excel + календарь + Zoom</strong>
+                  <p>Граф работ разорван — кандидаты теряются между инструментами</p>
+                </div>
+              </li>
+              <li>
+                <span class="pain-icon">✕</span>
+                <div>
+                  <strong>100 откликов, 5 релевантных</strong>
+                  <p>Нет fit-score — сильные кандидаты уходят, пока вы скрините вручную</p>
+                </div>
+              </li>
+              <li>
+                <span class="pain-icon">✕</span>
+                <div>
+                  <strong>Интервью без структуры</strong>
+                  <p>Нет адженды, записи и анализа — решения на ощущениях</p>
+                </div>
+              </li>
+              <li>
+                <span class="pain-icon">✕</span>
+                <div>
+                  <strong>Согласования тормозят оффер</strong>
+                  <p>Hiring manager и CEO не в одном конвейере — сроки растут</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="landing-section">
+            <h2 class="section-title">Core Jobs</h2>
+            <p class="section-sub">Как конвейер упрощает граф работ и даёт ценность</p>
             <div class="jtbd-list">
               <article class="jtbd-card">
                 <span class="jtbd-rank">01</span>
-                <span class="jtbd-when">Когда</span>
-                <p>мне нужно закрыть вакансию быстрее</p>
-                <span class="jtbd-want">Я хочу</span>
-                <p>видеть только релевантных кандидатов из HH и активного поиска</p>
-                <span class="jtbd-so">Чтобы</span>
-                <p>не тратить время на irrelevant отклики и ручной скрининг</p>
+                <span class="ajtbd-tag">Core Job</span>
+                <p class="job-story"><em>Когда</em> открыта вакансия, <em>хочу</em> быстро получить shortlist релевантных кандидатов, <em>чтобы</em> не тратить недели на скрининг.</p>
+                <div class="value-row">
+                  <span class="value-label">Ценность</span>
+                  <p>Мэтч из откликов и активного поиска HH · fit-score · топ-N на экране</p>
+                </div>
               </article>
-
               <article class="jtbd-card">
                 <span class="jtbd-rank">02</span>
-                <span class="jtbd-when">Когда</span>
-                <p>я назначаю интервью</p>
-                <span class="jtbd-want">Я хочу</span>
-                <p>получать вопросы, адженду и fit-score по каждому кандидату</p>
-                <span class="jtbd-so">Чтобы</span>
-                <p>проводить структурированные встречи и не терять сильных кандидатов</p>
+                <span class="ajtbd-tag">Core Job</span>
+                <p class="job-story"><em>Когда</em> назначаю интервью, <em>хочу</em> вопросы, адженду и слоты в одном месте, <em>чтобы</em> провести встречу структурированно.</p>
+                <div class="value-row">
+                  <span class="value-label">Ценность</span>
+                  <p>AI-рекомендации · календарь · запись через Daily · согласие кандидата</p>
+                </div>
               </article>
-
               <article class="jtbd-card">
                 <span class="jtbd-rank">03</span>
-                <span class="jtbd-when">Когда</span>
-                <p>интервью завершено</p>
-                <span class="jtbd-want">Я хочу</span>
-                <p>запись, анализ и рекомендацию по следующему этапу</p>
-                <span class="jtbd-so">Чтобы</span>
-                <p>быстро согласовать оффер с hiring manager и CEO</p>
+                <span class="ajtbd-tag">Core Job</span>
+                <p class="job-story"><em>Когда</em> интервью завершено, <em>хочу</em> анализ и решение по этапу, <em>чтобы</em> быстро довести сильного кандидата до оффера.</p>
+                <div class="value-row">
+                  <span class="value-label">Ценность</span>
+                  <p>Транскрипт · рекомендации · N этапов · согласование с hiring manager</p>
+                </div>
               </article>
             </div>
+          </div>
+
+          <div class="landing-section">
+            <h2 class="section-title">Почему VibeHunt</h2>
+            <div class="rtb-grid">
+              <div class="rtb-item">
+                <strong>↓ Time-to-offer</strong>
+                <p>Один конвейер вместо 4–5 инструментов</p>
+              </div>
+              <div class="rtb-item">
+                <strong>↑ Quality of hire</strong>
+                <p>Мэтч по профилю позиции и личности</p>
+              </div>
+              <div class="rtb-item">
+                <strong>KZ compliance</strong>
+                <p>Запись хранится в Казахстане</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="landing-section">
+            <h2 class="section-title">Снимаем барьеры</h2>
+            <div class="faq-list">
+              <details class="faq-item" open>
+                <summary>«У нас уже есть HH — зачем конвейер?»</summary>
+                <p>HH — источник кандидатов. Конвейер — граф работ от shortlist до оффера: мэтч, интервью, запись, согласования.</p>
+              </details>
+              <details class="faq-item">
+                <summary>«Кандидаты не согласятся на запись»</summary>
+                <p>Согласие при регистрации и перед каждой записью. Запись — в KZ, только для анализа и рекомендаций HR.</p>
+              </details>
+              <details class="faq-item">
+                <summary>«Сложно внедрять»</summary>
+                <p>Онбординг: регистрация → компания → HH. Дальше — одна вакансия и первый shortlist.</p>
+              </details>
+            </div>
+          </div>
+
+          <div class="landing-final">
+            <h2>Закройте следующую вакансию через конвейер</h2>
+            <p>Big Job не меняется — меняется граф работ, по которому вы её достигаете.</p>
+            <button class="btn vh-primary" data-nav="register">Начать бесплатно →</button>
           </div>
         </div>
       </section>
