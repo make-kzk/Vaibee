@@ -1,7 +1,7 @@
-# 02-01-02-MCode — Шаблон Team Motivational Map (MCode)
+# RSCH-02-01-02-0-MCode - Шаблон Team Motivational Map (MCode)
 
 > Практический шаблон для заполнения после прохождения MCode assessment всеми участниками команды.  
-> Раздел: [02-01-00-MCode — Motivation Code](./README.md) · Контекст: [02-01-01-MCode — Исследование MCode](./02-01-01-MCode.md)
+> Тема: [RSCH-02-01-MCode - Motivation Code](./README.md) · Контекст: [RSCH-02-01-01-0-MCode - Исследование MCode](./RSCH-02-01-01-0-MCode.md)
 
 ---
 
@@ -288,5 +288,5 @@ Visionary    [████░░░░░░] __/10
 
 ## Связанные документы
 
-- [02-01-01-MCode — Исследование методологии](./02-01-01-MCode.md)
-- [02-01-00-MCode — Motivation Code](./README.md)
+- [RSCH-02-01-01-0-MCode - Исследование методологии](./RSCH-02-01-01-0-MCode.md)
+- [RSCH-02-01-MCode - Motivation Code](./README.md)

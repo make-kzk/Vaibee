@@ -10,7 +10,7 @@
 
 ## Идея
 
-Интерактивный click-through пример заполненной Team Motivational Map — визуализация результата шаблона [02-01-02-MCode — Шаблон Team Motivational Map](../../../RSCH/RSCH-02/02-01-00-MCode/02-01-02-MCode.md).
+Интерактивный click-through пример заполненной Team Motivational Map — визуализация результата шаблона [RSCH-02-01-02-0-MCode - Шаблон Team Motivational Map](../../../RSCH/RSCH-02-00-00/RSCH-02-01-MCode/RSCH-02-01-02-0-MCode.md).
 
 ## Гипотеза
 
@@ -28,8 +28,8 @@
 
 ## Источники
 
-- [02-01-02-MCode — Шаблон Team Motivational Map](../../../RSCH/RSCH-02/02-01-00-MCode/02-01-02-MCode.md)
-- [02-01-01-MCode — Исследование MCode](../../../RSCH/RSCH-02/02-01-00-MCode/02-01-01-MCode.md)
+- [RSCH-02-01-02-0-MCode - Шаблон Team Motivational Map](../../../RSCH/RSCH-02-00-00/RSCH-02-01-MCode/RSCH-02-01-02-0-MCode.md)
+- [RSCH-02-01-01-0-MCode - Исследование MCode](../../../RSCH/RSCH-02-00-00/RSCH-02-01-MCode/RSCH-02-01-01-0-MCode.md)
 
 ## Прототип
 

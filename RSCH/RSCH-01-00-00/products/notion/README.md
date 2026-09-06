@@ -41,4 +41,4 @@ All-in-one workspace: заметки, базы данных, wiki, задачи.
 
 ## Связанные концепты
 
-- [vaibee-notes — Vaibee Notes](../../../PRDT/concepts/vaibee-notes/)
+- [vaibee-notes - Vaibee Notes](../../../PRDT/concepts/vaibee-notes/)

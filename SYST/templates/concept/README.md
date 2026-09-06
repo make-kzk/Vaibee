@@ -24,7 +24,7 @@
 
 ## Research-источники
 
-- [product-slug — {название продукта}](../../../RSCH/RSCH-01/products/product-slug/)
+- [product-slug - {название продукта}](../../../RSCH/RSCH-01-00-00/products/product-slug/)
 
 ## Прототип
 
