@@ -61,8 +61,8 @@
       "title": "Conveyor Step 1: HR Onboarding",
       "status": "draft",
       "date": "2026-09-06",
-      "tags": ["conveyor", "hiring", "hr", "onboarding"],
-      "summary": "Notion-style click-through: JTBD landing, HR cabinet, company profile (selects), HH integration.",
+      "tags": ["conveyor", "hiring", "hr", "onboarding", "vibehunt"],
+      "summary": "VibeHunt-style click-through: JTBD landing, HR cabinet, company selects, HH integration.",
       "research": []
     }
   ]
