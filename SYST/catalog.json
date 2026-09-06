@@ -62,7 +62,7 @@
       "status": "draft",
       "date": "2026-09-06",
       "tags": ["conveyor", "hiring", "hr", "onboarding"],
-      "summary": "Click-through prototype: HR registration, company info, consent, HeadHunter connect.",
+      "summary": "Notion-style click-through: JTBD landing, HR cabinet, company profile (selects), HH integration.",
       "research": []
     }
   ]
