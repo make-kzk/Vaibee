@@ -1,12 +1,22 @@
 {
   "research": [
     {
+      "slug": "12df",
+      "title": "12 Driving Forces (TTI)",
+      "status": "complete",
+      "date": "2026-09-05",
+      "tags": ["motivation", "team", "methodology", "tti"],
+      "summary": "TTI motivators assessment: 12 poles, clusters, business outcomes, artifact templates.",
+      "path": "RSCH/RSCH-02-00-00/RSCH-02-02-12DF/README.md"
+    },
+    {
       "slug": "mcode",
       "title": "MCode / Motivation Code",
       "status": "complete",
       "date": "2026-09-05",
       "tags": ["motivation", "team", "methodology"],
-      "summary": "Motivational assessment framework: 8 dimensions, 32 motivations, team alignment."
+      "summary": "Motivational assessment framework: 8 dimensions, 32 motivations, team alignment.",
+      "path": "RSCH/RSCH-02-00-00/RSCH-02-01-MCode/README.md"
     },
     {
       "slug": "notion",
@@ -14,7 +24,8 @@
       "status": "complete",
       "date": "2026-09-05",
       "tags": ["knowledge-base", "collaboration"],
-      "summary": "All-in-one workspace: notes, databases, wikis."
+      "summary": "All-in-one workspace: notes, databases, wikis.",
+      "path": "RSCH/RSCH-01-00-00/products/notion/README.md"
     }
   ],
   "concepts": [
@@ -35,6 +46,15 @@
       "tags": ["notes", "knowledge-base"],
       "summary": "Minimal note-taking concept inspired by Notion research.",
       "research": ["notion"]
+    },
+    {
+      "slug": "12df-artifacts",
+      "title": "12DF Artifacts Mockup",
+      "status": "draft",
+      "date": "2026-09-05",
+      "tags": ["12df", "motivation", "team", "tti"],
+      "summary": "Interactive click-through of 12 Driving Forces business artifacts A–H (prompt ready; prototype pending).",
+      "research": ["12df"]
     }
   ]
 }

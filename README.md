@@ -1,6 +1,6 @@
 # Vaibee
 
-Product research lab: исследуйте продукты, логируйте выводы, создавайте click-through концепты.
+Product research lab: исследуйте продукты, логируйте выводы, создавайте интерактивные click-through концепты.
 
 **Live:** `https://make-kzk.github.io/Vaibee/`
 
@@ -38,11 +38,14 @@ Vaibee/
 ## Workflow
 
 ```bash
-# Research → RSCH/RSCH-01-00-00/products/{slug}/
 cp -r SYST/templates/research RSCH/RSCH-01-00-00/products/my-product
-
-# Concept → PRDT/concepts/{slug}/
 cp -r SYST/templates/concept PRDT/concepts/my-concept
 ```
 
 Портал: [index.html](./index.html) · Каталог: [SYST/catalog.json](./SYST/catalog.json)
+
+## Работа с Cursor
+
+- «Исследуй {продукт} и залогируй в Vaibee» → research + catalog
+- «Создай click-through концепт на основе research {slug}» → concepts + prototype
+- «Собери мокап 12DF артефактов» → [PRDT/concepts/12df-artifacts/AGENT-PROMPT.md](./PRDT/concepts/12df-artifacts/AGENT-PROMPT.md) (SSOT: [RSCH-02-02-03-0-12DF.md](./RSCH/RSCH-02-00-00/RSCH-02-02-12DF/RSCH-02-02-03-0-12DF.md))
