@@ -7,7 +7,7 @@
 | ID | Подпись | Q | Файл |
 |----|---------|---|------|
 | PRDT-01-01-00-0-ideas | Обзор идей | 0 | [PRDT-01-01-00-0-ideas.md](./PRDT-01-01-00-0-ideas.md) |
-| PRDT-01-01-01-2-conveyor | Идея Конвейер | 2 | [PRDT-01-01-01-2-conveyor.md](./PRDT-01-01-01-2-conveyor.md) |
+| PRDT-01-01-01-conveyor | Идея Конвейер | — | [PRDT-01-01-01-conveyor.md](./PRDT-01-01-01-conveyor.md) |
 
 ## Нейминг на этом уровне
 
