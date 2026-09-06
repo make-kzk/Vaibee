@@ -22,6 +22,8 @@ SSOT: [PRDT-01-01-01-conveyor — Идея Конвейер](../../PRDT-01-00-00
 
 ## Прототип
 
-Открыть: [prototype/index.html](./prototype/index.html)
+> **Единый бесшовный прототип:** [conveyor/prototype/index.html](../conveyor/prototype/index.html)
+
+Открыть (только шаг 2): [prototype/index.html](./prototype/index.html)
 
 Предыдущий шаг: [conveyor-step-1](../conveyor-step-1/prototype/index.html)
