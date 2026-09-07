@@ -57,6 +57,15 @@
       "research": ["12df"]
     },
     {
+      "slug": "vibe-hunt",
+      "title": "VibeHunt — Specialist Mockup",
+      "status": "draft",
+      "date": "2026-09-07",
+      "tags": ["vibehunt", "career", "mockup"],
+      "summary": "Click-through mockup of vibe-hunt.com: landing, register, cabinet, vibe, reports — from VibeHunt88/web.",
+      "research": []
+    },
+    {
       "slug": "conveyor-step-1",
       "title": "Conveyor Step 1: HR Onboarding",
       "status": "draft",
