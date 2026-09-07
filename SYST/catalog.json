@@ -26,6 +26,15 @@
       "tags": ["knowledge-base", "collaboration"],
       "summary": "All-in-one workspace: notes, databases, wikis.",
       "path": "RSCH/RSCH-01-00-00/products/notion/README.md"
+    },
+    {
+      "slug": "cornell",
+      "title": "Cornell Notes",
+      "status": "complete",
+      "date": "2026-09-06",
+      "tags": ["note-taking", "methodology", "learning", "education"],
+      "summary": "Structured note-taking system: 3-zone page layout + 5 R's review cycle (Record, Reduce, Recite, Reflect, Review).",
+      "path": "RSCH/RSCH-02-00-00/RSCH-02-03-Cornell/README.md"
     }
   ],
   "concepts": [
