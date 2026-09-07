@@ -9,7 +9,7 @@ Illustrations for VHUI vibes, ABCD drivers, and Belbin roles — **bean-doodle**
 | `prompt-templates/` | Copy-paste prompts for `GenerateImage` |
 | `generated/` | Agent/human outputs (gitignore large batches if needed) |
 
-**Skill:** [`.claude/skills/vibe-character-art/SKILL.md`](../../../../.claude/skills/vibe-character-art/SKILL.md)
+**Skill:** [`.cursor/skills/vibe-character-art/SKILL.md`](../../.cursor/skills/vibe-character-art/SKILL.md) — invoke as **`/vibe-character-art`** in Cursor Agent chat.
 
 **Product slot:** 180×180 hero on Career Code screen — see `vibehunt-docs/delivery/career-code-screen-brief.md`.
 

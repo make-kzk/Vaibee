@@ -8,4 +8,4 @@ Canonical visual anchors for the `vibe-character-art` skill. **Always attach all
 | `f03e5cfe-462c-4a17-bbce-d15ddd5583bf.jpg` | 7 Belbin roles — compact grid |
 | `a9fb5a64-ba60-4b27-8504-8c7b6ecd23af.jpg` | 7 Belbin roles — detailed doodle layout with arrows |
 
-Skill: `vaibee/.claude/skills/vibe-character-art/SKILL.md`
+Skill: `vaibee/.cursor/skills/vibe-character-art/SKILL.md` — **`/vibe-character-art`**
