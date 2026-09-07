@@ -8,7 +8,9 @@ disable-model-invocation: true
 
 Generate VibeHunt personality-archetype illustrations: minimalist **bean-shaped** characters on a **dark hero surface**, white **hand-drawn doodle** line-art, Russian handwritten typography.
 
-Output: `PRDT/concepts/vibe-hunt/art/generated/` (content task E8).
+Output directory: **`{GENERATED_ROOT}/`** — see §Path resolution below.
+
+**Use in any Cursor project (no GitHub):** run `./install-global-skill.sh` from this folder. It copies the skill, reference JPGs, example, and VHUI table into `~/.cursor/skills/vibe-character-art/`.
 
 ---
 
@@ -50,13 +52,29 @@ Reply briefly, then wait for user choice or generate if they already typed args 
 
 ### 3. Execute generation
 
-1. Load copy from `vibehunt-backend/methodology/v1.0.0/vhui/vhui_tabl.json` for VHUI ids.
-2. Open all three reference JPGs (paths in §Tool).
-3. Build prompt from §5, call `GenerateImage` with three references.
-4. Review §8 checklist; regenerate once if style drifts.
-5. Save to `PRDT/concepts/vibe-hunt/art/generated/{filename}`.
-6. Update `art/generated/manifest.md`.
-7. Show result image to user.
+1. **Resolve paths** (see §Path resolution below).
+2. Load VHUI copy from `{SKILL_ROOT}/data/vhui_tabl.json` (global) or `vibehunt-backend/.../vhui_tabl.json` (in-repo) for VHUI ids.
+3. Open all three reference JPGs.
+4. Build prompt from §5, call `GenerateImage` with three references.
+5. Review §7 checklist; regenerate once if style drifts.
+6. Save to `{GENERATED_ROOT}/{filename}`.
+7. Update `{GENERATED_ROOT}/manifest.md`.
+8. Show result image to user.
+
+### Path resolution
+
+Use the first match:
+
+| Asset | Global install | In-repo (vaibee workspace) |
+|---|---|---|
+| Skill + refs | `~/.cursor/skills/vibe-character-art/` | `.cursor/skills/vibe-character-art/` + `PRDT/concepts/vibe-hunt/art/` |
+| References | `{SKILL_ROOT}/references/*.jpg` | `PRDT/concepts/vibe-hunt/art/references/*.jpg` |
+| Example | `{SKILL_ROOT}/examples/captain-archetype.png` | `PRDT/concepts/vibe-hunt/art/examples/captain-archetype.png` |
+| VHUI JSON | `{SKILL_ROOT}/data/vhui_tabl.json` | `vibehunt-backend/methodology/v1.0.0/vhui/vhui_tabl.json` |
+| Output | `{SKILL_ROOT}/generated/` | `PRDT/concepts/vibe-hunt/art/generated/` |
+
+`SKILL_ROOT` = `$HOME/.cursor/skills/vibe-character-art` if `references/` exists there.  
+`GENERATED_ROOT` = `{SKILL_ROOT}/generated` (global) or `PRDT/concepts/vibe-hunt/art/generated` (in-repo).
 
 ---
 
@@ -72,17 +90,17 @@ CallDynamicTool {
     filename: "<see §7>",
     aspect_ratio: "1:1",
     reference_image_paths: [
-      "/agent/repos/vaibee/PRDT/concepts/vibe-hunt/art/references/6f144722-e0bc-429b-b58e-eab882d735cf.jpg",
-      "/agent/repos/vaibee/PRDT/concepts/vibe-hunt/art/references/f03e5cfe-462c-4a17-bbce-d15ddd5583bf.jpg",
-      "/agent/repos/vaibee/PRDT/concepts/vibe-hunt/art/references/a9fb5a64-ba60-4b27-8504-8c7b6ecd23af.jpg"
+      "{SKILL_ROOT}/references/6f144722-e0bc-429b-b58e-eab882d735cf.jpg",
+      "{SKILL_ROOT}/references/f03e5cfe-462c-4a17-bbce-d15ddd5583bf.jpg",
+      "{SKILL_ROOT}/references/a9fb5a64-ba60-4b27-8504-8c7b6ecd23af.jpg"
     ]
   }
 }
 ```
 
-Use absolute paths when the active workspace root is not `vaibee`. **Always** pass all three references.
+Replace `{SKILL_ROOT}` with the resolved path from §Path resolution (absolute paths recommended). **Always** pass all three references.
 
-Approved example: `PRDT/concepts/vibe-hunt/art/examples/captain-archetype.png`.
+Approved example: `{SKILL_ROOT}/examples/captain-archetype.png` (or in-repo `PRDT/concepts/vibe-hunt/art/examples/…`).
 
 ---
 
@@ -210,7 +228,6 @@ More examples: `PRDT/concepts/vibe-hunt/art/prompt-templates/card.md`.
 
 | Path | Purpose |
 |---|---|
-| `PRDT/concepts/vibe-hunt/art/references/` | 3 style anchor JPGs |
-| `PRDT/concepts/vibe-hunt/art/examples/` | Approved samples |
-| `PRDT/concepts/vibe-hunt/art/prompt-templates/` | Prompt fragments |
-| `PRDT/concepts/vibe-hunt/art/generated/` | Output + `manifest.md` |
+| `~/.cursor/skills/vibe-character-art/` | **Global install** (see `install-global-skill.sh`) |
+| `PRDT/concepts/vibe-hunt/art/` | In-repo art bundle |
+| `install-global-skill.sh` | Copy skill + assets to `~/.cursor/skills/` |
