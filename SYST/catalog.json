@@ -26,6 +26,15 @@
       "tags": ["knowledge-base", "collaboration"],
       "summary": "All-in-one workspace: notes, databases, wikis.",
       "path": "RSCH/RSCH-01-00-00/products/notion/README.md"
+    },
+    {
+      "slug": "ai-hr-funding",
+      "title": "AI HR Funding 2025–26",
+      "status": "complete",
+      "date": "2026-09-10",
+      "tags": ["hr-tech", "funding", "ai", "recruiting", "marketplaces", "agentic"],
+      "summary": "Куда и как AI HR стартапы привлекают капитал: marketplaces для AI labs, agentic recruiting, HCM consolidation, compliance.",
+      "path": "RSCH/RSCH-01-00-00/products/ai-hr-funding/README.md"
     }
   ],
   "concepts": [

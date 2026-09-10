@@ -8,6 +8,7 @@
 |------|----------|
 | [products/](./products/) | Product research (legacy-пути, миграция позже) |
 | [products/notion/](./products/notion/) | Notion — product research |
+| [products/ai-hr-funding/](./products/ai-hr-funding/) | AI HR Funding 2025–26 — market research |
 
 ## Нейминг на этом уровне
 
