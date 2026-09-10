@@ -43,5 +43,5 @@
 
 ## Связанные концепты
 
-- [conveyor-step-1](../../../../PRDT/concepts/) — HR onboarding / hiring
-- [vibe-hunt](../../../../PRDT/concepts/) — specialist career mockup
+- [conveyor-step-1](../../../../PRDT/concepts/conveyor-step-1/) — HR onboarding / hiring
+- [vibe-hunt](../../../../PRDT/concepts/vibe-hunt/) — specialist career mockup
